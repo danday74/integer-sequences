@@ -5,7 +5,7 @@ const main = require('../index')
 
 describe('getPrimeNumbers', function () {
 
-  this.timeout(0)
+  this.enableTimeouts(false)
 
   it('up to 100', () => {
 
