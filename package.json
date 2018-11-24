@@ -25,11 +25,11 @@
   "keywords": [],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/danday74/node-template-18.git"
+    "url": "git+https://github.com/danday74/triangle-numbers.git"
   },
   "bugs": {
-    "url": "https://github.com/danday74/node-template-18/issues"
+    "url": "https://github.com/danday74/triangle-numbers/issues"
   },
-  "homepage": "https://github.com/danday74/node-template-18#readme",
+  "homepage": "https://github.com/danday74/triangle-numbers#readme",
   "comment": "coveralls@2.11.16"
 }
