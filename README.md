@@ -6,4 +6,4 @@
 [![dependencies](https://david-dm.org/danday74/triangle-numbers/status.svg)](https://david-dm.org/danday74/triangle-numbers)
 [![downloads](https://img.shields.io/npm/dm/triangle-numbers.svg)](https://www.npmjs.com/package/triangle-numbers)
 
-**Template for creating an npm package in 2018**
+**Calculates triangle numbers, square numbers, etc**
