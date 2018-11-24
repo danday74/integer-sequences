@@ -3,7 +3,10 @@ const expect = chai.expect
 
 const main = require('../index')
 
-describe('getPrimeNumbers', () => {
+describe('getPrimeNumbers', function () {
+
+  this.timeout(0)
+
   it('up to 100', () => {
 
     const EXPECTED = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]
@@ -17,5 +20,12 @@ describe('getPrimeNumbers', () => {
 
     numbers = main.getPrimeNumbers(96)
     expect(numbers).to.have.lengthOf(EXPECTED.length - 1)
+  })
+
+  it('up to 20000', () => {
+
+    console.time('primes')
+    main.getPrimeNumbers(20000)
+    console.timeEnd('primes')
   })
 })
