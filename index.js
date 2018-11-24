@@ -1,7 +1,9 @@
-const example = require('./js/example')
+const getTriangleNumbers = require('./js/getTriangleNumbers')
+const getSquareNumbers = require('./js/getSquareNumbers')
 
-const main = () => {
-  return example()
+const main = {
+  getTriangleNumbers,
+  getSquareNumbers
 }
 
 module.exports = main
