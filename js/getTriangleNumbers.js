@@ -1,17 +1,17 @@
 const getTriangleNumbers = max => {
 
-  const triangleNumbers = []
+  const numbers = []
 
   for (let i = 1; ; i++) {
     const triangleNumber = i * (i + 1) / 2
     if (triangleNumber <= max) {
-      triangleNumbers.push(triangleNumber)
+      numbers.push(triangleNumber)
     } else {
       break
     }
   }
 
-  return triangleNumbers
+  return numbers
 }
 
 module.exports = getTriangleNumbers

@@ -3,19 +3,19 @@ const expect = chai.expect
 
 const main = require('../index')
 
-describe('getTriangleNumbers', () => {
+describe('getPrimeNumbers', () => {
   it('up to 100', () => {
 
-    const EXPECTED = [1, 3, 6, 10, 15, 21, 28, 36, 45, 55, 66, 78, 91]
+    const EXPECTED = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]
     let numbers
 
-    numbers = main.getTriangleNumbers(100)
+    numbers = main.getPrimeNumbers(100)
     expect(numbers).to.eql(EXPECTED)
 
-    numbers = main.getTriangleNumbers(91)
+    numbers = main.getPrimeNumbers(97)
     expect(numbers).to.have.lengthOf(EXPECTED.length)
 
-    numbers = main.getTriangleNumbers(90)
+    numbers = main.getPrimeNumbers(96)
     expect(numbers).to.have.lengthOf(EXPECTED.length - 1)
   })
 })

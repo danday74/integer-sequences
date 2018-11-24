@@ -12,7 +12,9 @@
     "prepush": "npm run build"
   },
   "dependencies": {
-    "lodash": "^4.17.11"
+    "is-prime": "^1.0.1",
+    "lodash": "^4.17.11",
+    "primes": "0.0.1"
   },
   "devDependencies": {
     "chai": "^4.2.0",

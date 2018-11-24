@@ -1,17 +1,17 @@
 const getSquareNumbers = max => {
 
-  const squareNumbers = []
+  const numbers = []
 
   for (let i = 1; ; i++) {
     const squareNumber = i * i
     if (squareNumber <= max) {
-      squareNumbers.push(squareNumber)
+      numbers.push(squareNumber)
     } else {
       break
     }
   }
 
-  return squareNumbers
+  return numbers
 }
 
 module.exports = getSquareNumbers
