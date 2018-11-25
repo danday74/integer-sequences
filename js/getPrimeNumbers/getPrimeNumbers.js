@@ -2,6 +2,7 @@ const fs = require('fs')
 const primes = require('primes')
 const isPrime = require('is-prime')
 const getHighestPrimeNumber = require('./getHighestPrimeNumber')
+const debug = require('debug')('generate-primes')
 
 const PRIME_NUMBERS_FILE = __dirname + '/primeNumbers.md'
 
@@ -15,8 +16,11 @@ const getPrimeNumbers = max => {
 
   /* istanbul ignore next */
   if (!primeObject) {
+    debug('generating primes')
     const numbers = primes(max + 1)
-    numbers.forEach(num => {
+    debug('checking primes')
+    numbers.forEach((num, i) => {
+      if (i % 100 === 0) debug('validating prime', num, i)
       if (!isPrime(num)) throw new Error(`${num} is not a prime number`)
     })
     fs.writeFileSync(PRIME_NUMBERS_FILE, numbers)
@@ -24,8 +28,11 @@ const getPrimeNumbers = max => {
   } else if (primeObject.all || primeObject.highest === max) {
     return primeObject.array
   } else {
+    debug('generating more primes')
     const moreNumbers = primes(primeObject.highest + 1, max + 1)
-    moreNumbers.forEach(num => {
+    debug('checking more primes')
+    moreNumbers.forEach((num, i) => {
+      if (i % 100 === 0) debug('validating prime', num, i)
       /* istanbul ignore next */
       if (!isPrime(num)) throw new Error(`${num} is not a prime number`)
     })

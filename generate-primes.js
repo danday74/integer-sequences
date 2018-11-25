@@ -1,3 +1,5 @@
+// set DEBUG=generate-primes
+
 const main = require('./index')
 
 const arg = process.argv[2]
