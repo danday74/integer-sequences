@@ -1,4 +1,4 @@
-// set DEBUG=generate-primes
+// export DEBUG=generate-primes
 
 const main = require('./index')
 
