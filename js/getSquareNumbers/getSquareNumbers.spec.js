@@ -1,7 +1,7 @@
 const chai = require('chai')
 const expect = chai.expect
 
-const main = require('../index')
+const main = require('../..')
 
 describe('getSquareNumbers', () => {
   it('up to 100', () => {
