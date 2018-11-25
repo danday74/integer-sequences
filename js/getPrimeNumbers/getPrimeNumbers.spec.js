@@ -1,6 +1,5 @@
 const chai = require('chai')
 const expect = chai.expect
-
 const main = require('../..')
 const getHighestPrimeNumber = require('./getHighestPrimeNumber')
 
@@ -8,6 +7,7 @@ const PRIME_NUMBERS = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 5
 const PRIME_NUMBERS_FILE = __dirname + '/primeNumbers.md'
 
 describe('getPrimeNumbers', function () {
+
   this.enableTimeouts(false)
 
   describe('getHighestPrimeNumber', function () {
@@ -93,17 +93,16 @@ describe('getPrimeNumbers', function () {
 
     it('up to 100', () => {
 
-      const EXPECTED = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]
       let numbers
 
       numbers = main.getPrimeNumbers(100)
-      expect(numbers).to.eql(EXPECTED)
+      expect(numbers).to.eql(PRIME_NUMBERS)
 
       numbers = main.getPrimeNumbers(97)
-      expect(numbers).to.have.lengthOf(EXPECTED.length)
+      expect(numbers).to.have.lengthOf(PRIME_NUMBERS.length)
 
       numbers = main.getPrimeNumbers(96)
-      expect(numbers).to.have.lengthOf(EXPECTED.length - 1)
+      expect(numbers).to.have.lengthOf(PRIME_NUMBERS.length - 1)
     })
 
     const fileTest = (max, primes, filePrimes) => {

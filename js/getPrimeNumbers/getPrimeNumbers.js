@@ -1,6 +1,6 @@
+const fs = require('fs')
 const primes = require('primes')
 const isPrime = require('is-prime')
-const fs = require('fs')
 const getHighestPrimeNumber = require('./getHighestPrimeNumber')
 
 const PRIME_NUMBERS_FILE = __dirname + '/primeNumbers.md'
