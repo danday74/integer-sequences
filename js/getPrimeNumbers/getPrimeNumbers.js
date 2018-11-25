@@ -30,7 +30,7 @@ const getPrimeNumbers = max => {
       if (!isPrime(num)) throw new Error(`${num} is not a prime number`)
     })
     const numbers = [...primeObject.array, ...moreNumbers]
-    fs.writeFileSync(PRIME_NUMBERS_FILE, numbers)
+    if (moreNumbers.length) fs.writeFileSync(PRIME_NUMBERS_FILE, numbers)
     return numbers
   }
 }
