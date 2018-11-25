@@ -66,6 +66,30 @@ describe('getPrimeNumbers', function () {
 
   describe('getPrimeNumbers', function () {
 
+    it('up to 1', () => {
+      const numbers = main.getPrimeNumbers(1)
+      expect(numbers).to.eql([])
+    })
+
+    it('up to 2', () => {
+      const numbers = main.getPrimeNumbers(2)
+      expect(numbers).to.eql([2])
+    })
+
+    it('up to 3', () => {
+      const numbers = main.getPrimeNumbers(3)
+      expect(numbers).to.eql([2, 3])
+    })
+
+    it('up to 4', () => {
+      const numbers = main.getPrimeNumbers(4)
+      expect(numbers).to.eql([2, 3])
+    })
+
+    it('up to 5', () => {
+      const numbers = main.getPrimeNumbers(5)
+      expect(numbers).to.eql([2, 3, 5])
+    })
 
     it('up to 100', () => {
 
@@ -90,7 +114,8 @@ describe('getPrimeNumbers', function () {
       expect(fileNumbers).to.eql(filePrimes)
     }
 
-    it('file operations', () => {
+    // ignored to prevent wiping file cache
+    xit('file operations', () => {
 
       const PRIME_NUMBERS_15 = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47]
       const PRIME_NUMBERS_16 = [...PRIME_NUMBERS_15, 53]

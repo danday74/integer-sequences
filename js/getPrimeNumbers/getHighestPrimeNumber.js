@@ -1,34 +1,22 @@
-const getReturnObject = (prime, primes) => {
-  const idx = primes.indexOf(prime)
+const _ = require('lodash')
+
+const getHighestPrimeNumber = (num, primes) => {
+
+  let idx = _.sortedIndex(primes, num)
+  if (primes[idx] !== num) idx -= 1
+  const highest = primes[idx]
+
+  if (!highest) return null
+
   const array = primes.slice(0, idx + 1)
   const all = primes.length > array.length
+
   return {
-    highest: prime,
+    highest,
     idx,
     array,
     all
   }
-}
-
-const getHighestPrimeNumber = (num, primes) => {
-
-  let mid
-  let lo = 0
-  let hi = primes.length - 1
-
-  while (lo <= hi) {
-    mid = ~~((hi - lo) / 2 + lo)
-
-    if (primes[mid] === num) {
-      return getReturnObject(primes[mid], primes)
-    } else if (primes[mid] > num) {
-      hi = mid - 1
-    } else {
-      lo = mid + 1
-    }
-  }
-
-  return primes[hi] ? getReturnObject(primes[hi], primes) : null
 }
 
 module.exports = getHighestPrimeNumber

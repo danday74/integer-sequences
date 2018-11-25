@@ -7,14 +7,16 @@ const PRIME_NUMBERS_FILE = __dirname + '/primeNumbers.md'
 
 const getPrimeNumbers = max => {
 
+  if (max < 2) return []
+
   const contents = fs.readFileSync(PRIME_NUMBERS_FILE, 'utf8')
   const fileNumbers = JSON.parse(`[${contents}]`)
   const primeObject = getHighestPrimeNumber(max, fileNumbers)
 
+  /* istanbul ignore next */
   if (!primeObject) {
     const numbers = primes(max + 1)
     numbers.forEach(num => {
-      /* istanbul ignore next */
       if (!isPrime(num)) throw new Error(`${num} is not a prime number`)
     })
     fs.writeFileSync(PRIME_NUMBERS_FILE, numbers)
