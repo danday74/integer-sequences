@@ -1,45 +1,28 @@
 const fs = require('fs')
-const primes = require('primes')
-const isPrime = require('is-prime')
-const getHighestPrimeNumber = require('./getHighestPrimeNumber')
-const debug = require('debug')('generate-primes')
-
-const PRIME_NUMBERS_FILE = __dirname + '/primeNumbers.md'
+const _ = require('lodash')
 
 const getPrimeNumbers = max => {
 
   if (max < 2) return []
 
-  const contents = fs.readFileSync(PRIME_NUMBERS_FILE, 'utf8')
-  const fileNumbers = JSON.parse(`[${contents}]`)
-  const primeObject = getHighestPrimeNumber(max, fileNumbers)
+  let primes = []
+  let numFiles = fs.readdirSync(__dirname + '/primes').length
 
-  /* istanbul ignore next */
-  if (!primeObject) {
-    debug('generating primes')
-    const numbers = primes(max + 1)
-    debug('checking primes')
-    numbers.forEach((num, i) => {
-      if (i % 100 === 0) debug('validating prime', num, i)
-      if (!isPrime(num)) throw new Error(`${num} is not a prime number`)
-    })
-    fs.writeFileSync(PRIME_NUMBERS_FILE, numbers)
-    return numbers
-  } else if (primeObject.all || primeObject.highest === max) {
-    return primeObject.array
-  } else {
-    debug('generating more primes')
-    const moreNumbers = primes(primeObject.highest + 1, max + 1)
-    debug('checking more primes')
-    moreNumbers.forEach((num, i) => {
-      if (i % 100 === 0) debug('validating prime', num, i)
-      /* istanbul ignore next */
-      if (!isPrime(num)) throw new Error(`${num} is not a prime number`)
-    })
-    const numbers = [...primeObject.array, ...moreNumbers]
-    if (moreNumbers.length) fs.writeFileSync(PRIME_NUMBERS_FILE, numbers)
-    return numbers
+  for (let i = 0; i < numFiles; i++) {
+
+    const contents = fs.readFileSync(__dirname + `/primes/primes${i + 1}.txt`, 'utf8').replace(/\d+,\d+,\d+/, '')
+    const temp = contents.match(/\d+/g).map(x => parseInt(x))
+    primes = [...primes, ...temp]
+    const lastPrime = _.last(primes)
+    if (max <= lastPrime) break
   }
+
+  const lastPrime = _.last(primes)
+  if (max > lastPrime) throw Error('Maximum prime supported is ' + lastPrime)
+
+  let idx = _.sortedIndex(primes, max)
+  if (primes[idx] !== max) idx -= 1
+  return _.take(primes, idx + 1)
 }
 
 module.exports = getPrimeNumbers
