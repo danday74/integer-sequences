@@ -11,18 +11,20 @@ const getPrimeNumbers = max => {
   for (let i = 0; i < numFiles; i++) {
 
     const contents = fs.readFileSync(__dirname + `/primes/primes${i + 1}.txt`, 'utf8').replace(/\d+,\d+,\d+/, '')
-    const temp = contents.match(/\d+/g).map(x => parseInt(x))
+    const temp = contents.match(/\d+/g)
     primes = [...primes, ...temp]
     const lastPrime = _.last(primes)
     if (max <= lastPrime) break
   }
 
   const lastPrime = _.last(primes)
-  if (max > lastPrime) throw Error('Maximum prime supported is ' + lastPrime)
+  if (max > lastPrime) throw RangeError('Maximum prime supported is ' + lastPrime)
 
   let idx = _.sortedIndex(primes, max)
-  if (primes[idx] !== max) idx -= 1
-  return _.take(primes, idx + 1)
+  // noinspection EqualityComparisonWithCoercionJS
+  if (primes[idx] != max) idx -= 1
+  const results = _.take(primes, idx + 1)
+  return _.map(results, Number)
 }
 
 module.exports = getPrimeNumbers
