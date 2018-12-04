@@ -1,13 +1,15 @@
-const getPrimeNumbers = require('./js/get-prime-numbers/get-prime-numbers')
-const getSquareNumbers = require('./js/get-square-numbers/get-square-numbers')
-const getTriangleNumbers = require('./js/get-triangle-numbers/get-triangle-numbers')
-const getNumbersAsJson = require('./js/get-numbers-as-json/get-numbers-as-json')
+const getPrimeNumbers = require('./js/prime-numbers/get-prime-numbers')
+const getSquareNumbers = require('./js/square-numbers/get-square-numbers')
+const getTriangleNumbers = require('./js/triangle-numbers/get-triangle-numbers')
+const getNumbersAsJson = require('./js/numbers-as-json/get-numbers-as-json')
+const isTriangleNumber = require('./js/triangle-numbers/is-triangle-number')
 
 const main = {
   getPrimeNumbers,
   getSquareNumbers,
   getTriangleNumbers,
-  getNumbersAsJson
+  getNumbersAsJson,
+  isTriangleNumber
 }
 
 module.exports = main

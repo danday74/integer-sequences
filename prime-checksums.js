@@ -7,7 +7,7 @@ console.log('checksums running')
 
 const primes = main.getPrimeNumbers()
 
-const path = __dirname + '/js/get-prime-numbers/checksums/10m-primes.txt'
+const path = __dirname + '/js/prime-numbers/checksums/10m-primes.txt'
 const contents = fs.readFileSync(path, 'utf8')
 let checksums = contents.match(/\d+/g)
 

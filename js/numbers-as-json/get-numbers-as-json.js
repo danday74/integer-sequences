@@ -1,7 +1,7 @@
 const _ = require('lodash')
-const getPrimeNumbers = require('../get-prime-numbers/get-prime-numbers')
-const getSquareNumbers = require('../get-square-numbers/get-square-numbers')
-const getTriangleNumbers = require('../get-triangle-numbers/get-triangle-numbers')
+const getPrimeNumbers = require('../prime-numbers/get-prime-numbers')
+const getSquareNumbers = require('../square-numbers/get-square-numbers')
+const getTriangleNumbers = require('../triangle-numbers/get-triangle-numbers')
 const config = require('../../config')
 
 const nextPrime = (series, idx, i) => {
