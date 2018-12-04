@@ -1,6 +1,6 @@
+const _ = require('lodash')
 const assert = require('assert')
 const fs = require('fs')
-const _ = require('lodash')
 const main = require('.')
 
 console.log('checksums running')
