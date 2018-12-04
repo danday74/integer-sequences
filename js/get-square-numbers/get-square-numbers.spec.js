@@ -4,6 +4,7 @@ const expect = chai.expect
 const main = require('../..')
 
 describe('getSquareNumbers', () => {
+
   it('up to 100', () => {
 
     const EXPECTED = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]

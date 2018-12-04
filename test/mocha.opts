@@ -3,4 +3,3 @@ js
 --reporter spec
 --require ./test/test.bootstrap
 --colors
-
