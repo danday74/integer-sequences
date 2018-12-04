@@ -2,7 +2,6 @@
 
 ## Jobs
 
-Tidy up and commit
 Write isTriangle, etc
 Write getNthTriangle, etc
 
