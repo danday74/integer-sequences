@@ -6,4 +6,6 @@
 [![dependencies](https://david-dm.org/danday74/triangle-numbers/status.svg)](https://david-dm.org/danday74/triangle-numbers)
 [![downloads](https://img.shields.io/npm/dm/triangle-numbers.svg)](https://www.npmjs.com/package/triangle-numbers)
 
-**Calculates triangle numbers, square numbers, etc**
+**Calculates triangle numbers, square numbers, prime numbers, etc**
+
+
