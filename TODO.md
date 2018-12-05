@@ -2,7 +2,6 @@
 
 ## Jobs
 
-Fix build
 Write isTriangle, etc
 Write getNthTriangle, etc
 
