@@ -1,6 +1,6 @@
 {
-  "name": "triangle-numbers",
-  "version": "1.0.1",
+  "name": "math-sequences",
+  "version": "1.0.0",
   "description": "Calculates triangle numbers, square numbers, prime numbers, etc",
   "author": "danday74",
   "license": "ISC",
@@ -24,7 +24,16 @@
     "istanbul": "^0.4.5",
     "mocha": "^5.2.0"
   },
-  "keywords": [],
+  "keywords": [
+    "math",
+    "mathematic",
+    "sequence",
+    "series",
+    "fibonacci",
+    "prime",
+    "square",
+    "triangle"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/danday74/triangle-numbers.git"
