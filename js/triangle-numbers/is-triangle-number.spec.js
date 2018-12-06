@@ -7,7 +7,7 @@ describe('isTriangleNumber', () => {
 
   it('0', () => {
     const seriesIdx = main.isTriangleNumber(0)
-    expect(seriesIdx).to.equal(false)
+    expect(seriesIdx).to.equal(undefined)
   })
 
   it('1', () => {
