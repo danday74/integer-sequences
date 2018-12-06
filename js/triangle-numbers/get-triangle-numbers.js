@@ -1,9 +1,11 @@
+const getNthTriangleNumber = require('./get-nth-triangle-number')
+
 const getTriangleNumbers = max => {
 
   const numbers = []
 
   for (let i = 1; ; i++) {
-    const triangleNumber = i * (i + 1) / 2
+    const triangleNumber = getNthTriangleNumber(i)
     if (triangleNumber <= max) {
       numbers.push(triangleNumber)
     } else {
