@@ -1,10 +1,10 @@
-# triangle-numbers
+# math-sequences
 
-[![build](https://img.shields.io/travis/danday74/triangle-numbers/master.svg?label=linux)](https://travis-ci.org/danday74/triangle-numbers)
-[![coverage](https://coveralls.io/repos/github/danday74/triangle-numbers/badge.svg)](https://coveralls.io/github/danday74/triangle-numbers)
-[![npm](https://img.shields.io/npm/v/triangle-numbers.svg)](https://www.npmjs.com/package/triangle-numbers)
-[![dependencies](https://david-dm.org/danday74/triangle-numbers/status.svg)](https://david-dm.org/danday74/triangle-numbers)
-[![downloads](https://img.shields.io/npm/dm/triangle-numbers.svg)](https://www.npmjs.com/package/triangle-numbers)
+[![build](https://img.shields.io/travis/danday74/math-sequences/master.svg?label=linux)](https://travis-ci.org/danday74/math-sequences)
+[![coverage](https://coveralls.io/repos/github/danday74/math-sequences/badge.svg)](https://coveralls.io/github/danday74/math-sequences)
+[![npm](https://img.shields.io/npm/v/math-sequences.svg)](https://www.npmjs.com/package/math-sequences)
+[![dependencies](https://david-dm.org/danday74/math-sequences/status.svg)](https://david-dm.org/danday74/math-sequences)
+[![downloads](https://img.shields.io/npm/dm/math-sequences.svg)](https://www.npmjs.com/package/math-sequences)
 
 **Calculates triangle numbers, square numbers, prime numbers, etc**
 

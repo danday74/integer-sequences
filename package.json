@@ -36,12 +36,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/danday74/triangle-numbers.git"
+    "url": "git+https://github.com/danday74/math-sequences.git"
   },
   "bugs": {
-    "url": "https://github.com/danday74/triangle-numbers/issues"
+    "url": "https://github.com/danday74/math-sequences/issues"
   },
-  "homepage": "https://github.com/danday74/triangle-numbers#readme",
+  "homepage": "https://github.com/danday74/math-sequences#readme",
   "comment": "coveralls@2.11.16",
   "husky": {
     "hooks": {
