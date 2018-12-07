@@ -25,6 +25,16 @@ describe('isTriangleNumber', () => {
     expect(seriesIdx).to.equal(2)
   })
 
+  it('4', () => {
+    const seriesIdx = main.isTriangleNumber(4)
+    expect(seriesIdx).to.equal(false)
+  })
+
+  it('5', () => {
+    const seriesIdx = main.isTriangleNumber(5)
+    expect(seriesIdx).to.equal(false)
+  })
+
   it('2700', () => {
     const seriesIdx = main.isTriangleNumber(2700)
     expect(seriesIdx).to.equal(false)

@@ -4,6 +4,7 @@ const getTriangleNumbers = require('./js/triangle-numbers/get-triangle-numbers')
 const getNumbersAsJson = require('./js/numbers-as-json/get-numbers-as-json')
 const getNthSquareNumber = require('./js/square-numbers/get-nth-square-number')
 const getNthTriangleNumber = require('./js/triangle-numbers/get-nth-triangle-number')
+const isSquareNumber = require('./js/square-numbers/is-square-number')
 const isTriangleNumber = require('./js/triangle-numbers/is-triangle-number')
 
 const main = {
@@ -13,6 +14,7 @@ const main = {
   getNumbersAsJson,
   getNthSquareNumber,
   getNthTriangleNumber,
+  isSquareNumber,
   isTriangleNumber
 }
 
