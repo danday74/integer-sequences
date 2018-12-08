@@ -6,52 +6,52 @@ const main = require('../..')
 describe('getNthPrimeNumber', () => {
 
   it('null', () => {
-    const seriesIdx = main.getNthPrimeNumber()
-    expect(seriesIdx).to.equal(undefined)
+    const number = main.getNthPrimeNumber()
+    expect(number).to.equal(undefined)
   })
 
   it('P0', () => {
-    const seriesIdx = main.getNthPrimeNumber(0)
-    expect(seriesIdx).to.equal(undefined)
+    const number = main.getNthPrimeNumber(0)
+    expect(number).to.equal(undefined)
   })
 
   it('P1', () => {
-    const seriesIdx = main.getNthPrimeNumber(1)
-    expect(seriesIdx).to.equal(2)
+    const number = main.getNthPrimeNumber(1)
+    expect(number).to.equal(2)
   })
 
   it('P2', () => {
-    const seriesIdx = main.getNthPrimeNumber(2)
-    expect(seriesIdx).to.equal(3)
+    const number = main.getNthPrimeNumber(2)
+    expect(number).to.equal(3)
   })
 
   it('P3', () => {
-    const seriesIdx = main.getNthPrimeNumber(3)
-    expect(seriesIdx).to.equal(5)
+    const number = main.getNthPrimeNumber(3)
+    expect(number).to.equal(5)
   })
 
   it('P4', () => {
-    const seriesIdx = main.getNthPrimeNumber(4)
-    expect(seriesIdx).to.equal(7)
+    const number = main.getNthPrimeNumber(4)
+    expect(number).to.equal(7)
   })
 
   it('P5', () => {
-    const seriesIdx = main.getNthPrimeNumber(5)
-    expect(seriesIdx).to.equal(11)
+    const number = main.getNthPrimeNumber(5)
+    expect(number).to.equal(11)
   })
 
   it('P73', () => {
-    const seriesIdx = main.getNthPrimeNumber(73)
-    expect(seriesIdx).to.equal(367)
+    const number = main.getNthPrimeNumber(73)
+    expect(number).to.equal(367)
   })
 
   it('last supported prime', () => {
-    const seriesIdx = main.getNthPrimeNumber(config.LAST_PRIME_SERIES_IDX)
-    expect(seriesIdx).to.equal(config.LAST_PRIME)
+    const number = main.getNthPrimeNumber(config.LAST_PRIME_SERIES_IDX)
+    expect(number).to.equal(config.LAST_PRIME)
   })
 
   it('greater than last supported prime', () => {
-    const seriesIdx = main.getNthPrimeNumber(config.LAST_PRIME_SERIES_IDX + 1)
-    expect(seriesIdx).to.equal(undefined)
+    const number = main.getNthPrimeNumber(config.LAST_PRIME_SERIES_IDX + 1)
+    expect(number).to.equal(undefined)
   })
 })

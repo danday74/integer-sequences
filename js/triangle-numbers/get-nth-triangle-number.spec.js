@@ -6,42 +6,42 @@ const main = require('../..')
 describe('getNthTriangleNumber', () => {
 
   it('null', () => {
-    const seriesIdx = main.getNthTriangleNumber()
-    expect(seriesIdx).to.equal(undefined)
+    const number = main.getNthTriangleNumber()
+    expect(number).to.equal(undefined)
   })
 
   it('T0', () => {
-    const seriesIdx = main.getNthTriangleNumber(0)
-    expect(seriesIdx).to.equal(undefined)
+    const number = main.getNthTriangleNumber(0)
+    expect(number).to.equal(undefined)
   })
 
   it('T1', () => {
-    const seriesIdx = main.getNthTriangleNumber(1)
-    expect(seriesIdx).to.equal(1)
+    const number = main.getNthTriangleNumber(1)
+    expect(number).to.equal(1)
   })
 
   it('T2', () => {
-    const seriesIdx = main.getNthTriangleNumber(2)
-    expect(seriesIdx).to.equal(3)
+    const number = main.getNthTriangleNumber(2)
+    expect(number).to.equal(3)
   })
 
   it('T3', () => {
-    const seriesIdx = main.getNthTriangleNumber(3)
-    expect(seriesIdx).to.equal(6)
+    const number = main.getNthTriangleNumber(3)
+    expect(number).to.equal(6)
   })
 
   it('T4', () => {
-    const seriesIdx = main.getNthTriangleNumber(4)
-    expect(seriesIdx).to.equal(10)
+    const number = main.getNthTriangleNumber(4)
+    expect(number).to.equal(10)
   })
 
   it('T5', () => {
-    const seriesIdx = main.getNthTriangleNumber(5)
-    expect(seriesIdx).to.equal(15)
+    const number = main.getNthTriangleNumber(5)
+    expect(number).to.equal(15)
   })
 
   it('T73', () => {
-    const seriesIdx = main.getNthTriangleNumber(73)
-    expect(seriesIdx).to.equal(2701)
+    const number = main.getNthTriangleNumber(73)
+    expect(number).to.equal(2701)
   })
 })
