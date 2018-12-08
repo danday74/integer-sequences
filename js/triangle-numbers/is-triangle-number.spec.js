@@ -1,6 +1,5 @@
 const chai = require('chai')
 const expect = chai.expect
-
 const main = require('../..')
 
 describe('isTriangleNumber', () => {
