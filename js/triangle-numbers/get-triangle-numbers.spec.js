@@ -5,6 +5,11 @@ const main = require('../..')
 
 describe('getTriangleNumbers', () => {
 
+  it('null', () => {
+    const numbers = main.getTriangleNumbers()
+    expect(numbers).to.have.lengthOf(0)
+  })
+
   it('up to 100', () => {
 
     const EXPECTED = [1, 3, 6, 10, 15, 21, 28, 36, 45, 55, 66, 78, 91]

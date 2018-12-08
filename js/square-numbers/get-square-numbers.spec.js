@@ -5,6 +5,11 @@ const main = require('../..')
 
 describe('getSquareNumbers', () => {
 
+  it('null', () => {
+    const numbers = main.getSquareNumbers()
+    expect(numbers).to.have.lengthOf(0)
+  })
+
   it('up to 100', () => {
 
     const EXPECTED = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]

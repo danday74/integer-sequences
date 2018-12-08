@@ -5,6 +5,11 @@ const main = require('../..')
 
 describe('getNthTriangleNumber', () => {
 
+  it('null', () => {
+    const seriesIdx = main.getNthTriangleNumber()
+    expect(seriesIdx).to.equal(undefined)
+  })
+
   it('T0', () => {
     const seriesIdx = main.getNthTriangleNumber(0)
     expect(seriesIdx).to.equal(undefined)

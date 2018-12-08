@@ -5,6 +5,11 @@ const main = require('../..')
 
 describe('isPrimeNumber', () => {
 
+  it('null', () => {
+    const seriesIdx = main.isPrimeNumber()
+    expect(seriesIdx).to.equal(undefined)
+  })
+
   it('0', () => {
     const seriesIdx = main.isPrimeNumber(0)
     expect(seriesIdx).to.equal(undefined)

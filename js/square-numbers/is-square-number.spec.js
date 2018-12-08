@@ -5,6 +5,11 @@ const main = require('../..')
 
 describe('isSquareNumber', () => {
 
+  it('null', () => {
+    const seriesIdx = main.isSquareNumber()
+    expect(seriesIdx).to.equal(undefined)
+  })
+
   it('0', () => {
     const seriesIdx = main.isSquareNumber(0)
     expect(seriesIdx).to.equal(undefined)

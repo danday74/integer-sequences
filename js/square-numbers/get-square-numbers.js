@@ -1,6 +1,6 @@
 const getNthSquareNumber = require('./get-nth-square-number')
 
-const getSquareNumbers = max => {
+const getSquareNumbers = (max = 0) => {
 
   const numbers = []
 

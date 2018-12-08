@@ -5,6 +5,11 @@ const main = require('../..')
 
 describe('getNthSquareNumber', () => {
 
+  it('null', () => {
+    const seriesIdx = main.getNthSquareNumber()
+    expect(seriesIdx).to.equal(undefined)
+  })
+
   it('S0', () => {
     const seriesIdx = main.getNthSquareNumber(0)
     expect(seriesIdx).to.equal(undefined)

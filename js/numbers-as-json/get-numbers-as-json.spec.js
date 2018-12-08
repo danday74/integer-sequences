@@ -6,7 +6,12 @@ describe('getNumbersAsJson', function () {
 
   this.enableTimeouts(false)
 
-  it('zero', () => {
+  it('null', () => {
+    const numbers = main.getNumbersAsJson()
+    expect(numbers).to.have.lengthOf(0)
+  })
+
+  it('0', () => {
     const numbers = main.getNumbersAsJson(0)
     expect(numbers).to.have.lengthOf(0)
   })

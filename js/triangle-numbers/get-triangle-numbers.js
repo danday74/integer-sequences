@@ -1,6 +1,6 @@
 const getNthTriangleNumber = require('./get-nth-triangle-number')
 
-const getTriangleNumbers = max => {
+const getTriangleNumbers = (max = 0) => {
 
   const numbers = []
 

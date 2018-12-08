@@ -16,7 +16,7 @@ const next = (series, idx, i) => {
 
 const numbers = []
 
-const getNumbersAsJson = max => {
+const getNumbersAsJson = (max = 0) => {
 
   if (max < 1) return []
 
