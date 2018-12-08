@@ -1,5 +1,9 @@
 # TODO
 
+## Jobs
+
+Update README
+
 ## Series
 
 Cubic numbers (Pascals triangle - Star of David)
