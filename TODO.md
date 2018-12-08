@@ -1,10 +1,5 @@
 # TODO
 
-## Jobs
-
-Write isTriangle, etc
-Write getNthTriangle, etc
-
 ## Series
 
 Cubic numbers (Pascals triangle - Star of David)
