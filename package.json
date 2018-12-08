@@ -11,9 +11,11 @@
     "build": "npm run test1 && npm run test2 && npm run enforcer",
     "test1": "node --max-old-space-size=8192 test",
     "test2": "istanbul cover -x \"**/*.spec.js\" ./node_modules/mocha/bin/_mocha -- js",
+    "is-prime-test": "node --max-old-space-size=8192 is-prime-test",
     "prime-checksums": "node prime-checksums"
   },
   "dependencies": {
+    "is-prime": "^1.0.1",
     "lodash": "^4.17.11"
   },
   "devDependencies": {
