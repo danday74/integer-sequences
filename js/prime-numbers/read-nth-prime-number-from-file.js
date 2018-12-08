@@ -1,17 +1,9 @@
 const readPrimeNumbersFromFile = require('./read-prime-numbers-from-file')
-
-const lastPrimesPerFile = {
-  1: 15485863,
-  2: 32452843,
-  3: 49979687,
-  4: 67867967,
-  5: 86028121,
-  6: 104395301
-}
+const config = require('../../config')
 
 const readNthPrimeNumberFromFile = n => {
   const fileNumber = Math.ceil(n / 1000000)
-  const lastPrimeInFile = lastPrimesPerFile[fileNumber]
+  const lastPrimeInFile = config.LAST_PRIME_PER_FILE[fileNumber]
   return readPrimeNumbersFromFile(lastPrimeInFile)
 }
 

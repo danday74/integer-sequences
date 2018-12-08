@@ -4,8 +4,6 @@ const main = require('../..')
 const config = require('../../config')
 
 const PRIME_NUMBERS = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]
-const LAST_PRIME_FILE_1 = 15485863
-const FIRST_PRIME_FILE_2 = 15485867
 
 describe('getPrimeNumbers', function () {
 
@@ -54,7 +52,7 @@ describe('getPrimeNumbers', function () {
 
     let numbers
 
-    numbers = main.getPrimeNumbers(LAST_PRIME_FILE_1)
+    numbers = main.getPrimeNumbers(config.LAST_PRIME_PER_FILE[1])
     expect(numbers).to.have.lengthOf(1000000)
   })
 
@@ -62,7 +60,7 @@ describe('getPrimeNumbers', function () {
 
     let numbers
 
-    numbers = main.getPrimeNumbers(LAST_PRIME_FILE_1 + 1)
+    numbers = main.getPrimeNumbers(config.LAST_PRIME_PER_FILE[1] + 1)
     expect(numbers).to.have.lengthOf(1000000)
   })
 
@@ -70,7 +68,7 @@ describe('getPrimeNumbers', function () {
 
     let numbers
 
-    numbers = main.getPrimeNumbers(FIRST_PRIME_FILE_2)
+    numbers = main.getPrimeNumbers(config.FIRST_PRIME_PER_FILE[2])
     expect(numbers).to.have.lengthOf(1000001)
   })
 
