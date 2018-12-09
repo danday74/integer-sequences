@@ -15,6 +15,7 @@
     "prime-checksums": "node prime-checksums"
   },
   "dependencies": {
+    "big.js": "^5.2.2",
     "is-prime": "^1.0.1",
     "lodash": "^4.17.11"
   },

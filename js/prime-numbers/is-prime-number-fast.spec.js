@@ -1,3 +1,4 @@
+const Big = require('big.js')
 const chai = require('chai')
 const expect = chai.expect
 const config = require('../../config')
@@ -7,12 +8,12 @@ describe('isPrimeNumberFast', () => {
 
   it('null', () => {
     const seriesIdx = main.isPrimeNumberFast()
-    expect(seriesIdx).to.equal(undefined)
+    expect(seriesIdx).to.be.undefined
   })
 
   it('0', () => {
     const seriesIdx = main.isPrimeNumberFast(0)
-    expect(seriesIdx).to.equal(undefined)
+    expect(seriesIdx).to.be.undefined
   })
 
   it('1', () => {
@@ -26,27 +27,27 @@ describe('isPrimeNumberFast', () => {
   })
 
   it('3', () => {
-    const seriesIdx = main.isPrimeNumberFast(3)
+    const seriesIdx = main.isPrimeNumberFast(Big(3))
     expect(seriesIdx).to.equal(true)
   })
 
   it('4', () => {
-    const seriesIdx = main.isPrimeNumberFast(4)
+    const seriesIdx = main.isPrimeNumberFast(Big(4))
     expect(seriesIdx).to.equal(false)
   })
 
   it('5', () => {
-    const seriesIdx = main.isPrimeNumberFast(5)
+    const seriesIdx = main.isPrimeNumberFast(Big(5))
     expect(seriesIdx).to.equal(true)
   })
 
   it('366', () => {
-    const seriesIdx = main.isPrimeNumberFast(366)
+    const seriesIdx = main.isPrimeNumberFast('366')
     expect(seriesIdx).to.equal(false)
   })
 
   it('367', () => {
-    const seriesIdx = main.isPrimeNumberFast(367)
+    const seriesIdx = main.isPrimeNumberFast('367')
     expect(seriesIdx).to.equal(true)
   })
 

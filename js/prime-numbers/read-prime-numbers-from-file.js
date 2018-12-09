@@ -15,7 +15,7 @@ const readPrimeNumbersFromFile = max => {
   files = _.difference(files, filesRead)
 
   files.forEach(file => {
-    if (max == null || max > lastPrime) {
+    if (max == null || max.gt(lastPrime)) {
       filesRead.push(file)
       const path = DIR + '/' + file
       const contents = fs.readFileSync(path, 'utf8').replace(/\d+,\d+,\d+/, '')
@@ -25,7 +25,7 @@ const readPrimeNumbersFromFile = max => {
     }
     lastPrime = getLastPrime()
   })
-  if (max != null && max > lastPrime) throw RangeError(`Largest prime supported is ${lastPrime} but ${max} was requested`)
+  if (max != null && max.gt(lastPrime)) throw RangeError(`Largest prime supported is ${lastPrime} but ${max.toFixed()} was requested`)
   return primes
 }
 

@@ -1,7 +1,10 @@
+const Big = require('big.js')
 const isPrime = require('is-prime')
 
 const isPrimeNumberFast = (n = 0) => {
-  return n < 1 ? undefined : isPrime(n)
+  n = Big(n)
+  const num = parseInt(n.toFixed())
+  return n < 1 ? undefined : isPrime(num)
 }
 
 module.exports = isPrimeNumberFast

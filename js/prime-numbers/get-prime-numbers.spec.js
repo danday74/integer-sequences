@@ -1,3 +1,5 @@
+const _ = require('lodash')
+const Big = require('big.js')
 const chai = require('chai')
 const expect = chai.expect
 const main = require('../..')
@@ -8,6 +10,8 @@ const PRIME_NUMBERS = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 5
 describe('getPrimeNumbers', function () {
 
   this.enableTimeouts(false)
+
+  // null replaced by all
 
   it('up to 1', () => {
     const numbers = main.getPrimeNumbers(1)
@@ -20,17 +24,17 @@ describe('getPrimeNumbers', function () {
   })
 
   it('up to 3', () => {
-    const numbers = main.getPrimeNumbers(3)
+    const numbers = main.getPrimeNumbers(Big(3))
     expect(numbers).to.eql([2, 3])
   })
 
   it('up to 4', () => {
-    const numbers = main.getPrimeNumbers(4)
+    const numbers = main.getPrimeNumbers(Big(4))
     expect(numbers).to.eql([2, 3])
   })
 
   it('up to 5', () => {
-    const numbers = main.getPrimeNumbers(5)
+    const numbers = main.getPrimeNumbers('5')
     expect(numbers).to.eql([2, 3, 5])
   })
 
@@ -41,10 +45,10 @@ describe('getPrimeNumbers', function () {
     numbers = main.getPrimeNumbers(100)
     expect(numbers).to.eql(PRIME_NUMBERS)
 
-    numbers = main.getPrimeNumbers(97)
+    numbers = main.getPrimeNumbers(Big(97))
     expect(numbers).to.have.lengthOf(PRIME_NUMBERS.length)
 
-    numbers = main.getPrimeNumbers(96)
+    numbers = main.getPrimeNumbers('96')
     expect(numbers).to.have.lengthOf(PRIME_NUMBERS.length - 1)
   })
 
@@ -76,26 +80,20 @@ describe('getPrimeNumbers', function () {
 
     const numbers = main.getPrimeNumbers(config.LAST_PRIME)
     expect(numbers).to.have.lengthOf(config.LAST_PRIME_SERIES_IDX)
-    expect(numbers[numbers.length - 1]).to.equal(config.LAST_PRIME)
+    expect(_.last(numbers)).to.equal(config.LAST_PRIME)
   })
 
   it('greater than last supported prime', () => {
 
     expect(() => {
       main.getPrimeNumbers(config.LAST_PRIME + 1)
-    }).to.throw(RangeError)
+    }).to.throw(RangeError, `Largest prime supported is ${config.LAST_PRIME} but ${config.LAST_PRIME + 1} was requested`)
   })
 
   it('all primes', () => {
 
-    let numbers
-
-    numbers = main.getPrimeNumbers()
+    const numbers = main.getPrimeNumbers()
     expect(numbers).to.have.lengthOf(config.LAST_PRIME_SERIES_IDX)
-    expect(numbers[numbers.length - 1]).to.equal(config.LAST_PRIME)
-
-    numbers = main.getPrimeNumbers(null)
-    expect(numbers).to.have.lengthOf(config.LAST_PRIME_SERIES_IDX)
-    expect(numbers[numbers.length - 1]).to.equal(config.LAST_PRIME)
+    expect(_.last(numbers)).to.equal(config.LAST_PRIME)
   })
 })
