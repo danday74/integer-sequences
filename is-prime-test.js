@@ -4,6 +4,37 @@ const config = require('./config')
 const main = require('.')
 
 console.log('is-prime test running')
+
+// https://primes.utm.edu/lists/small/millions
+
+assert.equal(isPrime(982451607), false)
+assert.equal(isPrime(982451609), true)
+assert.equal(isPrime(982451611), false)
+
+assert.equal(isPrime(982451627), false)
+assert.equal(isPrime(982451629), true)
+assert.equal(isPrime(982451631), false)
+
+assert.equal(isPrime(982451651), false)
+assert.equal(isPrime(982451653), true)
+assert.equal(isPrime(982451657), false)
+
+// http://www.primos.mat.br/2T_en.html
+
+assert.equal(isPrime(47055833441), false)
+assert.equal(isPrime(47055833443), true)
+assert.equal(isPrime(47055833447), false)
+
+assert.equal(isPrime(47055833451), false)
+assert.equal(isPrime(47055833453), true)
+assert.equal(isPrime(47055833457), false)
+
+assert.equal(isPrime(47055833457), false)
+assert.equal(isPrime(47055833459), true)
+assert.equal(isPrime(47055833461), false)
+
+// main
+
 console.time('loading primes')
 const numbers = main.getNumbersAsJson(config.LAST_PRIME)
 console.timeEnd('loading primes')
