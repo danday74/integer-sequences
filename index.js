@@ -3,6 +3,7 @@ const getNPrimeNumbers = require('./js/prime-numbers/get-n-prime-numbers')
 const getSquareNumbers = require('./js/square-numbers/get-square-numbers')
 const getNSquareNumbers = require('./js/square-numbers/get-n-square-numbers')
 const getTriangleNumbers = require('./js/triangle-numbers/get-triangle-numbers')
+const getNTriangleNumbers = require('./js/triangle-numbers/get-n-triangle-numbers')
 const getNumbersAsJson = require('./js/numbers-as-json/get-numbers-as-json')
 const getNthPrimeNumber = require('./js/prime-numbers/get-nth-prime-number')
 const getNthSquareNumber = require('./js/square-numbers/get-nth-square-number')
@@ -18,6 +19,7 @@ const main = {
   getSquareNumbers,
   getNSquareNumbers,
   getTriangleNumbers,
+  getNTriangleNumbers,
   getNumbersAsJson,
   getNthPrimeNumber,
   getNthSquareNumber,
