@@ -9,6 +9,7 @@ let primes = []
 const getLastPrime = () => _.last(primes) || 0
 
 const readPrimeNumbersFromFile = max => {
+
   let lastPrime = getLastPrime()
   let files = fs.readdirSync(DIR)
 

@@ -6,6 +6,7 @@ Square numbers to Big
 Triangle numbers to Big
 Get N Numbers
 Update README
+Rename tests
 
 ## Series
 
