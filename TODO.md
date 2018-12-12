@@ -7,6 +7,7 @@ Triangle numbers to Big
 Get N Numbers
 Update README
 Rename tests
+Simplify get nth number to use get n numbers (prob for primes only)
 
 ## Series
 

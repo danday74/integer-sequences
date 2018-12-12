@@ -7,7 +7,7 @@ describe('getTriangleNumbers', () => {
 
   it('null', () => {
     const numbers = main.getTriangleNumbers()
-    expect(numbers).to.have.lengthOf(0)
+    expect(numbers).to.eql([])
   })
 
   it('up to 100', () => {
