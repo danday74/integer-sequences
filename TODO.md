@@ -4,7 +4,7 @@
 
 Square numbers to Big
 Triangle numbers to Big
-Get N Numbers
+Do something to make square and triangle use same code so real easy to add new series
 Update README
 Rename tests
 Simplify get nth number to use get n numbers (prob for primes only)
