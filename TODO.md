@@ -8,6 +8,7 @@ Do something to make square and triangle use same code so real easy to add new s
 Update README
 Rename tests
 Simplify get nth number to use get n numbers (prob for primes only)
+Consistency between spec of get-square-numbers and get-n-square-numbers, etc
 
 ## Series
 

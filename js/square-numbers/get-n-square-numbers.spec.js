@@ -1,3 +1,5 @@
+const _ = require('lodash')
+const Big = require('big.js')
 const chai = require('chai')
 const expect = chai.expect
 const main = require('../..')
@@ -10,12 +12,18 @@ describe('getNSquareNumbers', () => {
   })
 
   it('10', () => {
-    const EXPECTED = [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
-    const numbers = main.getNSquareNumbers(10)
+    const EXPECTED = [Big(1), Big(4), Big(9), Big(16), Big(25), Big(36), Big(49), Big(64), Big(81), Big(100)]
+    let numbers
+
+    numbers = main.getNSquareNumbers(10)
+    expect(numbers).to.eql(EXPECTED)
+
+    numbers = main.getNSquareNumbers(Big(10))
     expect(numbers).to.eql(EXPECTED)
   })
 
-  it('10 mill', () => {
-    main.getNSquareNumbers(10000000)
+  it('1 mill', () => {
+    const numbers = main.getNSquareNumbers('1000000')
+    expect(_.last(numbers)).to.eql(Big(1000000000000))
   })
 })
