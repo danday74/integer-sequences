@@ -9,6 +9,7 @@ Update README
 Rename tests
 Simplify get nth number to use get n numbers (prob for primes only)
 Consistency between spec of get-square-numbers and get-n-square-numbers, etc
+KEEP ALIGNED get-numbers-as-json.js and get-prime-numbers-as-json-for-testing.js
 
 ## Series
 
