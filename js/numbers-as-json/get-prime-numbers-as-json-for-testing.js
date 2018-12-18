@@ -4,6 +4,7 @@ const _ = require('lodash')
 const getPrimeNumbers = require('../prime-numbers/get-prime-numbers')
 const config = require('../../config')
 
+/* istanbul ignore next */
 const nextPrime = (series, idx, i) => {
   const num = series[idx]
   return (num === i) ? idx + 1 : (i > config.LAST_PRIME) ? /* istanbul ignore next */ null : false
@@ -11,6 +12,7 @@ const nextPrime = (series, idx, i) => {
 
 const numbers = []
 
+/* istanbul ignore next */
 const getPrimeNumbersAsJsonForTesting = (max = 0) => {
 
   if (max < 1) return []
