@@ -2,7 +2,6 @@
 
 ## Jobs
 
-Square numbers to Big
 Triangle numbers to Big
 Do something to make square and triangle use same code so real easy to add new series
 Update README
