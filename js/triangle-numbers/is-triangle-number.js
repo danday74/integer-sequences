@@ -1,7 +1,12 @@
+const Big = require('big.js')
+
 const isTriangleNumber = (n = 0) => {
-  if (n < 1) return undefined
-  const x = (Math.sqrt(8 * n + 1) - 1) / 2
-  return Number.isInteger(x) ? x : false
+  n = Big(n)
+  if (n.lt(1)) return undefined
+  // (Math.sqrt(8 * n + 1) - 1) / 2
+  const x = n.times(8).plus(1).sqrt().minus(1).div(2)
+  const intX = x.round()
+  return x.eq(intX) ? intX : false
 }
 
 module.exports = isTriangleNumber

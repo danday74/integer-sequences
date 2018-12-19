@@ -12,14 +12,9 @@ const nextPrime = (series, idx, i) => {
   return (num === i) ? idx + 1 : (i > config.LAST_PRIME) ? /* istanbul ignore next */ null : false
 }
 
-const nextBig = (series, idx, i) => {
-  const num = series[idx]
-  return (num && num.eq(i)) ? Big(idx + 1) : false
-}
-
 const next = (series, idx, i) => {
   const num = series[idx]
-  return (num === i) ? idx + 1 : false
+  return (num && num.eq(i)) ? Big(idx + 1) : false
 }
 
 const numbers = []
@@ -47,7 +42,7 @@ const getNumbersAsJson = (max = 0) => {
     const json = {
       number: i,
       prime: nextPrime(p, pIdx, i),
-      square: nextBig(s, sIdx, i),
+      square: next(s, sIdx, i),
       triangle: next(t, tIdx, i)
     }
 
