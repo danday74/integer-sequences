@@ -2,7 +2,6 @@
 
 ## Jobs
 
-Fix skipped test
 Update README
 
 ## Series

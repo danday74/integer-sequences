@@ -34,9 +34,9 @@ const getNumbersAsJson = (max = 0) => {
   const s = getSquareNumbers(max)
   const t = getTriangleNumbers(max)
 
-  let pIdx = _.sortedIndex(p, numbers.length)
-  let sIdx = _.sortedIndex(s, numbers.length)
-  let tIdx = _.sortedIndex(t, numbers.length)
+  let pIdx = _.sortedIndex(p, numbers.length + 1)
+  let sIdx = _.sortedIndex(s, numbers.length + 1)
+  let tIdx = _.sortedIndex(t, numbers.length + 1)
 
   const intMax = parseInt(max.toFixed()) // faster
   for (let i = numbers.length + 1; i <= intMax; i++) {

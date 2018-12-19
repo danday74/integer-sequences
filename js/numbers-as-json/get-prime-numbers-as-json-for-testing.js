@@ -27,7 +27,7 @@ const getNumbersAsJson = (max = 0) => {
     p = getPrimeNumbers()
   }
 
-  let pIdx = _.sortedIndex(p, numbers.length)
+  let pIdx = _.sortedIndex(p, numbers.length + 1)
 
   const intMax = parseInt(max.toFixed()) // faster
   for (let i = numbers.length + 1; i <= intMax; i++) {

@@ -11,7 +11,7 @@ describe('examples', () => {
     expect(value).to.equal('29')
   })
 
-  xit('example 2', () => {
+  it('example 2', () => {
     const json = main.getNumbersAsJson(7)
     expect(json).to.eql([
       {number: 1, prime: false, triangle: Big(1), square: Big(1)},
