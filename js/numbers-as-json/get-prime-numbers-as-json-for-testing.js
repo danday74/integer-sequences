@@ -14,7 +14,7 @@ const nextPrime = (series, idx, i) => {
 const numbers = []
 
 /* istanbul ignore next */
-const getPrimeNumbersAsJsonForTesting = (max = 0) => {
+const getNumbersAsJson = (max = 0) => {
 
   max = Big(max)
   if (max.lt(1)) return []
@@ -46,4 +46,4 @@ const getPrimeNumbersAsJsonForTesting = (max = 0) => {
   return (max.eq(numbers.length)) ? numbers : numbers.slice(0, max)
 }
 
-module.exports = getPrimeNumbersAsJsonForTesting
+module.exports = getNumbersAsJson
