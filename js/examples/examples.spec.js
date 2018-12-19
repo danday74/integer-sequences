@@ -3,45 +3,24 @@ const chai = require('chai')
 const expect = chai.expect
 const main = require('../..')
 
-describe('getNthSquareNumber', () => {
+describe('examples', () => {
 
-  it('null', () => {
-    const number = main.getNthSquareNumber()
-    expect(number).to.be.undefined
+  it('example 1', () => {
+    const bigObj = main.getNthPrimeNumber(10)
+    const value = bigObj.toFixed()
+    expect(value).to.equal('29')
   })
 
-  it('S0', () => {
-    const number = main.getNthSquareNumber(0)
-    expect(number).to.be.undefined
-  })
-
-  it('S1', () => {
-    const number = main.getNthSquareNumber(1)
-    expect(number).to.eql(Big(1))
-  })
-
-  it('S2', () => {
-    const number = main.getNthSquareNumber(2)
-    expect(number).to.eql(Big(4))
-  })
-
-  it('S3', () => {
-    const number = main.getNthSquareNumber(Big(3))
-    expect(number).to.eql(Big(9))
-  })
-
-  it('S4', () => {
-    const number = main.getNthSquareNumber(Big(4))
-    expect(number).to.eql(Big(16))
-  })
-
-  it('S5', () => {
-    const number = main.getNthSquareNumber('5')
-    expect(number).to.eql(Big(25))
-  })
-
-  it('S73', () => {
-    const number = main.getNthSquareNumber('73')
-    expect(number).to.eql(Big(5329))
+  xit('example 2', () => {
+    const json = main.getNumbersAsJson(7)
+    expect(json).to.eql([
+      {number: 1, prime: false, triangle: Big(1), square: Big(1)},
+      {number: 2, prime: 1, triangle: false, square: false},
+      {number: 3, prime: 2, triangle: Big(2), square: false},
+      {number: 4, prime: false, triangle: false, square: Big(2)},
+      {number: 5, prime: 3, triangle: false, square: false},
+      {number: 6, prime: false, triangle: Big(3), square: false},
+      {number: 7, prime: 4, triangle: false, square: false}
+    ])
   })
 })
