@@ -6,6 +6,6 @@
 [![dependencies](https://david-dm.org/danday74/math-sequences/status.svg)](https://david-dm.org/danday74/math-sequences)
 [![downloads](https://img.shields.io/npm/dm/math-sequences.svg)](https://www.npmjs.com/package/math-sequences)
 
-**Calculates triangle numbers, square numbers, prime numbers, etc**
+**Easy access to triangle numbers, square numbers, prime numbers, etc**
 
 
