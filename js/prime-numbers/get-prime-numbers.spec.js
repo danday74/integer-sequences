@@ -5,54 +5,58 @@ const expect = chai.expect
 const main = require('../..')
 const config = require('../../config')
 
-const PRIME_NUMBERS = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97]
-
 describe('getPrimeNumbers', function () {
 
   this.enableTimeouts(false)
 
   // null replaced by all
 
-  it('up to 1', () => {
+  it('list 0', () => {
+    const numbers = main.getPrimeNumbers(0)
+    expect(numbers).to.eql([])
+  })
+
+  it('list 1', () => {
     const numbers = main.getPrimeNumbers(1)
     expect(numbers).to.eql([])
   })
 
-  it('up to 2', () => {
-    const numbers = main.getPrimeNumbers(2)
+  it('list 2', () => {
+    const numbers = main.getPrimeNumbers(Big(2))
     expect(numbers).to.eql([2])
   })
 
-  it('up to 3', () => {
+  it('list 3', () => {
     const numbers = main.getPrimeNumbers(Big(3))
     expect(numbers).to.eql([2, 3])
   })
 
-  it('up to 4', () => {
-    const numbers = main.getPrimeNumbers(Big(4))
+  it('list 4', () => {
+    const numbers = main.getPrimeNumbers('4')
     expect(numbers).to.eql([2, 3])
   })
 
-  it('up to 5', () => {
+  it('list 5', () => {
     const numbers = main.getPrimeNumbers('5')
     expect(numbers).to.eql([2, 3, 5])
   })
 
-  it('up to 100', () => {
+  it('list 100', () => {
 
+    const EXPECTED = config.PRIME_NUMBERS_UPTO_100
     let numbers
 
     numbers = main.getPrimeNumbers(100)
-    expect(numbers).to.eql(PRIME_NUMBERS)
+    expect(numbers).to.eql(EXPECTED)
 
     numbers = main.getPrimeNumbers(Big(97))
-    expect(numbers).to.have.lengthOf(PRIME_NUMBERS.length)
+    expect(numbers).to.eql(EXPECTED)
 
     numbers = main.getPrimeNumbers('96')
-    expect(numbers).to.have.lengthOf(PRIME_NUMBERS.length - 1)
+    expect(numbers).to.have.lengthOf(EXPECTED.length - 1)
   })
 
-  it('up to end of 1st file', () => {
+  it('list end of 1st file', () => {
 
     let numbers
 
@@ -60,7 +64,7 @@ describe('getPrimeNumbers', function () {
     expect(numbers).to.have.lengthOf(1000000)
   })
 
-  it('up to start of 2nd file (before first prime)', () => {
+  it('list start of 2nd file (before first prime)', () => {
 
     let numbers
 
@@ -68,7 +72,7 @@ describe('getPrimeNumbers', function () {
     expect(numbers).to.have.lengthOf(1000000)
   })
 
-  it('up to start of 2nd file (first prime)', () => {
+  it('list start of 2nd file (first prime)', () => {
 
     let numbers
 
@@ -76,21 +80,21 @@ describe('getPrimeNumbers', function () {
     expect(numbers).to.have.lengthOf(1000001)
   })
 
-  it('up to last supported prime', () => {
+  it('list last supported prime', () => {
 
     const numbers = main.getPrimeNumbers(config.LAST_PRIME)
     expect(numbers).to.have.lengthOf(config.LAST_PRIME_SERIES_IDX)
     expect(_.last(numbers)).to.equal(config.LAST_PRIME)
   })
 
-  it('greater than last supported prime', () => {
+  it('list greater than last supported prime', () => {
 
     expect(() => {
       main.getPrimeNumbers(config.LAST_PRIME + 1)
     }).to.throw(RangeError, `Largest prime supported is ${config.LAST_PRIME} but ${config.LAST_PRIME + 1} was requested`)
   })
 
-  it('all primes', () => {
+  it('list all primes', () => {
 
     const numbers = main.getPrimeNumbers()
     expect(numbers).to.have.lengthOf(config.LAST_PRIME_SERIES_IDX)
