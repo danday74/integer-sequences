@@ -42,18 +42,18 @@ describe('getNumbersAsJson', function () {
   it('1 mill', () => {
     const number = 1000000
     const numbers = main.getNumbersAsJson(number)
-    expect(_.last(numbers)).to.eql({number: number, prime: false, triangle: false, square: Big(1000)})
+    expect(_.last(numbers)).to.eql({number, prime: false, triangle: false, square: Big(1000)})
   })
 
   it('first prime over 1 mill', () => {
     const number = 1000003
-    const numbers = main.getNumbersAsJson(number)
-    expect(_.last(numbers)).to.eql({number: number, prime: 78499, triangle: false, square: false})
+    const numbers = main.getNumbersAsJson(Big(number))
+    expect(_.last(numbers)).to.eql({number, prime: 78499, triangle: false, square: false})
   })
 
   it('smaller after bigger', () => {
     const number = 5
-    const numbers = main.getNumbersAsJson(number)
-    expect(_.last(numbers)).to.eql({number: 5, prime: 3, triangle: false, square: false})
+    const numbers = main.getNumbersAsJson(number.toString())
+    expect(_.last(numbers)).to.eql({number, prime: 3, triangle: false, square: false})
   })
 })

@@ -3,7 +3,6 @@
 ## Jobs
 
 compare triangle numbers to square numbers
-numbers as json to Big?
 Do something to make square and triangle use same code so real easy to add new series
 Update README
 Rename tests

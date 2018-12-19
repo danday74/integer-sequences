@@ -21,7 +21,8 @@ const numbers = []
 
 const getNumbersAsJson = (max = 0) => {
 
-  if (max < 1) return []
+  max = Big(max)
+  if (max.lt(1)) return []
 
   let p
   try {
@@ -54,7 +55,7 @@ const getNumbersAsJson = (max = 0) => {
   }
 
   // improves performance by avoiding slice where possible
-  return (max === numbers.length) ? numbers : numbers.slice(0, max)
+  return (max.eq(numbers.length)) ? numbers : numbers.slice(0, max)
 }
 
 module.exports = getNumbersAsJson
