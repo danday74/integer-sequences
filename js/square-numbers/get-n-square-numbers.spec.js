@@ -4,7 +4,9 @@ const chai = require('chai')
 const expect = chai.expect
 const main = require('../..')
 
-describe('getNSquareNumbers', () => {
+describe('getNSquareNumbers', function () {
+
+  this.enableTimeouts(false)
 
   it('null', () => {
     const numbers = main.getNSquareNumbers()
