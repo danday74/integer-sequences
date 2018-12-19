@@ -3,8 +3,6 @@
 ## Jobs
 
 Update README
-Simplify get nth number to use get n numbers (prob for primes only)
-KEEP ALIGNED get-numbers-as-json.js and get-prime-numbers-as-json-for-testing.js
 
 ## Series
 
