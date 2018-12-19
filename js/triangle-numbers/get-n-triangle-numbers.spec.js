@@ -1,10 +1,11 @@
-const Big = require('big.js')
 const _ = require('lodash')
+const Big = require('big.js')
 const chai = require('chai')
 const expect = chai.expect
 const main = require('../..')
+const config = require('../../config')
 
-describe('getNTriangleNumbers', function() {
+describe('getNTriangleNumbers', function () {
 
   this.enableTimeouts(false)
 
@@ -13,8 +14,8 @@ describe('getNTriangleNumbers', function() {
     expect(numbers).to.eql([])
   })
 
-  it('13', () => {
-    const EXPECTED = [Big(1), Big(3), Big(6), Big(10), Big(15), Big(21), Big(28), Big(36), Big(45), Big(55), Big(66), Big(78), Big(91)]
+  it('list n=13', () => {
+    const EXPECTED = config.TRIANGLE_NUMBERS_UPTO_100
     let numbers
 
     numbers = main.getNTriangleNumbers(13)
@@ -24,7 +25,7 @@ describe('getNTriangleNumbers', function() {
     expect(numbers).to.eql(EXPECTED)
   })
 
-  it('1 mill', () => {
+  it('list n=1m', () => {
     const numbers = main.getNTriangleNumbers('1000000')
     expect(_.last(numbers)).to.eql(Big(500000500000))
   })

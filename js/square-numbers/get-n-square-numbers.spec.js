@@ -3,6 +3,7 @@ const Big = require('big.js')
 const chai = require('chai')
 const expect = chai.expect
 const main = require('../..')
+const config = require('../../config')
 
 describe('getNSquareNumbers', function () {
 
@@ -13,8 +14,8 @@ describe('getNSquareNumbers', function () {
     expect(numbers).to.eql([])
   })
 
-  it('10', () => {
-    const EXPECTED = [Big(1), Big(4), Big(9), Big(16), Big(25), Big(36), Big(49), Big(64), Big(81), Big(100)]
+  it('list n=10', () => {
+    const EXPECTED = config.SQUARE_NUMBERS_UPTO_100
     let numbers
 
     numbers = main.getNSquareNumbers(10)
@@ -24,7 +25,7 @@ describe('getNSquareNumbers', function () {
     expect(numbers).to.eql(EXPECTED)
   })
 
-  it('1 mill', () => {
+  it('list n=1m', () => {
     const numbers = main.getNSquareNumbers('1000000')
     expect(_.last(numbers)).to.eql(Big(1000000000000))
   })

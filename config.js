@@ -1,3 +1,5 @@
+const _ = require('lodash')
+const Big = require('big.js')
 const LAST_PRIME = 104395301
 
 const config = {
@@ -19,7 +21,9 @@ const config = {
     4: 67867967,
     5: 86028121,
     6: LAST_PRIME
-  }
+  },
+  SQUARE_NUMBERS_UPTO_100: _.map([1, 4, 9, 16, 25, 36, 49, 64, 81, 100], Big),
+  TRIANGLE_NUMBERS_UPTO_100: _.map([1, 3, 6, 10, 15, 21, 28, 36, 45, 55, 66, 78, 91], Big)
 }
 
 module.exports = config
