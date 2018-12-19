@@ -69,6 +69,8 @@ Returns:
 ]
 ```
 
+NOTE: The values for `prime` in this JSON are numeric for performance reasons.
+
 
 
 
