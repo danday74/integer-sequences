@@ -26,9 +26,9 @@ Numeric arguments can be given as:
 * Big.js objects - e.g. `isPrimeNumber(Big('1000000'))` or `isPrimeNumber(Big(1000000))`
 * numbers - e.g. `isPrimeNumber(1000000)`
 
-Function return values are typically Big.js objects.
+Function return values are typically [Big.js](http://mikemcl.github.io/big.js) objects.
 
-To access a Big.js object value:
+To access a [Big.js](http://mikemcl.github.io/big.js) object value:
 
 ```javascript 1.7
 const ms = require('math-sequences')
@@ -45,7 +45,9 @@ console.log(value) // logs '29'
 
 ## General
 
-getNumbersAsJson(max: number) - Returns a JSON object providing data on a list of numbers.
+```
+ms.getNumbersAsJson(max: number)  // Returns a JSON object providing data on a list of numbers.
+```
 
 Example:
 
