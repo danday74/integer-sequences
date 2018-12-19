@@ -14,6 +14,11 @@ describe('getNSquareNumbers', function () {
     expect(numbers).to.eql([])
   })
 
+  it('list n=0', () => {
+    const numbers = main.getNSquareNumbers(0)
+    expect(numbers).to.eql([])
+  })
+
   it('list n=10', () => {
     const EXPECTED = config.SQUARE_NUMBERS_UPTO_100
     let numbers

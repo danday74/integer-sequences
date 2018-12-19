@@ -14,6 +14,11 @@ describe('getNTriangleNumbers', function () {
     expect(numbers).to.eql([])
   })
 
+  it('list n=0', () => {
+    const numbers = main.getNTriangleNumbers(0)
+    expect(numbers).to.eql([])
+  })
+
   it('list n=13', () => {
     const EXPECTED = config.TRIANGLE_NUMBERS_UPTO_100
     let numbers

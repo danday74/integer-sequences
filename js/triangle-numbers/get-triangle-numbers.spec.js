@@ -12,6 +12,11 @@ describe('getTriangleNumbers', () => {
     expect(numbers).to.eql([])
   })
 
+  it('list 0', () => {
+    const numbers = main.getTriangleNumbers(0)
+    expect(numbers).to.eql([])
+  })
+
   it('list 100', () => {
 
     const EXPECTED = config.TRIANGLE_NUMBERS_UPTO_100
