@@ -29,7 +29,8 @@ const getPrimeNumbersAsJsonForTesting = (max = 0) => {
 
   let pIdx = _.sortedIndex(p, numbers.length)
 
-  for (let i = numbers.length + 1; i <= max; i++) {
+  const intMax = parseInt(max.toFixed()) // faster
+  for (let i = numbers.length + 1; i <= intMax; i++) {
 
     const json = {
       number: i,
