@@ -39,13 +39,13 @@ describe('getNumbersAsJson', function () {
     expect(numbers).to.eql(EXPECTED)
   })
 
-  it('1 mill', () => {
+  it('1m', () => {
     const number = 1000000
     const numbers = main.getNumbersAsJson(number)
     expect(_.last(numbers)).to.eql({number, prime: false, triangle: false, square: Big(1000)})
   })
 
-  it('first prime over 1 mill', () => {
+  it('first prime over 1m', () => {
     const number = 1000003
     const numbers = main.getNumbersAsJson(Big(number))
     expect(_.last(numbers)).to.eql({number, prime: 78499, triangle: false, square: false})
