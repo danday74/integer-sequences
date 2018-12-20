@@ -23,7 +23,7 @@ Functional library for precise access to math sequences. Cached access offers pe
 ```javascript 1.7
 const ms = require('math-sequences')
 ms.getPrimeNumbers(100000000)  // takes 2145ms - first call
-ms.getPrimeNumbers(100000000)  // takes 23ms - second call
+ms.getPrimeNumbers(100000000)  // takes 23ms - second cached call
 ```
 
 Makes use of [Big.js](http://mikemcl.github.io/big.js) to guarantee precision when working with big numbers.
