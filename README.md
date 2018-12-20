@@ -26,7 +26,7 @@ ms.getPrimeNumbers(100000000)  // takes 2145ms - first call
 ms.getPrimeNumbers(100000000)  // takes 23ms - second cached call
 ```
 
-Makes use of [Big.js](http://mikemcl.github.io/big.js) to guarantee precision when working with big numbers.
+It makes use of [Big.js](http://mikemcl.github.io/big.js) to guarantee precision when working with big numbers.
 
 Numeric arguments can be given as:
  
