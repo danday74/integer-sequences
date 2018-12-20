@@ -49,7 +49,7 @@ console.log(value) // logs '29'
 
 <br>
 
-## General
+## Misc functions
 
 ```
 ms.getNumbersAsJson(max: number)  // Returns a JSON object providing data on a list of numbers.
