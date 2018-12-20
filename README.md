@@ -75,7 +75,7 @@ Returns:
 ]
 ```
 
-NOTE: Prime values may be numeric for performance reasons.
+NOTE: Prime values returned may be of type `number` for performance reasons.
 
 
 
