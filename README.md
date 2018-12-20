@@ -6,9 +6,7 @@
 [![dependencies](https://david-dm.org/danday74/math-sequences/status.svg)](https://david-dm.org/danday74/math-sequences)
 [![downloads](https://img.shields.io/npm/dm/math-sequences.svg)](https://www.npmjs.com/package/math-sequences)
 
-**Easy access to triangle numbers, square numbers, prime numbers, etc**
-
-`npm install --save math-sequences`
+**Functional library for precise access to math sequences such as prime numbers, square numbers, triangle numbers, etc**
 
 
 
@@ -16,15 +14,25 @@
 
 <br>
 
-## Info
+## Intro
+
+`npm install --save math-sequences`
+
+Functional library for precise access to math sequences. Cached access offers performance. For example:
+
+```javascript 1.7
+const ms = require('math-sequences')
+ms.getPrimeNumbers(100000000)  // takes 2145ms - first call
+ms.getPrimeNumbers(100000000)  // takes 23ms - second call
+```
 
 Makes use of [Big.js](http://mikemcl.github.io/big.js) to guarantee precision when working with big numbers.
 
 Numeric arguments can be given as:
  
-* strings - e.g. `isPrimeNumber('1000000')`
-* Big.js objects - e.g. `isPrimeNumber(Big('1000000'))` or `isPrimeNumber(Big(1000000))`
-* numbers - e.g. `isPrimeNumber(1000000)`
+* strings - e.g. `ms.isPrimeNumber('1000000')`
+* Big.js objects - e.g. `ms.isPrimeNumber(Big('1000000'))` or `ms.isPrimeNumber(Big(1000000))`
+* numbers - e.g. `ms.isPrimeNumber(1000000)`
 
 Function return values are typically [Big.js](http://mikemcl.github.io/big.js) objects.
 
@@ -104,3 +112,21 @@ ms.getNTriangleNumbers(n: number)
 ms.getNthTriangleNumber(n: number)
 ms.isTriangleNumber(n: number)
 ```
+
+
+
+
+
+<br>
+
+## Author says
+
+People think I am religious. Wrong. People think religion is boring! So do I. Worse than that, man-made religion is destructive. Jesus himself warned against it.
+
+What Jesus wants is relationship. To be your friend. This [video](https://www.youtube.com/watch?v=1IAhDGYlpqY) explains it perfectly.
+
+Remember, Jesus is alive, and you can be too if you believe and turn away from your sin :)
+
+> For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life. 17 For God did not send his Son into the world to condemn the world, but to save the world through him. 18 Whoever believes in him is not condemned, but whoever does not believe stands condemned already because they have not believed in the name of God’s one and only Son.
+
+[John 3:16](https://www.biblegateway.com/passage/?search=John+3%3A16-18&version=NIV)
