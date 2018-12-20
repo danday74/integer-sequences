@@ -125,10 +125,12 @@ People think I am religious. Wrong. People think religion is boring! So do I. Wo
 
 What Jesus wants is relationship. To be your friend. This [video](https://www.youtube.com/watch?v=1IAhDGYlpqY) explains it perfectly.
 
-Remember, Jesus is alive, and you can be too if you believe and turn away from your sin :)
+Remember, Jesus is alive, and you can be too if you believe and leave your life of sin :)
 
 > For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life. 17 For God did not send his Son into the world to condemn the world, but to save the world through him. 18 Whoever believes in him is not condemned, but whoever does not believe stands condemned already because they have not believed in the name of God’s one and only Son.
 
 [John 3:16](https://www.biblegateway.com/passage/?search=John+3%3A16-18&version=NIV)
+
+"He is no fool who gives up what he cannot keep to gain that which he cannot lose" Jim Elliot
 
 
