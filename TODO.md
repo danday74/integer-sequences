@@ -3,6 +3,7 @@
 Cubic numbers (Pascals triangle - Star of David)
 Fibonacci numbers
 Padovan numbers (Pascals triangle)
+Tetrahedral
 
 # PRIORITY 2
 
@@ -12,7 +13,6 @@ Winnies triangle
 
 ## Series
 
-Tetrahedral
 Powers of 2 (Pascals triangle)
 Catalan numbers (Pascals triangle)
 Pentagonal, Hexagonal, etc
