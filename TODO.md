@@ -21,6 +21,7 @@ Pentagonal, Hexagonal, etc
 
 Pascals triangle
 Sierpinski triangle
+333
 
 ## Constants
 
