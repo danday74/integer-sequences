@@ -121,7 +121,7 @@ ms.isTriangleNumber(n: number)
 
 People think I am religious. Wrong. People think religion is boring! So do I. Worse than that, man-made religion is destructive. Jesus himself warned against it.
 
-What Jesus wants is relationship, to be your friend. This [video](https://www.youtube.com/watch?v=1IAhDGYlpqY) explains it perfectly.
+What Jesus wants is relationship; to be your friend. This [video](https://www.youtube.com/watch?v=1IAhDGYlpqY) explains it perfectly.
 
 Remember, Jesus is alive, and you can be too if you believe in Him and leave your life of sin :)
 
