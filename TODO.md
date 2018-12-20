@@ -1,24 +1,26 @@
-# TODO
-
-## Jobs
-
-Update README
-
-## Series
+# PRIORITY 1
 
 Cubic numbers (Pascals triangle - Star of David)
 Fibonacci numbers
+Padovan numbers (Pascals triangle)
+
+# PRIORITY 2
+
+Winnies triangle
+
+# MIGHT DO
+
+## Series
+
 Tetrahedral
 Powers of 2 (Pascals triangle)
 Catalan numbers (Pascals triangle)
-Padovan numbers (Pascals triangle)
 Pentagonal, Hexagonal, etc
 
 ## Triangles
 
 Pascals triangle
 Sierpinski triangle
-Winnies triangle
 
 ## Constants
 
@@ -49,13 +51,12 @@ Every square number is also the sum of two consecutive triangle numbers
 ## Site
 
 Links to useful resources
-Watch Joseph many colours video - John Kostik
+Watch Joseph many colours video by John Kostik
 
 ## Other
 
-Euler's triangle
+Eulers triangle
 Fibonacci triangle
-Star of David Factorials
-37s
+Star of David factorials
 
 
