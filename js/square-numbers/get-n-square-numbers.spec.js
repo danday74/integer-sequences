@@ -5,5 +5,5 @@ const config = require('../../config')
 
 describe('getNSquareNumbers', function () {
   this.enableTimeouts(false)
-  spec(main.getNSquareNumbers, 10, config.SQUARE_NUMBERS_UPTO_100, Big(1000000000000))
+  spec(main.getNSquareNumbers, config.SQUARE_NUMBERS_UPTO_100, 10, Big(1000000000000))
 })

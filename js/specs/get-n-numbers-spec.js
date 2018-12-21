@@ -3,7 +3,7 @@ const Big = require('big.js')
 const chai = require('chai')
 const expect = chai.expect
 
-module.exports = (numberFunc, upTo100Count, upTo100, expected1Mill) => {
+module.exports = (numberFunc, upTo100, upTo100Count, expected1Mill) => {
 
   it('null', () => {
     const numbers = numberFunc()
