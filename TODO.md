@@ -16,6 +16,7 @@ Winnies triangle
 Powers of 2 (Pascals triangle)
 Catalan numbers (Pascals triangle)
 Pentagonal, Hexagonal, etc
+Pascal / Winnies triangle - 1, 4, 16, 62
 
 ## Triangles
 
