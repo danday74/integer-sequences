@@ -1,37 +1,9 @@
-const _ = require('lodash')
 const Big = require('big.js')
-const chai = require('chai')
-const expect = chai.expect
 const main = require('../..')
 const config = require('../../config')
+const spec = require('../specs/get-n-numbers-spec')
 
 describe('getNTriangleNumbers', function () {
-
   this.enableTimeouts(false)
-
-  it('null', () => {
-    const numbers = main.getNTriangleNumbers()
-    expect(numbers).to.eql([])
-  })
-
-  it('list n=0', () => {
-    const numbers = main.getNTriangleNumbers(0)
-    expect(numbers).to.eql([])
-  })
-
-  it('list n=13', () => {
-    const EXPECTED = config.TRIANGLE_NUMBERS_UPTO_100
-    let numbers
-
-    numbers = main.getNTriangleNumbers(13)
-    expect(numbers).to.eql(EXPECTED)
-
-    numbers = main.getNTriangleNumbers(Big(13))
-    expect(numbers).to.eql(EXPECTED)
-  })
-
-  it('list n=1m', () => {
-    const numbers = main.getNTriangleNumbers('1000000')
-    expect(_.last(numbers)).to.eql(Big(500000500000))
-  })
+  spec(main.getNTriangleNumbers, config.TRIANGLE_NUMBERS_UPTO_100, 13, Big(500000500000))
 })
