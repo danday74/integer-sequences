@@ -1,7 +1,7 @@
 # TODO
 
-Shared specs seem to need unnecessary params
-strDrop needs strDropPlusOne implementing
+Shared specs are concerned with type
+Cube to numbersasjson
 
 # PRIORITY 1
 
