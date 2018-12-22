@@ -1,6 +1,6 @@
 # TODO
 
-Cube to numbersasjson
+Update README for cube
 
 # PRIORITY 1
 
