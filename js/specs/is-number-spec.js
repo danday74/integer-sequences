@@ -2,7 +2,9 @@ const Big = require('big.js')
 const chai = require('chai')
 const expect = chai.expect
 
-module.exports = (numberFunc, expected, str73Minus1, str73) => {
+module.exports = (numberFunc, expected, str73) => {
+
+  const str73Minus1 = Big(str73).minus(1).toFixed()
 
   it('null', () => {
     const seriesIdx = numberFunc()
