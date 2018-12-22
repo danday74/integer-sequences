@@ -22,6 +22,7 @@ const config = {
     5: 86028121,
     6: LAST_PRIME
   },
+  CUBIC_NUMBERS_UPTO_100: _.map([1, 8, 27, 64], Big),
   PRIME_NUMBERS_UPTO_100: [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97],
   SQUARE_NUMBERS_UPTO_100: _.map([1, 4, 9, 16, 25, 36, 49, 64, 81, 100], Big),
   TRIANGLE_NUMBERS_UPTO_100: _.map([1, 3, 6, 10, 15, 21, 28, 36, 45, 55, 66, 78, 91], Big)
