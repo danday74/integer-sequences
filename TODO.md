@@ -2,7 +2,6 @@
 
 Shared specs seem to need unnecessary params
 strDrop needs strDropPlusOne implementing
-Add test for 1m getJson
 Cubic to cube
 
 # PRIORITY 1
