@@ -1,9 +1,9 @@
 const getNumbersAsJson = require('./js/numbers-as-json/get-numbers-as-json')
 
-const getCubicNumbers = require('./js/cubic-numbers/get-cubic-numbers')
-const getNCubicNumbers = require('./js/cubic-numbers/get-n-cubic-numbers')
-const getNthCubicNumber = require('./js/cubic-numbers/get-nth-cubic-number')
-const isCubicNumber = require('./js/cubic-numbers/is-cubic-number')
+const getCubeNumbers = require('./js/cube-numbers/get-cube-numbers')
+const getNCubeNumbers = require('./js/cube-numbers/get-n-cube-numbers')
+const getNthCubeNumber = require('./js/cube-numbers/get-nth-cube-number')
+const isCubeNumber = require('./js/cube-numbers/is-cube-number')
 
 const getPrimeNumbers = require('./js/prime-numbers/get-prime-numbers')
 const getNPrimeNumbers = require('./js/prime-numbers/get-n-prime-numbers')
@@ -24,10 +24,10 @@ const isTriangleNumber = require('./js/triangle-numbers/is-triangle-number')
 const main = {
   getNumbersAsJson,
 
-  getCubicNumbers,
-  getNCubicNumbers,
-  getNthCubicNumber,
-  isCubicNumber,
+  getCubeNumbers,
+  getNCubeNumbers,
+  getNthCubeNumber,
+  isCubeNumber,
 
   getPrimeNumbers,
   getNPrimeNumbers,

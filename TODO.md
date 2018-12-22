@@ -2,11 +2,10 @@
 
 Shared specs seem to need unnecessary params
 strDrop needs strDropPlusOne implementing
-Cubic to cube
 
 # PRIORITY 1
 
-Cubic numbers (Pascals triangle - Star of David)
+Cube numbers (Pascals triangle - Star of David)
 Fibonacci numbers
 Padovan numbers (Pascals triangle)
 Tetrahedral
