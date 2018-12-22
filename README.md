@@ -86,7 +86,7 @@ NOTE: Prime values returned may be of type `number` for performance reasons.
 ## Prime numbers
 
 ```
-ms.getPrimeNumbers(max: number)  // Returns list of primes, the last being <= max
+ms.getPrimeNumbers(max: number)  // Returns list of primes, the last being the largest <= max
 ms.getNPrimeNumbers(n: number)   // Returns the first n primes
 ms.getNthPrimeNumber(n: number)  // Returns the nth prime
 ms.isPrimeNumber(n: number)      // Returns a boolean, is n a prime?
