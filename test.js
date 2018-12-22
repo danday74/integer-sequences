@@ -1,13 +1,11 @@
 const _ = require('lodash')
 const assert = require('assert')
 const config = require('./config')
-const getPrimeNumbers = require('./js/prime-numbers/get-prime-numbers')
 const getPrimeNumberAsJsonForTesting = require('./js/numbers-as-json/get-prime-numbers-as-json-for-testing')
+const main = require('.')
 
 let json
 let number
-
-console.log('tests running')
 
 const test = (testName, expected) => {
   console.time(testName)
@@ -18,12 +16,18 @@ const test = (testName, expected) => {
   console.timeEnd(testName)
 }
 
+console.log('tests running')
+
+console.time('get numbers as json')
+main.getNumbersAsJson(1000000)
+console.timeEnd('get numbers as json')
+
 console.time('get primes 100000000')
-getPrimeNumbers(100000000)
+main.getPrimeNumbers(100000000)
 console.timeEnd('get primes 100000000')
 
 console.time('get primes 100000000')
-getPrimeNumbers(100000000)
+main.getPrimeNumbers(100000000)
 console.timeEnd('get primes 100000000')
 
 test('last prime minus 1', {number: config.LAST_PRIME - 1, prime: false})
