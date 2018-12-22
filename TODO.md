@@ -1,10 +1,5 @@
-# TODO
-
-Update README for cube
-
 # PRIORITY 1
 
-Cube numbers (Pascals triangle - Star of David)
 Fibonacci numbers
 Padovan numbers (Pascals triangle)
 Tetrahedral
@@ -53,6 +48,7 @@ Perfect numbers
 
 Any whole number can be written as the sum of at most three triangle numbers
 Every square number is also the sum of two consecutive triangle numbers
+Cube numbers are in Pascals triangle as Stars of David
 
 ## Site
 
