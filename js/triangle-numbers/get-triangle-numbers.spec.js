@@ -4,5 +4,5 @@ const config = require('../../config')
 const spec = require('../specs/get-numbers-spec')
 
 describe('getTriangleNumbers', () => {
-  spec(main.getTriangleNumbers, config.TRIANGLE_NUMBERS_UPTO_100, Big(99991011))
+  spec(main.getTriangleNumbers, config.TRIANGLE_NUMBERS_UPTO_100, Big('99991011'))
 })
