@@ -1,6 +1,5 @@
 # TODO
 
-Shared specs are concerned with type
 Cube to numbersasjson
 
 # PRIORITY 1
