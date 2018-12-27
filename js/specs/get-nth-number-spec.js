@@ -43,4 +43,9 @@ module.exports = (numberFunc, seriesKey, expected) => {
     const number = numberFunc('73')
     expect(number).to.eql(expected[5])
   })
+
+  it(seriesKey + '100m', () => {
+    const number = numberFunc('100000000')
+    expect(number).to.eql(expected[6])
+  })
 }
