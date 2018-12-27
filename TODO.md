@@ -1,6 +1,11 @@
+# IN PROGRESS
+
+prob need to rewrite is-number-spec.js (see get-nth-number-spec.js)
+Fibonacci numbers
+Consider series 0 (fib has 0 but others do not - consistency - avoid 0 for performance?)
+
 # PRIORITY 1
 
-Fibonacci numbers
 Padovan numbers (Pascals triangle)
 Tetrahedral
 
