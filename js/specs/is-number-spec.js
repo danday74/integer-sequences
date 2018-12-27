@@ -7,9 +7,9 @@ module.exports = (numberFunc, seriesKey, expected, big73, big100m) => {
   const str73 = big73.toFixed()
   const str73Minus1 = big73.minus(1).toFixed()
 
-  const str100m = big100m ? big100m.toFixed() : null
-  const str100mMinus1 = big100m ? big100m.minus(1).toFixed() : null
-  const itIf = big100m ? it : xit
+  const str100m = big100m ? big100m.toFixed() : /* istanbul ignore next */ null
+  const str100mMinus1 = big100m ? big100m.minus(1).toFixed() : /* istanbul ignore next */ null
+  const itIf = big100m ? it : /* istanbul ignore next */ xit
 
   it('null', () => {
     const seriesIdx = numberFunc()
