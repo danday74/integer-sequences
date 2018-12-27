@@ -2,10 +2,14 @@ const Big = require('big.js')
 const chai = require('chai')
 const expect = chai.expect
 
-module.exports = (numberFunc, expected, big73) => {
+module.exports = (numberFunc, seriesKey, expected, big73, big100m) => {
 
   const str73 = big73.toFixed()
   const str73Minus1 = big73.minus(1).toFixed()
+
+  const str100m = big100m ? big100m.toFixed() : null
+  const str100mMinus1 = big100m ? big100m.minus(1).toFixed() : null
+  const itIf = big100m ? it : xit
 
   it('null', () => {
     const seriesIdx = numberFunc()
@@ -50,5 +54,15 @@ module.exports = (numberFunc, expected, big73) => {
   it(str73, () => {
     const seriesIdx = numberFunc(str73)
     expect(seriesIdx).to.eql(Big(73))
+  })
+
+  itIf(seriesKey + '100m minus 1', () => {
+    const seriesIdx = numberFunc(str100mMinus1)
+    expect(seriesIdx).to.equal(false)
+  })
+
+  itIf(seriesKey + '100m', () => {
+    const seriesIdx = numberFunc(str100m)
+    expect(seriesIdx).to.eql(Big('100000000'))
   })
 }
