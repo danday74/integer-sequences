@@ -2,50 +2,31 @@ const Big = require('big.js')
 const chai = require('chai')
 const expect = chai.expect
 
-module.exports = (numberFunc, seriesKey, expected) => {
+module.exports = (numberFunc, seriesKey, expecteds) => {
 
   it('null', () => {
     const number = numberFunc()
     expect(number).to.be.undefined
   })
 
-  it(seriesKey + '0', () => {
-    const number = numberFunc(0)
+  it('negative', () => {
+    const number = numberFunc(Big(-1))
     expect(number).to.be.undefined
   })
 
-  it(seriesKey + '1', () => {
-    const number = numberFunc(1)
-    expect(number).to.eql(expected[0])
-  })
+  for (let i = 0; i < expecteds.length; i++) {
 
-  it(seriesKey + '2', () => {
-    const number = numberFunc(2)
-    expect(number).to.eql(expected[1])
-  })
+    const expected = expecteds[i]
+    const n = expected.n
 
-  it(seriesKey + '3', () => {
-    const number = numberFunc(Big(3))
-    expect(number).to.eql(expected[2])
-  })
+    let input = n
+    if (i % 3 === 1) input = n.toFixed() // test string
+    if (i % 3 === 2) input = parseInt(n.toFixed()) // test number
 
-  it(seriesKey + '4', () => {
-    const number = numberFunc(Big(4))
-    expect(number).to.eql(expected[3])
-  })
-
-  it(seriesKey + '5', () => {
-    const number = numberFunc('5')
-    expect(number).to.eql(expected[4])
-  })
-
-  it(seriesKey + '73', () => {
-    const number = numberFunc('73')
-    expect(number).to.eql(expected[5])
-  })
-
-  it(seriesKey + '100m', () => {
-    const number = numberFunc('100000000')
-    expect(number).to.eql(expected[6])
-  })
+    const testName = expected.testName ? seriesKey + expected.testName : seriesKey + n
+    it(testName, () => {
+      const number = numberFunc(input)
+      expect(number).to.eql(expected.value)
+    })
+  }
 }

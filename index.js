@@ -5,6 +5,8 @@ const getNCubeNumbers = require('./js/cube-numbers/get-n-cube-numbers')
 const getNthCubeNumber = require('./js/cube-numbers/get-nth-cube-number')
 const isCubeNumber = require('./js/cube-numbers/is-cube-number')
 
+const getNthFibonacciNumber = require('./js/fibonacci-numbers/get-nth-fibonacci-number')
+
 const getPrimeNumbers = require('./js/prime-numbers/get-prime-numbers')
 const getNPrimeNumbers = require('./js/prime-numbers/get-n-prime-numbers')
 const getNthPrimeNumber = require('./js/prime-numbers/get-nth-prime-number')
@@ -28,6 +30,8 @@ const main = {
   getNCubeNumbers,
   getNthCubeNumber,
   isCubeNumber,
+
+  getNthFibonacciNumber,
 
   getPrimeNumbers,
   getNPrimeNumbers,
