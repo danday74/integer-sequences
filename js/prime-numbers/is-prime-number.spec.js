@@ -1,68 +1,22 @@
 const Big = require('big.js')
-const chai = require('chai')
-const expect = chai.expect
-const config = require('../../config')
 const main = require('../..')
+const config = require('../../config')
+const spec = require('../specs/is-number-spec')
+
+const seriesKey = config.seriesKeys.prime
 
 describe('isPrimeNumber', () => {
-
-  it('null', () => {
-    const seriesIdx = main.isPrimeNumber()
-    expect(seriesIdx).to.be.undefined
-  })
-
-  it('0', () => {
-    const seriesIdx = main.isPrimeNumber(0)
-    expect(seriesIdx).to.be.undefined
-  })
-
-  it('1', () => {
-    const seriesIdx = main.isPrimeNumber(1)
-    expect(seriesIdx).to.equal(false)
-  })
-
-  it('2', () => {
-    const seriesIdx = main.isPrimeNumber(2)
-    expect(seriesIdx).to.eql(Big(1))
-  })
-
-  it('3', () => {
-    const seriesIdx = main.isPrimeNumber(Big(3))
-    expect(seriesIdx).to.eql(Big(2))
-  })
-
-  it('4', () => {
-    const seriesIdx = main.isPrimeNumber(Big(4))
-    expect(seriesIdx).to.equal(false)
-  })
-
-  it('5', () => {
-    const seriesIdx = main.isPrimeNumber(Big(5))
-    expect(seriesIdx).to.eql(Big(3))
-  })
-
-  it('366', () => {
-    const seriesIdx = main.isPrimeNumber('366')
-    expect(seriesIdx).to.equal(false)
-  })
-
-  it('367', () => {
-    const seriesIdx = main.isPrimeNumber('367')
-    expect(seriesIdx).to.eql(Big(73))
-  })
-
-  it('last supported prime', () => {
-    const seriesIdx = main.isPrimeNumber(config.LAST_PRIME)
-    expect(seriesIdx).to.eql(Big(config.LAST_PRIME_SERIES_IDX))
-  })
-
-  it('greater than last supported prime (not prime)', () => {
-    const seriesIdx = main.isPrimeNumber(config.LAST_PRIME + 1)
-    expect(seriesIdx).to.equal(false)
-  })
-
-  it('greater than last supported prime (prime)', () => {
-    const seriesIdx = main.isPrimeNumber(config.NEXT_PRIME_AFTER_LAST)
-    expect(seriesIdx).to.equal(true) // here we can only return true
-  })
+  spec(main.isPrimeNumber, [
+    {n: Big('0'), value: undefined},
+    {n: Big('1'), value: false},
+    {n: Big('2'), value: Big('1')},
+    {n: Big('3'), value: Big('2')},
+    {n: Big('4'), value: false},
+    {n: Big('5'), value: Big('3')},
+    {n: Big('367'), value: Big('73'), testName: seriesKey + '73'},
+    {n: Big('368'), value: false, testName: seriesKey + '73 plus 1'},
+    {n: Big(config.LAST_PRIME), value: Big(config.LAST_PRIME_SERIES_IDX), testName: 'last supported prime'},
+    {n: Big(config.LAST_PRIME + 1), value: false, testName: 'greater than last supported prime (not prime)'},
+    {n: Big(config.NEXT_PRIME_AFTER_LAST), value: true, testName: 'greater than last supported prime (prime)'}
+  ])
 })
