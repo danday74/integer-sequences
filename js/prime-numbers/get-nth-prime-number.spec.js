@@ -3,8 +3,10 @@ const main = require('../..')
 const config = require('../../config')
 const spec = require('../specs/get-nth-number-spec')
 
+const seriesKey = config.seriesKeys.prime
+
 describe('getNthPrimeNumber', () => {
-  spec(main.getNthPrimeNumber, config.seriesKeys.prime, [
+  spec(main.getNthPrimeNumber, seriesKey, [
     {n: Big('0'), value: undefined},
     {n: Big('1'), value: Big('2')},
     {n: Big('2'), value: Big('3')},

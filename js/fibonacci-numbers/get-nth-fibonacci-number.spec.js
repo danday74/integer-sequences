@@ -3,8 +3,10 @@ const main = require('../..')
 const config = require('../../config')
 const spec = require('../specs/get-nth-number-spec')
 
+const seriesKey = config.seriesKeys.fibonacci
+
 describe('getNthFibonacciNumber', () => {
-  spec(main.getNthFibonacciNumber, config.seriesKeys.fibonacci, [
+  spec(main.getNthFibonacciNumber, seriesKey, [
     {n: Big('0'), value: Big('0')},
     {n: Big('1'), value: Big('1')},
     {n: Big('2'), value: Big('1')},
