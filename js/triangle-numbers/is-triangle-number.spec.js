@@ -1,8 +1,9 @@
 const Big = require('big.js')
 const main = require('../..')
+const config = require('../../config')
 const spec = require('../specs/is-number-spec')
 
-const seriesKey = 'T'
+const seriesKey = config.seriesKeys.triangle
 
 describe('isTriangleNumber', () => {
   spec(main.isTriangleNumber, [

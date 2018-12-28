@@ -1,8 +1,9 @@
 const Big = require('big.js')
 const main = require('../..')
+const config = require('../../config')
 const spec = require('../specs/is-number-spec')
 
-const seriesKey = 'S'
+const seriesKey = config.seriesKeys.square
 
 describe('isSquareNumber', () => {
   spec(main.isSquareNumber, [
