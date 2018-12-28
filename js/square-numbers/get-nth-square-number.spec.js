@@ -1,9 +1,10 @@
 const Big = require('big.js')
 const main = require('../..')
+const config = require('../../config')
 const spec = require('../specs/get-nth-number-spec')
 
 describe('getNthSquareNumber', () => {
-  spec(main.getNthSquareNumber, 'S', [
+  spec(main.getNthSquareNumber, config.seriesKeys.square, [
     {n: Big('0'), value: undefined},
     {n: Big('1'), value: Big('1')},
     {n: Big('2'), value: Big('4')},

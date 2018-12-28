@@ -1,9 +1,10 @@
 const Big = require('big.js')
 const main = require('../..')
+const config = require('../../config')
 const spec = require('../specs/get-nth-number-spec')
 
 describe('getNthTriangleNumber', () => {
-  spec(main.getNthTriangleNumber, 'T', [
+  spec(main.getNthTriangleNumber, config.seriesKeys.triangle, [
     {n: Big('0'), value: undefined},
     {n: Big('1'), value: Big('1')},
     {n: Big('2'), value: Big('3')},

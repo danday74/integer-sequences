@@ -24,6 +24,7 @@ const config = {
   },
   seriesKeys: {
     cube: 'C',
+    fibonacci: 'F',
     prime: 'P',
     square: 'S',
     triangle: 'T'

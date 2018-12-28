@@ -1,9 +1,10 @@
 const Big = require('big.js')
 const main = require('../..')
+const config = require('../../config')
 const spec = require('../specs/get-nth-number-spec')
 
 describe('getNthFibonacciNumber', () => {
-  spec(main.getNthFibonacciNumber, 'F', [
+  spec(main.getNthFibonacciNumber, config.seriesKeys.fibonacci, [
     {n: Big('0'), value: Big('0')},
     {n: Big('1'), value: Big('1')},
     {n: Big('2'), value: Big('1')},

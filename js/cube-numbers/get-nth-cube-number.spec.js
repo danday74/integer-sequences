@@ -1,9 +1,10 @@
 const Big = require('big.js')
 const main = require('../..')
+const config = require('../../config')
 const spec = require('../specs/get-nth-number-spec')
 
 describe('getNthCubeNumber', () => {
-  spec(main.getNthCubeNumber, 'C', [
+  spec(main.getNthCubeNumber, config.seriesKeys.cube, [
     {n: Big('0'), value: undefined},
     {n: Big('1'), value: Big('1')},
     {n: Big('2'), value: Big('8')},
