@@ -7,7 +7,7 @@ const seriesKey = config.seriesKeys.cube
 
 describe('getNthCubeNumber', () => {
   spec(main.getNthCubeNumber, seriesKey, [
-    {n: Big('0'), value: undefined},
+    {n: Big('0'), value: Big('0')},
     {n: Big('1'), value: Big('1')},
     {n: Big('2'), value: Big('8')},
     {n: Big('3'), value: Big('27')},
