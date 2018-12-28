@@ -1,58 +1,18 @@
 const Big = require('big.js')
-const chai = require('chai')
-const expect = chai.expect
-const config = require('../../config')
 const main = require('../..')
+const config = require('../../config')
+const spec = require('../specs/get-nth-number-spec')
 
 describe('getNthPrimeNumber', () => {
-
-  it('null', () => {
-    const number = main.getNthPrimeNumber()
-    expect(number).to.be.undefined
-  })
-
-  it('P0', () => {
-    const number = main.getNthPrimeNumber(0)
-    expect(number).to.be.undefined
-  })
-
-  it('P1', () => {
-    const number = main.getNthPrimeNumber(1)
-    expect(number).to.eql(Big(2))
-  })
-
-  it('P2', () => {
-    const number = main.getNthPrimeNumber(2)
-    expect(number).to.eql(Big(3))
-  })
-
-  it('P3', () => {
-    const number = main.getNthPrimeNumber(Big(3))
-    expect(number).to.eql(Big(5))
-  })
-
-  it('P4', () => {
-    const number = main.getNthPrimeNumber(Big(4))
-    expect(number).to.eql(Big(7))
-  })
-
-  it('P5', () => {
-    const number = main.getNthPrimeNumber('5')
-    expect(number).to.eql(Big(11))
-  })
-
-  it('P73', () => {
-    const number = main.getNthPrimeNumber('73')
-    expect(number).to.eql(Big(367))
-  })
-
-  it('last supported prime', () => {
-    const number = main.getNthPrimeNumber(config.LAST_PRIME_SERIES_IDX)
-    expect(number).to.eql(Big(config.LAST_PRIME))
-  })
-
-  it('greater than last supported prime', () => {
-    const number = main.getNthPrimeNumber(config.LAST_PRIME_SERIES_IDX + 1)
-    expect(number).to.be.undefined
-  })
+  spec(main.getNthPrimeNumber, config.seriesKeys.prime, [
+    {n: Big('0'), value: undefined},
+    {n: Big('1'), value: Big('2')},
+    {n: Big('2'), value: Big('3')},
+    {n: Big('3'), value: Big('5')},
+    {n: Big('4'), value: Big('7')},
+    {n: Big('5'), value: Big('11')},
+    {n: Big('73'), value: Big('367')},
+    {n: Big(config.LAST_PRIME_SERIES_IDX), value: Big(config.LAST_PRIME), testName: 'last supported prime'},
+    {n: Big(config.LAST_PRIME_SERIES_IDX + 1), value: undefined, testName: 'greater than last supported prime'}
+  ])
 })

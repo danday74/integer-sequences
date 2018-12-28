@@ -23,7 +23,7 @@ module.exports = (numberFunc, seriesKey, expecteds) => {
     if (i % 3 === 1) input = n.toFixed() // test string
     if (i % 3 === 2) input = parseInt(n.toFixed()) // test number
 
-    const testName = expected.testName ? seriesKey + expected.testName : seriesKey + n
+    const testName = expected.testName ? expected.testName : seriesKey + n
     it(testName, () => {
       const number = numberFunc(input)
       expect(number).to.eql(expected.value)
