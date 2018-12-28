@@ -89,7 +89,7 @@ NOTE: Prime values returned may be of type `number` for performance reasons.
 ms.getPrimeNumbers(max: number)  // Returns list of primes, the last being the largest <= max
 ms.getNPrimeNumbers(n: number)   // Returns the first n primes
 ms.getNthPrimeNumber(n: number)  // Returns the nth prime
-ms.isPrimeNumber(n: number)      // Returns a boolean, is n a prime?
+ms.isPrimeNumber(n: number)      // Returns x where n is the xth term or false where n is not a prime
 ms.isPrimeNumberFast(n: number)  // Returns a boolean, is n a prime?
 ```
 
