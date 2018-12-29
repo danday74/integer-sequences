@@ -1,8 +1,7 @@
 const Big = require('big.js')
 
-const getNthFibonacciNumber = n => {
+const getNthFibonacciNumber = (n = -1) => {
 
-  if (n == null) return undefined
   n = Big(n)
   if (n.lt(0)) return undefined
   if (n.lt(2)) return n
