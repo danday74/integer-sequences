@@ -1,8 +1,8 @@
 const Big = require('big.js')
 
-const isTriangleNumber = (n = 0) => {
+const isTriangleNumber = (n = -1) => {
   n = Big(n)
-  if (n.lt(1)) return undefined
+  if (n.lt(0)) return undefined
   // (Math.sqrt(8 * n + 1) - 1) / 2
   const x = n.times(8).plus(1).sqrt().minus(1).div(2)
   const intX = x.round()

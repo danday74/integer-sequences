@@ -7,7 +7,7 @@ const seriesKey = config.seriesKeys.triangle
 
 describe('isTriangleNumber', () => {
   spec(main.isTriangleNumber, [
-    {n: Big('0'), value: undefined},
+    {n: Big('0'), value: Big('0')},
     {n: Big('1'), value: Big('1')},
     {n: Big('2'), value: false},
     {n: Big('3'), value: Big('2')},

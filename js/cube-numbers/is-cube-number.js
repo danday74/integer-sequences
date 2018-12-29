@@ -54,9 +54,9 @@ const cubeRoot = v => {
   }
 }
 
-const isCubeNumber = (n = 0) => {
+const isCubeNumber = (n = -1) => {
   n = Big(n)
-  if (n.lt(1)) return undefined
+  if (n.lt(0)) return undefined
   return cubeRoot(n)
 }
 
