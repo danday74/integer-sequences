@@ -1,7 +1,6 @@
 # IN PROGRESS
 
 Fibonacci numbers
-Consider series 0 (fib has 0 but others do not - consistency - avoid 0 for performance?)
 
 # PRIORITY 1
 
