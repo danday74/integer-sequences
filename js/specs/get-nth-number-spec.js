@@ -21,7 +21,7 @@ module.exports = (numberFunc, seriesKey, expecteds) => {
 
     let input = n
     if (i % 3 === 1) input = n.toFixed() // test string
-    if (i % 3 === 2) input = parseInt(n.toFixed()) // test number
+    if (i % 3 === 2 && n.lte(Number.MAX_SAFE_INTEGER)) input = parseInt(n.toFixed()) // test number
 
     const testName = expected.testName ? expected.testName : seriesKey + n
     it(testName, () => {

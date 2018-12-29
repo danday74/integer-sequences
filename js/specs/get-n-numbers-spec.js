@@ -3,9 +3,11 @@ const Big = require('big.js')
 const chai = require('chai')
 const expect = chai.expect
 
-module.exports = (numberFunc, upTo100, expected1Mill) => {
+module.exports = (numberFunc, upTo100, expected) => {
 
   const upTo100Count = upTo100.length
+  const strN = expected.n.toFixed()
+  const testName = expected.testName ? 'list n=' + expected.testName : 'list n=' + strN
 
   it('null', () => {
     const numbers = numberFunc()
@@ -27,8 +29,8 @@ module.exports = (numberFunc, upTo100, expected1Mill) => {
     expect(numbers).to.eql(upTo100)
   })
 
-  it('list n=1m', () => {
-    const numbers = numberFunc('1000000')
-    expect(_.last(numbers)).to.eql(expected1Mill)
+  it(testName, () => {
+    const numbers = numberFunc(strN)
+    expect(_.last(numbers)).to.eql(expected.value)
   })
 }
