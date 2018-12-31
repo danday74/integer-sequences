@@ -1,5 +1,5 @@
 const _ = require('lodash')
-const Big = require('big.js')
+const Big = require('big.js.safe')
 const chai = require('chai')
 const expect = chai.expect
 const main = require('../..')

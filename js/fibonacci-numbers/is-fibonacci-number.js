@@ -1,5 +1,5 @@
 const _ = require('lodash')
-const Big = require('big.js')
+const Big = require('big.js.safe')
 const getFibonacciNumbers = require('./get-fibonacci-numbers')
 const getNthFibonacciNumber = require('./get-nth-fibonacci-number')
 

@@ -1,4 +1,4 @@
-const Big = require('big.js')
+const Big = require('big.js.safe')
 const isPrime = require('is-prime')
 
 const isPrimeNumberFast = (n = 0) => {

@@ -1,4 +1,4 @@
-const Big = require('big.js')
+const Big = require('big.js.safe')
 const main = require('../..')
 const config = require('../../config')
 const spec = require('../specs/get-numbers-spec')

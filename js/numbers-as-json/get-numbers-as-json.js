@@ -1,7 +1,7 @@
 // KEEP ALIGNED get-numbers-as-json.js and get-prime-numbers-as-json-for-testing.js
 
 const _ = require('lodash')
-const Big = require('big.js')
+const Big = require('big.js.safe')
 const getCubeNumbers = require('../cube-numbers/get-cube-numbers')
 const getPrimeNumbers = require('../prime-numbers/get-prime-numbers')
 const getSquareNumbers = require('../square-numbers/get-square-numbers')

@@ -1,4 +1,4 @@
-const Big = require('big.js')
+const Big = require('big.js.safe')
 const readNPrimeNumbersFromFile = require('./read-n-prime-numbers-from-file')
 
 const getNPrimeNumbers = n => {

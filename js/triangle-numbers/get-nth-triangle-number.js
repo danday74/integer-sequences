@@ -1,4 +1,4 @@
-const Big = require('big.js')
+const Big = require('big.js.safe')
 
 const getNthTriangleNumber = (n = -1) => {
   n = Big(n)

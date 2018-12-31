@@ -1,5 +1,5 @@
 const _ = require('lodash')
-const Big = require('big.js')
+const Big = require('big.js.safe')
 const LAST_PRIME = 104395301
 
 const config = {

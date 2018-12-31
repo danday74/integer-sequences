@@ -1,6 +1,6 @@
 // see https://stackoverflow.com/questions/53878669/find-cube-root-using-limited-math-operators
 
-const Big = require('big.js')
+const Big = require('big.js.safe')
 
 const ZERO = Big(0)
 const TEN = new Big(10)

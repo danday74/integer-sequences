@@ -1,5 +1,5 @@
 const _ = require('lodash')
-const Big = require('big.js')
+const Big = require('big.js.safe')
 const readPrimeNumbersFromFile = require('./read-prime-numbers-from-file')
 
 const getPrimeNumbers = max => {
