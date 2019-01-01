@@ -14,7 +14,7 @@ const isFibonacciNumber = (n = -1) => {
 
   const numbers = getFibonacciNumbers(n)
   const last = _.last(numbers)
-  return n.eq(last) ? Big(numbers.length) : false
+  return n.eq(last) ? Big(numbers.length) : /* istanbul ignore next */ false
 }
 
 module.exports = isFibonacciNumber
