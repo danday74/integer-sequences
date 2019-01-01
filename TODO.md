@@ -1,10 +1,9 @@
 # IN PROGRESS
 
-Fibonacci numbers
+Padovan numbers (Pascals triangle)
 
 # PRIORITY 1
 
-Padovan numbers (Pascals triangle)
 Tetrahedral
 
 # PRIORITY 2
