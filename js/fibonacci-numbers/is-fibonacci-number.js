@@ -8,7 +8,7 @@ const isFibonacciNumber = (n = -1) => {
   n = Big(n)
   if (n.lt(0)) return undefined
   if (n.eq(0)) return getNthFibonacciNumber(0)
-  // if (n.eq(1)) return [Big(1), Big(2)] // but nothing else returns an array!
+  if (n.eq(1)) return [Big(1), Big(2)]
 
   if (!isFibonacciNumberFast(n)) return false
 
