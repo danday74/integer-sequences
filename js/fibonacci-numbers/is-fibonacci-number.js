@@ -12,6 +12,7 @@ const isFibonacciNumber = (n = -1) => {
 
   if (!isFibonacciNumberFast(n)) return false
 
+  // simply returning Big(numbers.length) is probably sufficient but will leave for now
   const numbers = getFibonacciNumbers(n)
   const last = _.last(numbers)
   return n.eq(last) ? Big(numbers.length) : /* istanbul ignore next */ false
