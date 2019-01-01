@@ -13,6 +13,7 @@ describe('isPrimeNumberFast', () => {
     {n: Big('3'), value: true},
     {n: Big('4'), value: false},
     {n: Big('5'), value: true},
+    {n: Big('366'), value: false, testName: seriesKey + '73 minus 1'},
     {n: Big('367'), value: true, testName: seriesKey + '73'},
     {n: Big('368'), value: false, testName: seriesKey + '73 plus 1'},
     {n: Big(config.LAST_PRIME), value: true, testName: 'last supported prime'},

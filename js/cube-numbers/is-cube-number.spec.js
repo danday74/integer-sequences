@@ -13,8 +13,10 @@ describe('isCubeNumber', () => {
     {n: Big('3'), value: false},
     {n: Big('4'), value: false},
     {n: Big('5'), value: false},
+    {n: Big('389016'), value: false, testName: seriesKey + '73 minus 1'},
     {n: Big('389017'), value: Big('73'), testName: seriesKey + '73'},
     {n: Big('389018'), value: false, testName: seriesKey + '73 plus 1'},
+    {n: Big('999999999999999999999999'), value: false, testName: seriesKey + '100m minus 1'},
     {n: Big('1000000000000000000000000'), value: Big('100000000'), testName: seriesKey + '100m'},
     {n: Big('1000000000000000000000001'), value: false, testName: seriesKey + '100m plus 1'}
   ])

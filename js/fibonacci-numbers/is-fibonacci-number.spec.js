@@ -13,8 +13,10 @@ describe('isFibonacciNumber', () => {
     {n: Big('3'), value: Big('4')},
     {n: Big('4'), value: false},
     {n: Big('5'), value: Big('5')},
+    {n: Big('806515533049392'), value: false, testName: seriesKey + '73 minus 1'},
     {n: Big('806515533049393'), value: Big('73'), testName: seriesKey + '73'},
     {n: Big('806515533049394'), value: false, testName: seriesKey + '73 plus 1'},
+    {n: Big('222232244629420445529739893461909967206666939096499764990979599'), value: false, testName: seriesKey + '300 minus 1'},
     {n: Big('222232244629420445529739893461909967206666939096499764990979600'), value: Big('300'), testName: seriesKey + '300'},
     {n: Big('222232244629420445529739893461909967206666939096499764990979601'), value: false, testName: seriesKey + '300 plus 1'}
   ])
