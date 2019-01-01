@@ -14,6 +14,11 @@ module.exports = (numberFunc, upTo100, expected100Mill) => {
     expect(numbers).to.eql([])
   })
 
+  it('negative', () => {
+    const numbers = numberFunc(-1)
+    expect(numbers).to.be.undefined
+  })
+
   it('list 0', () => {
     const numbers = numberFunc(0)
     expect(numbers).to.eql([])
