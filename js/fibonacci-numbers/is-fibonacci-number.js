@@ -2,6 +2,7 @@ const _ = require('lodash')
 const Big = require('big.js.safe')
 const getFibonacciNumbers = require('./get-fibonacci-numbers')
 const getNthFibonacciNumber = require('./get-nth-fibonacci-number')
+const isFibonacciNumberFast = require('./is-fibonacci-number-fast')
 
 const isFibonacciNumber = (n = -1) => {
   n = Big(n)
@@ -9,8 +10,7 @@ const isFibonacciNumber = (n = -1) => {
   if (n.eq(0)) return getNthFibonacciNumber(0)
   // if (n.eq(1)) return [Big(1), Big(2)] // but nothing else returns an array!
 
-  // Could add isFibonacciNumberFast and use that to return false early, this would save time with very big numbers
-  // See https://stackoverflow.com/questions/2432669/test-if-a-number-is-fibonacci
+  if (!isFibonacciNumberFast(n)) return false
 
   const numbers = getFibonacciNumbers(n)
   const last = _.last(numbers)
