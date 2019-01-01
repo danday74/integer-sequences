@@ -3,10 +3,17 @@
 const _ = require('lodash')
 const Big = require('big.js.safe')
 const getCubeNumbers = require('../cube-numbers/get-cube-numbers')
+const getFibonacciNumbers = require('../fibonacci-numbers/get-fibonacci-numbers')
 const getPrimeNumbers = require('../prime-numbers/get-prime-numbers')
 const getSquareNumbers = require('../square-numbers/get-square-numbers')
 const getTriangleNumbers = require('../triangle-numbers/get-triangle-numbers')
+const isFibonacciNumber = require('../fibonacci-numbers/is-fibonacci-number')
 const config = require('../../config')
+
+const nextFibonacci = (series, idx, i) => {
+  if (i === 1) return isFibonacciNumber(i)
+  return next(series, idx, i)
+}
 
 const nextPrime = (series, idx, i) => {
   const num = series[idx]
@@ -26,6 +33,7 @@ const getNumbersAsJson = (max = 0) => {
   if (max.lt(1)) return []
 
   const c = getCubeNumbers(max)
+  const f = getFibonacciNumbers(max)
   let p
   try {
     p = getPrimeNumbers(max)
@@ -36,23 +44,31 @@ const getNumbersAsJson = (max = 0) => {
   const s = getSquareNumbers(max)
   const t = getTriangleNumbers(max)
 
-  let cIdx = _.sortedIndex(c, numbers.length + 1)
-  let pIdx = _.sortedIndex(p, numbers.length + 1)
-  let sIdx = _.sortedIndex(s, numbers.length + 1)
-  let tIdx = _.sortedIndex(t, numbers.length + 1)
+  const len = numbers.length + 1
+
+  let cIdx = _.sortedIndex(c, len)
+  let fIdx = _.sortedIndex(f, len)
+  let pIdx = _.sortedIndex(p, len)
+  let sIdx = _.sortedIndex(s, len)
+  let tIdx = _.sortedIndex(t, len)
 
   const intMax = parseInt(max.toFixed()) // faster
-  for (let i = numbers.length + 1; i <= intMax; i++) {
+  for (let i = len; i <= intMax; i++) {
 
     const json = {
       number: i,
       cube: next(c, cIdx, i),
+      fibonacci: nextFibonacci(f, fIdx, i),
       prime: nextPrime(p, pIdx, i),
       square: next(s, sIdx, i),
       triangle: next(t, tIdx, i)
     }
 
     json.cube && cIdx++
+    if (json.fibonacci) {
+      if (i === 1) fIdx++
+      fIdx++
+    }
     json.prime && pIdx++
     json.square && sIdx++
     json.triangle && tIdx++
