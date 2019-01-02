@@ -14,6 +14,7 @@ const isFibonacciNumberFast = require('./js/fibonacci-numbers/is-fibonacci-numbe
 const getPadovanNumbers = require('./js/padovan-numbers/get-padovan-numbers')
 const getNPadovanNumbers = require('./js/padovan-numbers/get-n-padovan-numbers')
 const getNthPadovanNumber = require('./js/padovan-numbers/get-nth-padovan-number')
+const isPadovanNumber = require('./js/padovan-numbers/is-padovan-number')
 
 const getPrimeNumbers = require('./js/prime-numbers/get-prime-numbers')
 const getNPrimeNumbers = require('./js/prime-numbers/get-n-prime-numbers')
@@ -48,6 +49,7 @@ const main = {
   getPadovanNumbers,
   getNPadovanNumbers,
   getNthPadovanNumber,
+  isPadovanNumber,
 
   getPrimeNumbers,
   getNPrimeNumbers,
