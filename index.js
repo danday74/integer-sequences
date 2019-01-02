@@ -11,6 +11,8 @@ const getNthFibonacciNumber = require('./js/fibonacci-numbers/get-nth-fibonacci-
 const isFibonacciNumber = require('./js/fibonacci-numbers/is-fibonacci-number')
 const isFibonacciNumberFast = require('./js/fibonacci-numbers/is-fibonacci-number-fast')
 
+const getNthPadovanNumber = require('./js/padovan-numbers/get-nth-padovan-number')
+
 const getPrimeNumbers = require('./js/prime-numbers/get-prime-numbers')
 const getNPrimeNumbers = require('./js/prime-numbers/get-n-prime-numbers')
 const getNthPrimeNumber = require('./js/prime-numbers/get-nth-prime-number')
@@ -40,6 +42,8 @@ const main = {
   getNthFibonacciNumber,
   isFibonacciNumber,
   isFibonacciNumberFast,
+
+  getNthPadovanNumber,
 
   getPrimeNumbers,
   getNPrimeNumbers,
