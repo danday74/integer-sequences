@@ -1,12 +1,9 @@
 # IN PROGRESS
 
-Padovan numbers (Pascals triangle)
+Tetrahedral
+Then tidy up TODO - non-sequence stuff to other package
 
 # PRIORITY 1
-
-Tetrahedral
-
-# PRIORITY 2
 
 Winnies triangle
 
