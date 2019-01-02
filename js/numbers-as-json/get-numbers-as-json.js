@@ -4,14 +4,21 @@ const _ = require('lodash')
 const Big = require('big.js.safe')
 const getCubeNumbers = require('../cube-numbers/get-cube-numbers')
 const getFibonacciNumbers = require('../fibonacci-numbers/get-fibonacci-numbers')
+const getPadovanNumbers = require('../padovan-numbers/get-padovan-numbers')
 const getPrimeNumbers = require('../prime-numbers/get-prime-numbers')
 const getSquareNumbers = require('../square-numbers/get-square-numbers')
 const getTriangleNumbers = require('../triangle-numbers/get-triangle-numbers')
 const isFibonacciNumber = require('../fibonacci-numbers/is-fibonacci-number')
+const isPadovanNumber = require('../padovan-numbers/is-padovan-number')
 const config = require('../../config')
 
 const nextFibonacci = (series, idx, i) => {
   if (i === 1) return isFibonacciNumber(i)
+  return next(series, idx, i)
+}
+
+const nextPadovan = (series, idx, i) => {
+  if (i <= 2) return isPadovanNumber(i)
   return next(series, idx, i)
 }
 
@@ -34,6 +41,7 @@ const getNumbersAsJson = (max = 0) => {
 
   const c = getCubeNumbers(max)
   const f = getFibonacciNumbers(max)
+  const pad = getPadovanNumbers(max)
   let p
   try {
     p = getPrimeNumbers(max)
@@ -48,6 +56,7 @@ const getNumbersAsJson = (max = 0) => {
 
   let cIdx = _.sortedIndex(c, len)
   let fIdx = _.sortedIndex(f, len)
+  let padIdx = _.sortedIndex(pad, len)
   let pIdx = _.sortedIndex(p, len)
   let sIdx = _.sortedIndex(s, len)
   let tIdx = _.sortedIndex(t, len)
@@ -59,6 +68,7 @@ const getNumbersAsJson = (max = 0) => {
       number: i,
       cube: next(c, cIdx, i),
       fibonacci: nextFibonacci(f, fIdx, i),
+      padovan: nextPadovan(pad, padIdx, i),
       prime: nextPrime(p, pIdx, i),
       square: next(s, sIdx, i),
       triangle: next(t, tIdx, i)
@@ -68,6 +78,11 @@ const getNumbersAsJson = (max = 0) => {
     if (json.fibonacci) {
       if (i === 1) fIdx++
       fIdx++
+    }
+    if (json.padovan) {
+      if (i === 1) padIdx += 2
+      if (i === 2) padIdx++
+      padIdx++
     }
     json.prime && pIdx++
     json.square && sIdx++
