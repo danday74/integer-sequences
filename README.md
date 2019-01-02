@@ -112,6 +112,15 @@ ms.isFibonacciNumber(n: number)
 ms.isFibonacciNumberFast(n: number)
 ```
 
+## [Padovan numbers](https://oeis.org/A134816)
+
+```
+ms.getPadovanNumbers(max: number)
+ms.getNPadovanNumbers(n: number)
+ms.getNthPadovanNumber(n: number)
+ms.isPadovanNumber(n: number)
+```
+
 ## Square numbers
 
 ```
