@@ -66,7 +66,7 @@ const getNumbersAsJson = (max = 0) => {
   for (let i = len; i <= intMax; i++) {
 
     const json = {
-      number: Big(i),
+      number: i, // Big(i) 400ms slower than i
       cube: next(c, cIdx, i),
       fibonacci: nextFibonacci(f, fIdx, i),
       padovan: nextPadovan(pad, padIdx, i),

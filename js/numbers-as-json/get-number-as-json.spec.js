@@ -38,6 +38,7 @@ describe('getNumberAsJson', function () {
     it(i.toString(), () => {
       const actual = main.getNumberAsJson(i)
       const expected = _.cloneDeep(numbers[i - 1])
+      expected.number = Big(expected.number)
       if (expected.prime) expected.prime = Big(expected.prime)
       expect(actual).to.eql(expected)
     })
