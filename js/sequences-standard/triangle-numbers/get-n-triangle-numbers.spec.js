@@ -1,7 +1,7 @@
 const Big = require('big.js.safe')
 const main = require('../../..')
 const config = require('../../../config')
-const spec = require('../../specs/get-n-numbers-spec')
+const spec = require('../../other/specs/get-n-numbers-spec')
 
 describe('getNTriangleNumbers', function () {
   this.enableTimeouts(false)
