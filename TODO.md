@@ -2,7 +2,6 @@
 
 Tetrahedral
 Then tidy up TODO - non-sequence stuff to other package
-increase is test count? currently, only does up to 5th term
 
 # PRIORITY 1
 
