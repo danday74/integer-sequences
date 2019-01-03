@@ -75,7 +75,7 @@ Returns:
 ]
 ```
 
-NOTE: Prime values returned may be of type `number` for performance reasons.
+Prime values returned may be of type `number` for performance reasons.
 
 ```
 ms.getNumberAsJson(n: number)  // Returns the nth numeric JSON object
