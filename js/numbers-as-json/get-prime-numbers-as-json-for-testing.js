@@ -17,7 +17,8 @@ const numbers = []
 const getNumbersAsJson = (max = 0) => {
 
   max = Big(max)
-  if (max.lt(1)) return []
+  if (max.lt(0)) return undefined
+  if (max.eq(0)) return []
 
   let p
   try {
@@ -27,13 +28,14 @@ const getNumbersAsJson = (max = 0) => {
     p = getPrimeNumbers()
   }
 
-  let pIdx = _.sortedIndex(p, numbers.length + 1)
+  const len = numbers.length + 1
+  let pIdx = _.sortedIndex(p, len)
 
   const intMax = parseInt(max.toFixed()) // faster
-  for (let i = numbers.length + 1; i <= intMax; i++) {
+  for (let i = len; i <= intMax; i++) {
 
     const json = {
-      number: i,
+      number: i, // Big(i) 400ms slower than i
       prime: nextPrime(p, pIdx, i)
     }
 
