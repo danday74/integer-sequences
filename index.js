@@ -1,4 +1,5 @@
 const getNumbersAsJson = require('./js/numbers-as-json/get-numbers-as-json')
+const getNumberAsJson = require('./js/numbers-as-json/get-number-as-json')
 
 const getCubeNumbers = require('./js/cube-numbers/get-cube-numbers')
 const getNCubeNumbers = require('./js/cube-numbers/get-n-cube-numbers')
@@ -34,6 +35,7 @@ const isTriangleNumber = require('./js/triangle-numbers/is-triangle-number')
 
 const main = {
   getNumbersAsJson,
+  getNumberAsJson,
 
   getCubeNumbers,
   getNCubeNumbers,

@@ -37,7 +37,8 @@ const numbers = []
 const getNumbersAsJson = (max = 0) => {
 
   max = Big(max)
-  if (max.lt(1)) return []
+  if (max.lt(0)) return undefined
+  if (max.eq(0)) return []
 
   const c = getCubeNumbers(max)
   const f = getFibonacciNumbers(max)
@@ -65,7 +66,7 @@ const getNumbersAsJson = (max = 0) => {
   for (let i = len; i <= intMax; i++) {
 
     const json = {
-      number: i,
+      number: Big(i),
       cube: next(c, cIdx, i),
       fibonacci: nextFibonacci(f, fIdx, i),
       padovan: nextPadovan(pad, padIdx, i),
