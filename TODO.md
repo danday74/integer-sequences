@@ -1,6 +1,7 @@
 # IN PROGRESS
 
-Tetrahedral
+Tetrahedron
+Sequences referenced in oeis gematria - https://oeis.org/A280090
 Then tidy up TODO - non-sequence stuff to other package
 
 # PRIORITY 1
