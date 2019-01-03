@@ -52,7 +52,7 @@ console.log(value) // logs '29'
 ## Misc functions
 
 ```
-ms.getNumbersAsJson(max: number)  // Returns a JSON object providing data on a list of numbers
+ms.getNumbersAsJson(max: number)  // Returns a list of numeric JSON objects
 ```
 
 Example:
@@ -77,6 +77,10 @@ Returns:
 
 NOTE: Prime values returned may be of type `number` for performance reasons.
 
+```
+ms.getNumberAsJson(n: number)  // Returns the nth numeric JSON object
+```
+
 
 
 
@@ -86,7 +90,7 @@ NOTE: Prime values returned may be of type `number` for performance reasons.
 ## Prime numbers
 
 ```
-ms.getPrimeNumbers(max: number)  // Returns list of primes, the last being the largest <= max
+ms.getPrimeNumbers(max: number)  // Returns a list of primes, the last being the largest <= max
 ms.getNPrimeNumbers(n: number)   // Returns the first n primes
 ms.getNthPrimeNumber(n: number)  // Returns the nth prime
 ms.isPrimeNumber(n: number)      // Returns x where n is the xth term or false where n is not a prime
