@@ -2,7 +2,7 @@
 
 const _ = require('lodash')
 const Big = require('big.js.safe')
-const getPrimeNumbers = require('../sequences/sequences-other/prime-numbers/get-prime-numbers')
+const getPrimeNumbers = require('../sequences/irregular/prime-numbers/get-prime-numbers')
 const config = require('../../config')
 
 /* istanbul ignore next */
