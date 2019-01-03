@@ -1,11 +1,11 @@
 const Big = require('big.js.safe')
 
-const isCubeNumber = require('../sequences-standard/cube-numbers/is-cube-number')
-const isFibonacciNumber = require('../sequences-standard/fibonacci-numbers/is-fibonacci-number')
-const isPadovanNumber = require('../sequences-standard/padovan-numbers/is-padovan-number')
-const isPrimeNumber = require('../sequences-other/prime-numbers/is-prime-number')
-const isSquareNumber = require('../sequences-standard/square-numbers/is-square-number')
-const isTriangleNumber = require('../sequences-standard/triangle-numbers/is-triangle-number')
+const isCubeNumber = require('../sequences/sequences-standard/cube-numbers/is-cube-number')
+const isFibonacciNumber = require('../sequences/sequences-standard/fibonacci-numbers/is-fibonacci-number')
+const isPadovanNumber = require('../sequences/sequences-standard/padovan-numbers/is-padovan-number')
+const isPrimeNumber = require('../sequences/sequences-other/prime-numbers/is-prime-number')
+const isSquareNumber = require('../sequences/sequences-standard/square-numbers/is-square-number')
+const isTriangleNumber = require('../sequences/sequences-standard/triangle-numbers/is-triangle-number')
 
 const getNumberAsJson = (n = -1) => {
 

@@ -2,14 +2,14 @@
 
 const _ = require('lodash')
 const Big = require('big.js.safe')
-const getCubeNumbers = require('../sequences-standard/cube-numbers/get-cube-numbers')
-const getFibonacciNumbers = require('../sequences-standard/fibonacci-numbers/get-fibonacci-numbers')
-const getPadovanNumbers = require('../sequences-standard/padovan-numbers/get-padovan-numbers')
-const getPrimeNumbers = require('../sequences-other/prime-numbers/get-prime-numbers')
-const getSquareNumbers = require('../sequences-standard/square-numbers/get-square-numbers')
-const getTriangleNumbers = require('../sequences-standard/triangle-numbers/get-triangle-numbers')
-const isFibonacciNumber = require('../sequences-standard/fibonacci-numbers/is-fibonacci-number')
-const isPadovanNumber = require('../sequences-standard/padovan-numbers/is-padovan-number')
+const getCubeNumbers = require('../sequences/sequences-standard/cube-numbers/get-cube-numbers')
+const getFibonacciNumbers = require('../sequences/sequences-standard/fibonacci-numbers/get-fibonacci-numbers')
+const getPadovanNumbers = require('../sequences/sequences-standard/padovan-numbers/get-padovan-numbers')
+const getPrimeNumbers = require('../sequences/sequences-other/prime-numbers/get-prime-numbers')
+const getSquareNumbers = require('../sequences/sequences-standard/square-numbers/get-square-numbers')
+const getTriangleNumbers = require('../sequences/sequences-standard/triangle-numbers/get-triangle-numbers')
+const isFibonacciNumber = require('../sequences/sequences-standard/fibonacci-numbers/is-fibonacci-number')
+const isPadovanNumber = require('../sequences/sequences-standard/padovan-numbers/is-padovan-number')
 const config = require('../../config')
 
 const nextFibonacci = (series, idx, i) => {
