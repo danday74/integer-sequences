@@ -1,6 +1,6 @@
 {
   "name": "math-sequences",
-  "version": "1.0.12",
+  "version": "1.1.0",
   "description": "Functional library for precise access to math sequences such as prime numbers, square numbers, triangle numbers, etc",
   "author": "danday74",
   "license": "ISC",
