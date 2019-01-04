@@ -1,34 +1,22 @@
 const Big = require('big.js.safe')
 const nthRoot = require('../../../more/helpers/nthRoot')
-const getNthTetrahedronNumber = require('./get-nth-tetrahedron-number')
-const isTetrahedronNumberFast = require('./is-tetrahedron-number-fast')
+const isCubeNumber = require('../cube-numbers/is-cube-number')
 
 const isTetrahedronNumber = (n = -1) => {
 
   n = Big(n)
   if (n.lt(0)) return undefined
+  if (n.eq(0)) return Big(0)
 
-  if (!isTetrahedronNumberFast(n)) return false
+  n = n.times(6)
+  const cubeRoot = nthRoot(n, 3)
+  Big.RM = 3
+  const cubeRootRounded = cubeRoot.round()
+  Big.RM = 1
 
-  let idx, tet
-
-  idx = nthRoot(n.times(6), 3).round()
-  tet = getNthTetrahedronNumber(idx)
-
-  /* istanbul ignore else */
-  if (n.lt(tet)) {
-    while (n.lt(tet)) {
-      idx = idx.minus(1)
-      tet = getNthTetrahedronNumber(idx)
-    }
-  } else if (n.gt(tet)) {
-    while (n.gt(tet)) {
-      idx = idx.plus(1)
-      tet = getNthTetrahedronNumber(idx)
-    }
-  }
-
-  return (n.eq(tet)) ? idx : /* istanbul ignore next */ false
+  n = n.plus(cubeRootRounded)
+  const cubeIdx = isCubeNumber(n)
+  return cubeIdx ? cubeIdx.minus(1) : false
 }
 
 module.exports = isTetrahedronNumber

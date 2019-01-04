@@ -141,7 +141,6 @@ ms.getTetrahedronNumbers(max: number)
 ms.getNTetrahedronNumbers(n: number)
 ms.getNthTetrahedronNumber(n: number)
 ms.isTetrahedronNumber(n: number)
-ms.isTetrahedronNumberFast(n: number)
 ```
 
 ## Triangle numbers
