@@ -2,6 +2,7 @@
 
 Research sequences referred to in Gen 1:1 Gematria literature - see https://oeis.org/A280090 - and many more Internet pages on this
 Prioritise sequences
+Tidy code (should be tidy but double check)
 
 # Other sequences
 
