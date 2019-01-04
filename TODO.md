@@ -1,8 +1,7 @@
 # IN PROGRESS
 
-Tetrahedron
-Sequences referenced in oeis gematria - https://oeis.org/A280090
 Then tidy up TODO - non-sequence stuff to other package
+Sequences referenced in oeis gematria - https://oeis.org/A280090
 Star numbers - Unique among the star numbers is 35113, since its prime factors - 13, 37 and 73 - are also consecutive star numbers
 Stellated octahedron - massively interesting - see https://oeis.org/A280090
 
