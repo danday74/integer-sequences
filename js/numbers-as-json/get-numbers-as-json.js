@@ -7,6 +7,7 @@ const getFibonacciNumbers = require('../sequences/standard/fibonacci-numbers/get
 const getPadovanNumbers = require('../sequences/standard/padovan-numbers/get-padovan-numbers')
 const getPrimeNumbers = require('../sequences/irregular/prime-numbers/get-prime-numbers')
 const getSquareNumbers = require('../sequences/standard/square-numbers/get-square-numbers')
+const getTetrahedronNumbers = require('../sequences/standard/tetrahedron-numbers/get-tetrahedron-numbers')
 const getTriangleNumbers = require('../sequences/standard/triangle-numbers/get-triangle-numbers')
 const isFibonacciNumber = require('../sequences/standard/fibonacci-numbers/is-fibonacci-number')
 const isPadovanNumber = require('../sequences/standard/padovan-numbers/is-padovan-number')
@@ -51,6 +52,7 @@ const getNumbersAsJson = (max = 0) => {
     p = getPrimeNumbers()
   }
   const s = getSquareNumbers(max)
+  const tet = getTetrahedronNumbers(max)
   const t = getTriangleNumbers(max)
 
   const len = numbers.length + 1
@@ -60,6 +62,7 @@ const getNumbersAsJson = (max = 0) => {
   let padIdx = _.sortedIndex(pad, len)
   let pIdx = _.sortedIndex(p, len)
   let sIdx = _.sortedIndex(s, len)
+  let tetIdx = _.sortedIndex(tet, len)
   let tIdx = _.sortedIndex(t, len)
 
   const intMax = parseInt(max.toFixed()) // faster
@@ -72,6 +75,7 @@ const getNumbersAsJson = (max = 0) => {
       padovan: nextPadovan(pad, padIdx, i),
       prime: nextPrime(p, pIdx, i),
       square: next(s, sIdx, i),
+      tetrahedron: next(tet, tetIdx, i),
       triangle: next(t, tIdx, i)
     }
 
@@ -87,6 +91,7 @@ const getNumbersAsJson = (max = 0) => {
     }
     json.prime && pIdx++
     json.square && sIdx++
+    json.tetrahedron && tetIdx++
     json.triangle && tIdx++
 
     numbers.push(json)

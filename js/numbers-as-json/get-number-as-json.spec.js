@@ -27,6 +27,7 @@ describe('getNumberAsJson', function () {
       padovan: Big(0),
       prime: undefined,
       square: Big(0),
+      tetrahedron: Big(0),
       triangle: Big(0)
     })
   })
@@ -53,6 +54,7 @@ describe('getNumberAsJson', function () {
       padovan: false,
       prime: false,
       square: Big(10000),
+      tetrahedron: false,
       triangle: false
     })
   })
