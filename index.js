@@ -31,6 +31,7 @@ const isSquareNumber = require('./js/sequences/standard/square-numbers/is-square
 const getTetrahedronNumbers = require('./js/sequences/standard/tetrahedron-numbers/get-tetrahedron-numbers')
 const getNTetrahedronNumbers = require('./js/sequences/standard/tetrahedron-numbers/get-n-tetrahedron-numbers')
 const getNthTetrahedronNumber = require('./js/sequences/standard/tetrahedron-numbers/get-nth-tetrahedron-number')
+const isTetrahedronNumber = require('./js/sequences/standard/tetrahedron-numbers/is-tetrahedron-number')
 const isTetrahedronNumberFast = require('./js/sequences/standard/tetrahedron-numbers/is-tetrahedron-number-fast')
 
 const getTriangleNumbers = require('./js/sequences/standard/triangle-numbers/get-triangle-numbers')
@@ -72,6 +73,7 @@ const main = {
   getTetrahedronNumbers,
   getNTetrahedronNumbers,
   getNthTetrahedronNumber,
+  isTetrahedronNumber,
   isTetrahedronNumberFast,
 
   getTriangleNumbers,
