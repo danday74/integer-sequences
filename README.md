@@ -116,7 +116,7 @@ ms.isFibonacciNumber(n: number)
 ms.isFibonacciNumberFast(n: number)
 ```
 
-## [Padovan numbers](https://oeis.org/A134816)
+## Padovan numbers - [A134816](https://oeis.org/A134816)
 
 ```
 ms.getPadovanNumbers(max: number)
