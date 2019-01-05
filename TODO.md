@@ -1,6 +1,5 @@
 # TODO
 
-Add OEIS IDs to README
 Approve sequences - see APPROVAL.md
 Research sequences referred to in Gen 1:1 Gematria literature - see https://oeis.org/A280090 - and many more Internet pages on this
 Prioritise sequences
