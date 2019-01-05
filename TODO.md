@@ -31,4 +31,3 @@ Perfect numbers
 # Notes
 
 Cube numbers are in Pascals triangle as Stars of David
-
