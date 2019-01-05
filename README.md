@@ -1,12 +1,12 @@
-# math-sequences
+# integer-sequences
 
-[![build](https://img.shields.io/travis/danday74/math-sequences/master.svg?label=linux)](https://travis-ci.org/danday74/math-sequences)
-[![coverage](https://coveralls.io/repos/github/danday74/math-sequences/badge.svg)](https://coveralls.io/github/danday74/math-sequences)
-[![npm](https://img.shields.io/npm/v/math-sequences.svg)](https://www.npmjs.com/package/math-sequences)
-[![dependencies](https://david-dm.org/danday74/math-sequences/status.svg)](https://david-dm.org/danday74/math-sequences)
-[![downloads](https://img.shields.io/npm/dm/math-sequences.svg)](https://www.npmjs.com/package/math-sequences)
+[![build](https://img.shields.io/travis/danday74/integer-sequences/master.svg?label=linux)](https://travis-ci.org/danday74/integer-sequences)
+[![coverage](https://coveralls.io/repos/github/danday74/integer-sequences/badge.svg)](https://coveralls.io/github/danday74/integer-sequences)
+[![npm](https://img.shields.io/npm/v/integer-sequences.svg)](https://www.npmjs.com/package/integer-sequences)
+[![dependencies](https://david-dm.org/danday74/integer-sequences/status.svg)](https://david-dm.org/danday74/integer-sequences)
+[![downloads](https://img.shields.io/npm/dm/integer-sequences.svg)](https://www.npmjs.com/package/integer-sequences)
 
-**Functional library for precise access to math sequences such as prime numbers, square numbers, triangle numbers, etc**
+**Functional library for precise access to integer sequences such as prime numbers, square numbers, triangle numbers, etc**
 
 
 
@@ -16,29 +16,29 @@
 
 ## Intro
 
-`npm install --save math-sequences`
+`npm install --save integer-sequences`
 
-Functional library for precise access to math sequences. Cached access offers performance. For example:
+Functional library for precise access to integer sequences. Cached access offers performance. For example:
 
 ```javascript 1.7
-const ms = require('math-sequences')
-ms.getPrimeNumbers(100000000)  // takes 2145ms - first call
-ms.getPrimeNumbers(100000000)  // takes 23ms - second cached call
+const intseqs = require('integer-sequences')
+intseqs.getPrimeNumbers(100000000)  // takes 2145ms - first call
+intseqs.getPrimeNumbers(100000000)  // takes 23ms - second cached call
 ```
 
 It makes use of [Big.js](http://mikemcl.github.io/big.js) to guarantee precision when working with big numbers.
 
 Numeric arguments can be given as:
  
-* strings - e.g. `ms.isPrimeNumber('1000000')`
-* Big.js objects - e.g. `ms.isPrimeNumber(Big('1000000'))` or `ms.isPrimeNumber(Big(1000000))`
-* numbers - e.g. `ms.isPrimeNumber(1000000)`
+* strings - e.g. `intseqs.isPrimeNumber('1000000')`
+* Big.js objects - e.g. `intseqs.isPrimeNumber(Big('1000000'))` or `intseqs.isPrimeNumber(Big(1000000))`
+* numbers - e.g. `intseqs.isPrimeNumber(1000000)`
 
 Function return values are typically [Big.js](http://mikemcl.github.io/big.js) objects. To access a [Big.js](http://mikemcl.github.io/big.js) object value:
 
 ```javascript 1.7
-const ms = require('math-sequences')
-const bigObj = ms.getNthPrimeNumber(10)
+const intseqs = require('integer-sequences')
+const bigObj = intseqs.getNthPrimeNumber(10)
 const value = bigObj.toFixed()
 console.log(value) // logs '29'
 ```
@@ -52,13 +52,13 @@ console.log(value) // logs '29'
 ## Misc functions
 
 ```
-ms.getNumbersAsJson(max: number)  // Returns a list of numeric JSON objects
+intseqs.getNumbersAsJson(max: number)  // Returns a list of numeric JSON objects
 ```
 
 Example:
 
 ```javascript 1.7
-ms.getNumbersAsJson(7)
+intseqs.getNumbersAsJson(7)
 ```
 
 Returns:
@@ -78,7 +78,7 @@ Returns:
 Prime values returned may be of type `number` for performance reasons.
 
 ```
-ms.getNumberAsJson(n: number)  // Returns the nth numeric JSON object
+intseqs.getNumberAsJson(n: number)  // Returns the nth numeric JSON object
 ```
 
 
@@ -90,66 +90,66 @@ ms.getNumberAsJson(n: number)  // Returns the nth numeric JSON object
 ## Prime numbers - [A000040](https://oeis.org/A000040)
 
 ```
-ms.getPrimeNumbers(max: number)  // Returns a list of primes, the last being the largest <= max
-ms.getNPrimeNumbers(n: number)   // Returns the first n primes
-ms.getNthPrimeNumber(n: number)  // Returns the nth prime
-ms.isPrimeNumber(n: number)      // Returns x where n is the xth term or false where n is not a prime
-ms.isPrimeNumberFast(n: number)  // Returns a boolean, is n a prime?
+intseqs.getPrimeNumbers(max: number)  // Returns a list of primes, the last being the largest <= max
+intseqs.getNPrimeNumbers(n: number)   // Returns the first n primes
+intseqs.getNthPrimeNumber(n: number)  // Returns the nth prime
+intseqs.isPrimeNumber(n: number)      // Returns x where n is the xth term or false where n is not a prime
+intseqs.isPrimeNumberFast(n: number)  // Returns a boolean, is n a prime?
 ```
 
 ## Cube numbers - [A000578](https://oeis.org/A000578)
 
 ```
-ms.getCubeNumbers(max: number)
-ms.getNCubeNumbers(n: number)
-ms.getNthCubeNumber(n: number)
-ms.isCubeNumber(n: number)
+intseqs.getCubeNumbers(max: number)
+intseqs.getNCubeNumbers(n: number)
+intseqs.getNthCubeNumber(n: number)
+intseqs.isCubeNumber(n: number)
 ```
 
 ## Fibonacci numbers - [A000045](https://oeis.org/A000045)
 
 ```
-ms.getFibonacciNumbers(max: number)
-ms.getNFibonacciNumbers(n: number)
-ms.getNthFibonacciNumber(n: number)
-ms.isFibonacciNumber(n: number)
-ms.isFibonacciNumberFast(n: number)
+intseqs.getFibonacciNumbers(max: number)
+intseqs.getNFibonacciNumbers(n: number)
+intseqs.getNthFibonacciNumber(n: number)
+intseqs.isFibonacciNumber(n: number)
+intseqs.isFibonacciNumberFast(n: number)
 ```
 
 ## Padovan numbers - [A134816](https://oeis.org/A134816)
 
 ```
-ms.getPadovanNumbers(max: number)
-ms.getNPadovanNumbers(n: number)
-ms.getNthPadovanNumber(n: number)
-ms.isPadovanNumber(n: number)
+intseqs.getPadovanNumbers(max: number)
+intseqs.getNPadovanNumbers(n: number)
+intseqs.getNthPadovanNumber(n: number)
+intseqs.isPadovanNumber(n: number)
 ```
 
 ## Square numbers - [A000290](https://oeis.org/A000290)
 
 ```
-ms.getSquareNumbers(max: number)
-ms.getNSquareNumbers(n: number)
-ms.getNthSquareNumber(n: number)
-ms.isSquareNumber(n: number)
+intseqs.getSquareNumbers(max: number)
+intseqs.getNSquareNumbers(n: number)
+intseqs.getNthSquareNumber(n: number)
+intseqs.isSquareNumber(n: number)
 ```
 
 ## Tetrahedron numbers - [A000292](https://oeis.org/A000292)
 
 ```
-ms.getTetrahedronNumbers(max: number)
-ms.getNTetrahedronNumbers(n: number)
-ms.getNthTetrahedronNumber(n: number)
-ms.isTetrahedronNumber(n: number)
+intseqs.getTetrahedronNumbers(max: number)
+intseqs.getNTetrahedronNumbers(n: number)
+intseqs.getNthTetrahedronNumber(n: number)
+intseqs.isTetrahedronNumber(n: number)
 ```
 
 ## Triangle numbers - [A000217](https://oeis.org/A000217)
 
 ```
-ms.getTriangleNumbers(max: number)
-ms.getNTriangleNumbers(n: number)
-ms.getNthTriangleNumber(n: number)
-ms.isTriangleNumber(n: number)
+intseqs.getTriangleNumbers(max: number)
+intseqs.getNTriangleNumbers(n: number)
+intseqs.getNthTriangleNumber(n: number)
+intseqs.isTriangleNumber(n: number)
 ```
 
 

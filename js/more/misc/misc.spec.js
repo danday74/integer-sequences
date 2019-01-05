@@ -1,20 +1,20 @@
 const Big = require('big.js.safe')
 const chai = require('chai')
 const expect = chai.expect
-const main = require('../../..')
+const intseqs = require('../../..')
 
 describe('misc', () => {
 
   describe('examples', () => {
 
     it('example 1', () => {
-      const bigObj = main.getNthPrimeNumber(10)
+      const bigObj = intseqs.getNthPrimeNumber(10)
       const value = bigObj.toFixed()
       expect(value).to.equal('29')
     })
 
     it('example 2', () => {
-      const json = main.getNumbersAsJson(7)
+      const json = intseqs.getNumbersAsJson(7)
       expect(json).to.eql([
         {
           number: 1,

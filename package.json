@@ -1,7 +1,7 @@
 {
-  "name": "math-sequences",
-  "version": "1.1.1",
-  "description": "Functional library for precise access to math sequences such as prime numbers, square numbers, triangle numbers, etc",
+  "name": "integer-sequences",
+  "version": "1.0.0",
+  "description": "Functional library for precise access to integer sequences such as prime numbers, square numbers, triangle numbers, etc",
   "author": "danday74",
   "license": "ISC",
   "main": "index.js",
@@ -40,12 +40,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/danday74/math-sequences.git"
+    "url": "git+https://github.com/danday74/integer-sequences.git"
   },
   "bugs": {
-    "url": "https://github.com/danday74/math-sequences/issues"
+    "url": "https://github.com/danday74/integer-sequences/issues"
   },
-  "homepage": "https://github.com/danday74/math-sequences#readme",
+  "homepage": "https://github.com/danday74/integer-sequences#readme",
   "comment": "coveralls@2.11.16",
   "husky": {
     "hooks": {
