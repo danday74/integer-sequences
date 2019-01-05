@@ -5,8 +5,8 @@ const spec = require('../../../more/specs/get-nth-number-spec')
 
 const seriesKey = config.seriesKeys.padovan
 
-describe('getNthPadovanNumber', () => {
-  spec(main.getNthPadovanNumber, seriesKey, [
+describe('padovan.term', () => {
+  spec(main.padovan.term, seriesKey, [
     {n: Big('0'), value: Big('0')},
     {n: Big('1'), value: Big('1')},
     {n: Big('2'), value: Big('1')},

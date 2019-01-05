@@ -5,8 +5,8 @@ const spec = require('../../../more/specs/is-number-spec')
 
 const seriesKey = config.seriesKeys.padovan
 
-describe('isPadovanNumber', () => {
-  spec(main.isPadovanNumber, [
+describe('padovan.isTerm', () => {
+  spec(main.padovan.isTerm, [
     {n: Big('0'), value: Big('0')},
     {n: Big('1'), value: [Big('1'), Big('2'), Big('3')]},
     {n: Big('2'), value: [Big('4'), Big('5')]},

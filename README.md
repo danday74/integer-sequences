@@ -119,10 +119,10 @@ intseqs.fibonacci.isTermFast(n: number)
 ## Padovan numbers - [A134816](https://oeis.org/A134816)
 
 ```
-intseqs.getPadovanNumbers(max: number)
-intseqs.getNPadovanNumbers(n: number)
-intseqs.getNthPadovanNumber(n: number)
-intseqs.isPadovanNumber(n: number)
+intseqs.padovan.sequence(n: number)
+intseqs.padovan.sequenceMax(max: number)
+intseqs.padovan.term(n: number)
+intseqs.padovan.isTerm(n: number)
 ```
 
 ## Square numbers - [A000290](https://oeis.org/A000290)

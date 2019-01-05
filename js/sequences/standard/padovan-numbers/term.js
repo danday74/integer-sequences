@@ -1,6 +1,6 @@
 const Big = require('big.js.safe')
 
-const getNthPadovanNumber = (n = -1) => {
+const term = (n = -1) => {
 
   n = Big(n)
   if (n.lt(0)) return undefined
@@ -23,4 +23,4 @@ const getNthPadovanNumber = (n = -1) => {
   return curr
 }
 
-module.exports = getNthPadovanNumber
+module.exports = term

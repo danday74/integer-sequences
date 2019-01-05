@@ -3,6 +3,6 @@ const main = require('../../../..')
 const config = require('../../../../config')
 const spec = require('../../../more/specs/get-numbers-spec')
 
-describe('getPadovanNumbers', () => {
-  spec(main.getPadovanNumbers, config.PADOVAN_NUMBERS_UPTO_100, Big('82938844'))
+describe('padovan.sequenceMax', () => {
+  spec(main.padovan.sequenceMax, config.PADOVAN_NUMBERS_UPTO_100, Big('82938844'))
 })

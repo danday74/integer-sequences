@@ -3,11 +3,7 @@ const getNumberAsJson = require('./js/numbers-as-json/get-number-as-json')
 
 const cube = require('./js/sequences/standard/cube-numbers')
 const fibonacci = require('./js/sequences/standard/fibonacci-numbers')
-
-const getPadovanNumbers = require('./js/sequences/standard/padovan-numbers/get-padovan-numbers')
-const getNPadovanNumbers = require('./js/sequences/standard/padovan-numbers/get-n-padovan-numbers')
-const getNthPadovanNumber = require('./js/sequences/standard/padovan-numbers/get-nth-padovan-number')
-const isPadovanNumber = require('./js/sequences/standard/padovan-numbers/is-padovan-number')
+const padovan = require('./js/sequences/standard/padovan-numbers')
 
 const getPrimeNumbers = require('./js/sequences/irregular/prime-numbers/get-prime-numbers')
 const getNPrimeNumbers = require('./js/sequences/irregular/prime-numbers/get-n-prime-numbers')
@@ -36,11 +32,7 @@ const main = {
 
   cube,
   fibonacci,
-
-  getPadovanNumbers,
-  getNPadovanNumbers,
-  getNthPadovanNumber,
-  isPadovanNumber,
+  padovan,
 
   getPrimeNumbers,
   getNPrimeNumbers,
