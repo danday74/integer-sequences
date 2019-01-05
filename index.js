@@ -11,10 +11,7 @@ const getNthPrimeNumber = require('./js/sequences/irregular/prime-numbers/get-nt
 const isPrimeNumber = require('./js/sequences/irregular/prime-numbers/is-prime-number')
 const isPrimeNumberFast = require('./js/sequences/irregular/prime-numbers/is-prime-number-fast')
 
-const getSquareNumbers = require('./js/sequences/standard/square-numbers/get-square-numbers')
-const getNSquareNumbers = require('./js/sequences/standard/square-numbers/get-n-square-numbers')
-const getNthSquareNumber = require('./js/sequences/standard/square-numbers/get-nth-square-number')
-const isSquareNumber = require('./js/sequences/standard/square-numbers/is-square-number')
+const square = require('./js/sequences/standard/square-numbers')
 
 const getTetrahedronNumbers = require('./js/sequences/standard/tetrahedron-numbers/get-tetrahedron-numbers')
 const getNTetrahedronNumbers = require('./js/sequences/standard/tetrahedron-numbers/get-n-tetrahedron-numbers')
@@ -40,10 +37,7 @@ const main = {
   isPrimeNumber,
   isPrimeNumberFast,
 
-  getSquareNumbers,
-  getNSquareNumbers,
-  getNthSquareNumber,
-  isSquareNumber,
+  square,
 
   getTetrahedronNumbers,
   getNTetrahedronNumbers,

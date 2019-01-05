@@ -128,10 +128,10 @@ intseqs.padovan.isTerm(n: number)
 ## Square numbers - [A000290](https://oeis.org/A000290)
 
 ```
-intseqs.getSquareNumbers(max: number)
-intseqs.getNSquareNumbers(n: number)
-intseqs.getNthSquareNumber(n: number)
-intseqs.isSquareNumber(n: number)
+intseqs.square.sequence(n: number)
+intseqs.square.sequenceMax(max: number)
+intseqs.square.term(n: number)
+intseqs.square.isTerm(n: number)
 ```
 
 ## Tetrahedron numbers - [A000292](https://oeis.org/A000292)

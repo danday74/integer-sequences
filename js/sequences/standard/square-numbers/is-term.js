@@ -1,6 +1,6 @@
 const Big = require('big.js.safe')
 
-const isSquareNumber = (n = -1) => {
+const isTerm = (n = -1) => {
   n = Big(n)
   if (n.lt(0)) return undefined
   const sqrt = n.sqrt()
@@ -8,4 +8,4 @@ const isSquareNumber = (n = -1) => {
   return sqrt.eq(intSqrt) ? intSqrt : false
 }
 
-module.exports = isSquareNumber
+module.exports = isTerm
