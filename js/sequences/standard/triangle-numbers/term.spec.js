@@ -5,8 +5,8 @@ const spec = require('../../../more/specs/get-nth-number-spec')
 
 const seriesKey = config.seriesKeys.triangle
 
-describe('getNthTriangleNumber', () => {
-  spec(main.getNthTriangleNumber, seriesKey, [
+describe('triangle.term', () => {
+  spec(main.triangle.term, seriesKey, [
     {n: Big('0'), value: Big('0')},
     {n: Big('1'), value: Big('1')},
     {n: Big('2'), value: Big('3')},

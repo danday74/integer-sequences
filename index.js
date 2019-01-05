@@ -13,11 +13,7 @@ const isPrimeNumberFast = require('./js/sequences/irregular/prime-numbers/is-pri
 
 const square = require('./js/sequences/standard/square-numbers')
 const tetrahedron = require('./js/sequences/standard/tetrahedron-numbers')
-
-const getTriangleNumbers = require('./js/sequences/standard/triangle-numbers/get-triangle-numbers')
-const getNTriangleNumbers = require('./js/sequences/standard/triangle-numbers/get-n-triangle-numbers')
-const getNthTriangleNumber = require('./js/sequences/standard/triangle-numbers/get-nth-triangle-number')
-const isTriangleNumber = require('./js/sequences/standard/triangle-numbers/is-triangle-number')
+const triangle = require('./js/sequences/standard/triangle-numbers')
 
 const main = {
   getNumbersAsJson,
@@ -35,11 +31,7 @@ const main = {
 
   square,
   tetrahedron,
-
-  getTriangleNumbers,
-  getNTriangleNumbers,
-  getNthTriangleNumber,
-  isTriangleNumber
+  triangle
 }
 
 module.exports = main

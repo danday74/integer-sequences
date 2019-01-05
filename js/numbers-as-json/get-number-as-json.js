@@ -6,7 +6,7 @@ const padovan = require('../sequences/standard/padovan-numbers')
 const isPrimeNumber = require('../sequences/irregular/prime-numbers/is-prime-number')
 const square = require('../sequences/standard/square-numbers')
 const tetrahedron = require('../sequences/standard/tetrahedron-numbers')
-const isTriangleNumber = require('../sequences/standard/triangle-numbers/is-triangle-number')
+const triangle = require('../sequences/standard/triangle-numbers')
 
 const getNumberAsJson = (n = -1) => {
 
@@ -21,7 +21,7 @@ const getNumberAsJson = (n = -1) => {
     prime: isPrimeNumber(n),
     square: square.isTerm(n),
     tetrahedron: tetrahedron.isTerm(n),
-    triangle: isTriangleNumber(n)
+    triangle: triangle.isTerm(n)
   }
 }
 

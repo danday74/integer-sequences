@@ -1,9 +1,9 @@
 const Big = require('big.js.safe')
 
-const getNthTriangleNumber = (n = -1) => {
+const term = (n = -1) => {
   n = Big(n)
   // n * (n + 1) / 2
   return n.lt(0) ? undefined : n.times(n.plus(1)).div(2)
 }
 
-module.exports = getNthTriangleNumber
+module.exports = term

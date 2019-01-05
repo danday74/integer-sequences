@@ -146,10 +146,10 @@ intseqs.tetrahedron.isTerm(n: number)
 ## Triangle numbers - [A000217](https://oeis.org/A000217)
 
 ```
-intseqs.getTriangleNumbers(max: number)
-intseqs.getNTriangleNumbers(n: number)
-intseqs.getNthTriangleNumber(n: number)
-intseqs.isTriangleNumber(n: number)
+intseqs.triangle.sequence(n: number)
+intseqs.triangle.sequenceMax(max: number)
+intseqs.triangle.term(n: number)
+intseqs.triangle.isTerm(n: number)
 ```
 
 

@@ -1,6 +1,6 @@
 const Big = require('big.js.safe')
 
-const isTriangleNumber = (n = -1) => {
+const isTerm = (n = -1) => {
   n = Big(n)
   if (n.lt(0)) return undefined
   // (Math.sqrt(8 * n + 1) - 1) / 2
@@ -9,4 +9,4 @@ const isTriangleNumber = (n = -1) => {
   return x.eq(intX) ? intX : false
 }
 
-module.exports = isTriangleNumber
+module.exports = isTerm

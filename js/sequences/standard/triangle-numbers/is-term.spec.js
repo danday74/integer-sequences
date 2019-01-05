@@ -5,8 +5,8 @@ const spec = require('../../../more/specs/is-number-spec')
 
 const seriesKey = config.seriesKeys.triangle
 
-describe('isTriangleNumber', () => {
-  spec(main.isTriangleNumber, [
+describe('triangle.isTerm', () => {
+  spec(main.triangle.isTerm, [
     {n: Big('0'), value: Big('0')},
     {n: Big('1'), value: Big('1')},
     {n: Big('2'), value: false},

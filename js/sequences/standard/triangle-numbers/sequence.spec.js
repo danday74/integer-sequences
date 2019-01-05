@@ -3,7 +3,7 @@ const main = require('../../../..')
 const config = require('../../../../config')
 const spec = require('../../../more/specs/get-n-numbers-spec')
 
-describe('getNTriangleNumbers', function () {
+describe('triangle.sequence', function () {
   this.enableTimeouts(false)
-  spec(main.getNTriangleNumbers, config.TRIANGLE_NUMBERS_UPTO_100, {n: Big('1000000'), value: Big('500000500000'), testName: '1m'})
+  spec(main.triangle.sequence, config.TRIANGLE_NUMBERS_UPTO_100, {n: Big('1000000'), value: Big('500000500000'), testName: '1m'})
 })

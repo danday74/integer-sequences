@@ -1,5 +1,7 @@
 # TODO
 
+Add lightweight examples to README?
+Add template files you would need for new sequence
 Links to relevant term and isTerm files in README
 Add more keywords, esp for each sequence
 Approve sequences - see APPROVAL.md
