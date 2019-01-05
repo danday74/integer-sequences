@@ -11,6 +11,7 @@ const path = __dirname + '/js/prime-numbers/checksums/10m-primes.txt'
 const contents = fs.readFileSync(path, 'utf8')
 let checksums = contents.match(/\d+/g)
 
+// noinspection JSCheckFunctionSignatures
 checksums = _.map(checksums, Number)
 
 primes.forEach((prime, i) => {

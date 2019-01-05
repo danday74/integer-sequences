@@ -21,6 +21,7 @@ const readPrimeNumbersFromFile = max => {
       const path = DIR + '/' + file
       const contents = fs.readFileSync(path, 'utf8').replace(/\d+,\d+,\d+/, '')
       let temp = contents.match(/\d+/g)
+      // noinspection JSCheckFunctionSignatures
       temp = _.map(temp, Number)
       primes = [...primes, ...temp]
     }
