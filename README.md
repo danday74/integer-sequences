@@ -87,7 +87,7 @@ ms.getNumberAsJson(n: number)  // Returns the nth numeric JSON object
 
 <br>
 
-## Prime numbers
+## Prime numbers - [A000040](https://oeis.org/A000040)
 
 ```
 ms.getPrimeNumbers(max: number)  // Returns a list of primes, the last being the largest <= max
@@ -97,7 +97,7 @@ ms.isPrimeNumber(n: number)      // Returns x where n is the xth term or false w
 ms.isPrimeNumberFast(n: number)  // Returns a boolean, is n a prime?
 ```
 
-## Cube numbers
+## Cube numbers - [A000578](https://oeis.org/A000578)
 
 ```
 ms.getCubeNumbers(max: number)
@@ -106,7 +106,7 @@ ms.getNthCubeNumber(n: number)
 ms.isCubeNumber(n: number)
 ```
 
-## Fibonacci numbers
+## Fibonacci numbers - [A000045](https://oeis.org/A000045)
 
 ```
 ms.getFibonacciNumbers(max: number)
@@ -125,7 +125,7 @@ ms.getNthPadovanNumber(n: number)
 ms.isPadovanNumber(n: number)
 ```
 
-## Square numbers
+## Square numbers - [A000290](https://oeis.org/A000290)
 
 ```
 ms.getSquareNumbers(max: number)
@@ -134,7 +134,7 @@ ms.getNthSquareNumber(n: number)
 ms.isSquareNumber(n: number)
 ```
 
-## Tetrahedron numbers
+## Tetrahedron numbers - [A000292](https://oeis.org/A000292)
 
 ```
 ms.getTetrahedronNumbers(max: number)
@@ -143,7 +143,7 @@ ms.getNthTetrahedronNumber(n: number)
 ms.isTetrahedronNumber(n: number)
 ```
 
-## Triangle numbers
+## Triangle numbers - [A000217](https://oeis.org/A000217)
 
 ```
 ms.getTriangleNumbers(max: number)
