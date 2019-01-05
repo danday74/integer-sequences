@@ -1,6 +1,6 @@
 {
   "name": "integer-sequences",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Functional library for precise access to integer sequences such as prime numbers, square numbers, triangle numbers, etc",
   "author": "danday74",
   "license": "ISC",
