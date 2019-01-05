@@ -3,6 +3,6 @@ const main = require('../../../..')
 const config = require('../../../../config')
 const spec = require('../../../more/specs/get-numbers-spec')
 
-describe('getFibonacciNumbers', () => {
-  spec(main.getFibonacciNumbers, config.FIBONACCI_NUMBERS_UPTO_100, Big('63245986'))
+describe('fibonacci.sequenceMax', () => {
+  spec(main.fibonacci.sequenceMax, config.FIBONACCI_NUMBERS_UPTO_100, Big('63245986'))
 })

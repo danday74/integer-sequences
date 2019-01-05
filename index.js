@@ -2,12 +2,7 @@ const getNumbersAsJson = require('./js/numbers-as-json/get-numbers-as-json')
 const getNumberAsJson = require('./js/numbers-as-json/get-number-as-json')
 
 const cube = require('./js/sequences/standard/cube-numbers')
-
-const getFibonacciNumbers = require('./js/sequences/standard/fibonacci-numbers/get-fibonacci-numbers')
-const getNFibonacciNumbers = require('./js/sequences/standard/fibonacci-numbers/get-n-fibonacci-numbers')
-const getNthFibonacciNumber = require('./js/sequences/standard/fibonacci-numbers/get-nth-fibonacci-number')
-const isFibonacciNumber = require('./js/sequences/standard/fibonacci-numbers/is-fibonacci-number')
-const isFibonacciNumberFast = require('./js/sequences/standard/fibonacci-numbers/is-fibonacci-number-fast')
+const fibonacci = require('./js/sequences/standard/fibonacci-numbers')
 
 const getPadovanNumbers = require('./js/sequences/standard/padovan-numbers/get-padovan-numbers')
 const getNPadovanNumbers = require('./js/sequences/standard/padovan-numbers/get-n-padovan-numbers')
@@ -40,12 +35,7 @@ const main = {
   getNumberAsJson,
 
   cube,
-
-  getFibonacciNumbers,
-  getNFibonacciNumbers,
-  getNthFibonacciNumber,
-  isFibonacciNumber,
-  isFibonacciNumberFast,
+  fibonacci,
 
   getPadovanNumbers,
   getNPadovanNumbers,

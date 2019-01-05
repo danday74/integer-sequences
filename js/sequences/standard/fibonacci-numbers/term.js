@@ -1,6 +1,6 @@
 const Big = require('big.js.safe')
 
-const getNthFibonacciNumber = (n = -1) => {
+const term = (n = -1) => {
 
   n = Big(n)
   if (n.lt(0)) return undefined
@@ -18,4 +18,4 @@ const getNthFibonacciNumber = (n = -1) => {
   return y
 }
 
-module.exports = getNthFibonacciNumber
+module.exports = term

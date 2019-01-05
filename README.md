@@ -109,11 +109,11 @@ intseqs.cube.isTerm(n: number)
 ## Fibonacci numbers - [A000045](https://oeis.org/A000045)
 
 ```
-intseqs.getFibonacciNumbers(max: number)
-intseqs.getNFibonacciNumbers(n: number)
-intseqs.getNthFibonacciNumber(n: number)
-intseqs.isFibonacciNumber(n: number)
-intseqs.isFibonacciNumberFast(n: number)
+intseqs.fibonacci.sequence(n: number)
+intseqs.fibonacci.sequenceMax(max: number)
+intseqs.fibonacci.term(n: number)
+intseqs.fibonacci.isTerm(n: number)
+intseqs.fibonacci.isTermFast(n: number)
 ```
 
 ## Padovan numbers - [A134816](https://oeis.org/A134816)

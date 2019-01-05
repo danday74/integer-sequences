@@ -3,18 +3,17 @@
 const _ = require('lodash')
 const Big = require('big.js.safe')
 const cube = require('../sequences/standard/cube-numbers')
-const getFibonacciNumbers = require('../sequences/standard/fibonacci-numbers/get-fibonacci-numbers')
+const fibonacci = require('../sequences/standard/fibonacci-numbers')
 const getPadovanNumbers = require('../sequences/standard/padovan-numbers/get-padovan-numbers')
 const getPrimeNumbers = require('../sequences/irregular/prime-numbers/get-prime-numbers')
 const getSquareNumbers = require('../sequences/standard/square-numbers/get-square-numbers')
 const getTetrahedronNumbers = require('../sequences/standard/tetrahedron-numbers/get-tetrahedron-numbers')
 const getTriangleNumbers = require('../sequences/standard/triangle-numbers/get-triangle-numbers')
-const isFibonacciNumber = require('../sequences/standard/fibonacci-numbers/is-fibonacci-number')
 const isPadovanNumber = require('../sequences/standard/padovan-numbers/is-padovan-number')
 const config = require('../../config')
 
 const nextFibonacci = (series, idx, i) => {
-  if (i === 1) return isFibonacciNumber(i)
+  if (i === 1) return fibonacci.isTerm(i)
   return next(series, idx, i)
 }
 
@@ -42,7 +41,7 @@ const getNumbersAsJson = (max = 0) => {
   if (max.eq(0)) return []
 
   const c = cube.sequenceMax(max)
-  const f = getFibonacciNumbers(max)
+  const f = fibonacci.sequenceMax(max)
   const pad = getPadovanNumbers(max)
   let p
   try {

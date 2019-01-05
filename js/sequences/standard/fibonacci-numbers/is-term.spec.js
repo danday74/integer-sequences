@@ -5,8 +5,8 @@ const spec = require('../../../more/specs/is-number-spec')
 
 const seriesKey = config.seriesKeys.fibonacci
 
-describe('isFibonacciNumber', () => {
-  spec(main.isFibonacciNumber, [
+describe('fibonacci.isTerm', () => {
+  spec(main.fibonacci.isTerm, [
     {n: Big('0'), value: Big('0')},
     {n: Big('1'), value: [Big('1'), Big('2')]},
     {n: Big('2'), value: Big('3')},

@@ -1,7 +1,7 @@
 const Big = require('big.js.safe')
 const isSquareNumber = require('../square-numbers/is-square-number')
 
-const isFibonacciNumberFast = (n = -1) => {
+const isTermFast = (n = -1) => {
 
   n = Big(n)
   if (n.lt(0)) return undefined
@@ -12,4 +12,4 @@ const isFibonacciNumberFast = (n = -1) => {
   return isSquareNumber(hi) !== false || isSquareNumber(lo) !== false
 }
 
-module.exports = isFibonacciNumberFast
+module.exports = isTermFast
