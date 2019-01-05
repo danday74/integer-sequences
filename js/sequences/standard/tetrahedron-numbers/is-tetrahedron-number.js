@@ -1,6 +1,6 @@
 const Big = require('big.js.safe')
 const nthRoot = require('../../../more/helpers/nthRoot')
-const isCubeNumber = require('../cube-numbers/is-cube-number')
+const cube = require('../cube-numbers')
 
 const isTetrahedronNumber = (n = -1) => {
 
@@ -15,7 +15,7 @@ const isTetrahedronNumber = (n = -1) => {
   Big.RM = 1
 
   n = n.plus(cubeRootRounded)
-  const cubeIdx = isCubeNumber(n)
+  const cubeIdx = cube.isTerm(n)
   return cubeIdx ? cubeIdx.minus(1) : false
 }
 

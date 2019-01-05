@@ -2,7 +2,7 @@
 
 const _ = require('lodash')
 const Big = require('big.js.safe')
-const getCubeNumbers = require('../sequences/standard/cube-numbers/get-cube-numbers')
+const cube = require('../sequences/standard/cube-numbers')
 const getFibonacciNumbers = require('../sequences/standard/fibonacci-numbers/get-fibonacci-numbers')
 const getPadovanNumbers = require('../sequences/standard/padovan-numbers/get-padovan-numbers')
 const getPrimeNumbers = require('../sequences/irregular/prime-numbers/get-prime-numbers')
@@ -41,7 +41,7 @@ const getNumbersAsJson = (max = 0) => {
   if (max.lt(0)) return undefined
   if (max.eq(0)) return []
 
-  const c = getCubeNumbers(max)
+  const c = cube.sequenceMax(max)
   const f = getFibonacciNumbers(max)
   const pad = getPadovanNumbers(max)
   let p

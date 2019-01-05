@@ -100,10 +100,10 @@ intseqs.isPrimeNumberFast(n: number)  // Returns a boolean, is n a prime?
 ## Cube numbers - [A000578](https://oeis.org/A000578)
 
 ```
-intseqs.getCubeNumbers(max: number)
-intseqs.getNCubeNumbers(n: number)
-intseqs.getNthCubeNumber(n: number)
-intseqs.isCubeNumber(n: number)
+intseqs.cube.sequence(n: number)
+intseqs.cube.sequenceMax(max: number)
+intseqs.cube.term(n: number)
+intseqs.cube.isTerm(n: number)
 ```
 
 ## Fibonacci numbers - [A000045](https://oeis.org/A000045)

@@ -1,10 +1,7 @@
 const getNumbersAsJson = require('./js/numbers-as-json/get-numbers-as-json')
 const getNumberAsJson = require('./js/numbers-as-json/get-number-as-json')
 
-const getCubeNumbers = require('./js/sequences/standard/cube-numbers/get-cube-numbers')
-const getNCubeNumbers = require('./js/sequences/standard/cube-numbers/get-n-cube-numbers')
-const getNthCubeNumber = require('./js/sequences/standard/cube-numbers/get-nth-cube-number')
-const isCubeNumber = require('./js/sequences/standard/cube-numbers/is-cube-number')
+const cube = require('./js/sequences/standard/cube-numbers')
 
 const getFibonacciNumbers = require('./js/sequences/standard/fibonacci-numbers/get-fibonacci-numbers')
 const getNFibonacciNumbers = require('./js/sequences/standard/fibonacci-numbers/get-n-fibonacci-numbers')
@@ -42,10 +39,7 @@ const main = {
   getNumbersAsJson,
   getNumberAsJson,
 
-  getCubeNumbers,
-  getNCubeNumbers,
-  getNthCubeNumber,
-  isCubeNumber,
+  cube,
 
   getFibonacciNumbers,
   getNFibonacciNumbers,

@@ -5,8 +5,8 @@ const spec = require('../../../more/specs/get-nth-number-spec')
 
 const seriesKey = config.seriesKeys.cube
 
-describe('getNthCubeNumber', () => {
-  spec(main.getNthCubeNumber, seriesKey, [
+describe('cube.term', () => {
+  spec(main.cube.term, seriesKey, [
     {n: Big('0'), value: Big('0')},
     {n: Big('1'), value: Big('1')},
     {n: Big('2'), value: Big('8')},

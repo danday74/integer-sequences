@@ -1,6 +1,6 @@
 const Big = require('big.js.safe')
 
-const isCubeNumber = require('../sequences/standard/cube-numbers/is-cube-number')
+const cube = require('../sequences/standard/cube-numbers')
 const isFibonacciNumber = require('../sequences/standard/fibonacci-numbers/is-fibonacci-number')
 const isPadovanNumber = require('../sequences/standard/padovan-numbers/is-padovan-number')
 const isPrimeNumber = require('../sequences/irregular/prime-numbers/is-prime-number')
@@ -15,7 +15,7 @@ const getNumberAsJson = (n = -1) => {
 
   return {
     number: Big(n),
-    cube: isCubeNumber(n),
+    cube: cube.isTerm(n),
     fibonacci: isFibonacciNumber(n),
     padovan: isPadovanNumber(n),
     prime: isPrimeNumber(n),
