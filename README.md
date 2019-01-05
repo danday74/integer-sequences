@@ -137,10 +137,10 @@ intseqs.square.isTerm(n: number)
 ## Tetrahedron numbers - [A000292](https://oeis.org/A000292)
 
 ```
-intseqs.getTetrahedronNumbers(max: number)
-intseqs.getNTetrahedronNumbers(n: number)
-intseqs.getNthTetrahedronNumber(n: number)
-intseqs.isTetrahedronNumber(n: number)
+intseqs.tetrahedron.sequence(n: number)
+intseqs.tetrahedron.sequenceMax(max: number)
+intseqs.tetrahedron.term(n: number)
+intseqs.tetrahedron.isTerm(n: number)
 ```
 
 ## Triangle numbers - [A000217](https://oeis.org/A000217)
@@ -160,7 +160,7 @@ intseqs.isTriangleNumber(n: number)
 
 ## Author says
 
-People think I am religious. Wrong. People think religion is boring! So do I. Worse than that, man-made religion is destructive. Jesus himself warned against it.
+People think I am religious. Wrong. I just love Jesus! People think religion is boring! So do I. Worse than that, man-made religion is destructive. Jesus himself warned against it.
 
 What Jesus wants is relationship; to be your friend. This [video](https://www.youtube.com/watch?v=1IAhDGYlpqY) explains it fairly well.
 

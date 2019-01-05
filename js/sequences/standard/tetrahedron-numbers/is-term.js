@@ -2,7 +2,7 @@ const Big = require('big.js.safe')
 const nthRoot = require('../../../more/helpers/nthRoot')
 const cube = require('../cube-numbers')
 
-const isTetrahedronNumber = (n = -1) => {
+const isTerm = (n = -1) => {
 
   n = Big(n)
   if (n.lt(0)) return undefined
@@ -19,4 +19,4 @@ const isTetrahedronNumber = (n = -1) => {
   return cubeIdx ? cubeIdx.minus(1) : false
 }
 
-module.exports = isTetrahedronNumber
+module.exports = isTerm

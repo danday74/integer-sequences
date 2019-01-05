@@ -7,7 +7,7 @@ const fibonacci = require('../sequences/standard/fibonacci-numbers')
 const padovan = require('../sequences/standard/padovan-numbers')
 const getPrimeNumbers = require('../sequences/irregular/prime-numbers/get-prime-numbers')
 const square = require('../sequences/standard/square-numbers')
-const getTetrahedronNumbers = require('../sequences/standard/tetrahedron-numbers/get-tetrahedron-numbers')
+const tetrahedron = require('../sequences/standard/tetrahedron-numbers')
 const getTriangleNumbers = require('../sequences/standard/triangle-numbers/get-triangle-numbers')
 const config = require('../../config')
 
@@ -50,7 +50,7 @@ const getNumbersAsJson = (max = 0) => {
     p = getPrimeNumbers()
   }
   const s = square.sequenceMax(max)
-  const tet = getTetrahedronNumbers(max)
+  const tet = tetrahedron.sequenceMax(max)
   const t = getTriangleNumbers(max)
 
   const len = numbers.length + 1

@@ -5,8 +5,8 @@ const spec = require('../../../more/specs/is-number-spec')
 
 const seriesKey = config.seriesKeys.tetrahedron
 
-describe('isTetrahedronNumber', () => {
-  spec(main.isTetrahedronNumber, [
+describe('tetrahedron.isTerm', () => {
+  spec(main.tetrahedron.isTerm, [
     {n: Big('0'), value: Big('0')},
     {n: Big('1'), value: Big('1')},
     {n: Big('2'), value: false},

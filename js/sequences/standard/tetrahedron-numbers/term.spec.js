@@ -5,8 +5,8 @@ const spec = require('../../../more/specs/get-nth-number-spec')
 
 const seriesKey = config.seriesKeys.tetrahedron
 
-describe('getNthTetrahedronNumber', () => {
-  spec(main.getNthTetrahedronNumber, seriesKey, [
+describe('tetrahedron.term', () => {
+  spec(main.tetrahedron.term, seriesKey, [
     {n: Big('0'), value: Big('0')},
     {n: Big('1'), value: Big('1')},
     {n: Big('2'), value: Big('4')},
