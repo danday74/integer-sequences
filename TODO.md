@@ -1,6 +1,5 @@
 # TODO
 
-Links to relevant term and isTerm files in README
 Add template files you would need for new sequence
 Add more keywords, esp for each sequence
 Approve sequences - see APPROVAL.md
