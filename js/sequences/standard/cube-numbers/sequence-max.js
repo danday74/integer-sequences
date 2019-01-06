@@ -1,3 +1,3 @@
 const term = require('./term')
-const getNumbers = require('../../../more/series/get-numbers')
-module.exports = (max = 0) => getNumbers(term, max)
+const getSequenceMax = require('../../../more/series/get-sequence-max')
+module.exports = (max = 0) => getSequenceMax(term, max)

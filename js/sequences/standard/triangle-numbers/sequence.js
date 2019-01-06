@@ -1,3 +1,3 @@
 const term = require('./term')
-const getNNumbers = require('../../../more/series/get-n-numbers')
-module.exports = (n = 0) => getNNumbers(term, n)
+const getSequence = require('../../../more/series/get-sequence')
+module.exports = (n = 0) => getSequence(term, n)

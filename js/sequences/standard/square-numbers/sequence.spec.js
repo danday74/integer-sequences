@@ -1,7 +1,7 @@
 const Big = require('big.js.safe')
 const main = require('../../../..')
 const config = require('../../../../config')
-const spec = require('../../../more/specs/get-n-numbers-spec')
+const spec = require('../../../more/specs/get-sequence-spec')
 
 describe('square.sequence', function () {
   this.enableTimeouts(false)

@@ -1,7 +1,7 @@
 const Big = require('big.js.safe')
 const main = require('../../../..')
 const config = require('../../../../config')
-const spec = require('../../../more/specs/is-number-spec')
+const spec = require('../../../more/specs/get-is-term-spec')
 
 const seriesKey = config.seriesKeys.prime
 

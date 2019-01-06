@@ -1,6 +1,6 @@
 const Big = require('big.js.safe')
 
-const getNumbers = (numberFunc, max = 0) => {
+const getSequenceMax = (numberFunc, max = 0) => {
 
   max = Big(max)
   if (max.lt(0)) return undefined
@@ -18,4 +18,4 @@ const getNumbers = (numberFunc, max = 0) => {
   return numbers
 }
 
-module.exports = getNumbers
+module.exports = getSequenceMax
