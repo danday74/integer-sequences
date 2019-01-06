@@ -1,6 +1,5 @@
 # TODO
 
-rename read-n-prime-numbers-from-file and renames on paper
 Add lightweight examples to README?
 Add template files you would need for new sequence
 Links to relevant term and isTerm files in README
