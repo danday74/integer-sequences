@@ -1,10 +1,10 @@
 const Big = require('big.js.safe')
-const readPrimeNumbersFromFile = require('./read-prime-numbers-from-file')
-const config = require('../../../../config')
+const readPrimeSequenceMaxFromFile = require('./read-prime-sequence-max-from-file')
+const config = require('../../../../../config')
 
-const readNPrimeNumbersFromFile = n => {
+const readPrimeSequenceFromFile = n => {
 
-  if (n == null) return readPrimeNumbersFromFile()
+  if (n == null) return readPrimeSequenceMaxFromFile()
 
   Big.RM = 3
   const fileNumber = n.div(1000000).round()
@@ -12,10 +12,10 @@ const readNPrimeNumbersFromFile = n => {
 
   const lastPrimeInFile = config.LAST_PRIME_PER_FILE[fileNumber]
   if (lastPrimeInFile) {
-    return readPrimeNumbersFromFile(Big(lastPrimeInFile))
+    return readPrimeSequenceMaxFromFile(Big(lastPrimeInFile))
   } else {
     throw RangeError(`Largest prime index supported is ${config.LAST_PRIME_SERIES_IDX} but ${n.toFixed()} was requested`)
   }
 }
 
-module.exports = readNPrimeNumbersFromFile
+module.exports = readPrimeSequenceFromFile

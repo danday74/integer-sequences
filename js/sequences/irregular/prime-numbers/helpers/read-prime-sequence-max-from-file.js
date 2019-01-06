@@ -1,14 +1,15 @@
 const _ = require('lodash')
 const fs = require('fs')
+const path = require('path')
 
-const DIR = __dirname + '/primes'
+const DIR = path.resolve(__dirname + '/../primes')
 
 const filesRead = [] // keeps track of which files have been read already
 let primes = []
 
 const getLastPrime = () => _.last(primes) || 0
 
-const readPrimeNumbersFromFile = max => {
+const readPrimeSequenceMaxFromFile = max => {
 
   let lastPrime = getLastPrime()
   let files = fs.readdirSync(DIR)
@@ -31,4 +32,4 @@ const readPrimeNumbersFromFile = max => {
   return primes
 }
 
-module.exports = readPrimeNumbersFromFile
+module.exports = readPrimeSequenceMaxFromFile

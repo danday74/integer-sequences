@@ -1,6 +1,6 @@
 const _ = require('lodash')
 const Big = require('big.js.safe')
-const readPrimeNumbersFromFile = require('./read-prime-numbers-from-file')
+const readPrimeSequenceMaxFromFile = require('./helpers/read-prime-sequence-max-from-file')
 
 const sequenceMax = max => {
 
@@ -9,7 +9,7 @@ const sequenceMax = max => {
     if (max.lt(2)) return []
   }
 
-  const primes = readPrimeNumbersFromFile(max)
+  const primes = readPrimeSequenceMaxFromFile(max)
 
   if (max != null) {
     let idx = _.sortedIndex(primes, max)
