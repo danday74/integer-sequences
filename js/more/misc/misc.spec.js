@@ -8,12 +8,19 @@ describe('misc', () => {
   describe('examples', () => {
 
     it('example 1', () => {
+      intseqs.prime.isTerm('1000000')
+      intseqs.prime.isTerm(Big('1000000'))
+      intseqs.prime.isTerm(Big(1000000))
+      intseqs.prime.isTerm(1000000)
+    })
+
+    it('example 2', () => {
       const bigObj = intseqs.prime.term(10)
       const value = bigObj.toFixed()
       expect(value).to.equal('29')
     })
 
-    it('example 2', () => {
+    it('example 3', () => {
       const json = intseqs.getNumbersAsJson(7)
       expect(json).to.eql([
         {
