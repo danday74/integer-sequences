@@ -22,23 +22,23 @@ Functional library for precise access to integer sequences. Cached access offers
 
 ```javascript 1.7
 const intseqs = require('integer-sequences')
-intseqs.getPrimeNumbers(100000000)  // takes 2145ms - first call
-intseqs.getPrimeNumbers(100000000)  // takes 23ms - second cached call
+intseqs.prime.sequenceMax(100000000)  // takes 2145ms - first call
+intseqs.prime.sequenceMax(100000000)  // takes 23ms - second cached call
 ```
 
 It makes use of [Big.js](http://mikemcl.github.io/big.js) to guarantee precision when working with big numbers.
 
 Numeric arguments can be given as:
  
-* strings - e.g. `intseqs.isPrimeNumber('1000000')`
-* Big.js objects - e.g. `intseqs.isPrimeNumber(Big('1000000'))` or `intseqs.isPrimeNumber(Big(1000000))`
-* numbers - e.g. `intseqs.isPrimeNumber(1000000)`
+* strings - e.g. `intseqs.prime.isTerm('1000000')`
+* Big.js objects - e.g. `intseqs.prime.isTerm(Big('1000000'))` or `intseqs.prime.isTerm(Big(1000000))`
+* numbers - e.g. `intseqs.prime.isTerm(1000000)`
 
 Function return values are typically [Big.js](http://mikemcl.github.io/big.js) objects. To access a [Big.js](http://mikemcl.github.io/big.js) object value:
 
 ```javascript 1.7
 const intseqs = require('integer-sequences')
-const bigObj = intseqs.getNthPrimeNumber(10)
+const bigObj = intseqs.prime.term(10)
 const value = bigObj.toFixed()
 console.log(value) // logs '29'
 ```
@@ -90,11 +90,11 @@ intseqs.getNumberAsJson(n: number)  // Returns the nth numeric JSON object
 ## Prime numbers - [A000040](https://oeis.org/A000040)
 
 ```
-intseqs.getPrimeNumbers(max: number)  // Returns a list of primes, the last being the largest <= max
-intseqs.getNPrimeNumbers(n: number)   // Returns the first n primes
-intseqs.getNthPrimeNumber(n: number)  // Returns the nth prime
-intseqs.isPrimeNumber(n: number)      // Returns x where n is the xth term or false where n is not a prime
-intseqs.isPrimeNumberFast(n: number)  // Returns a boolean, is n a prime?
+intseqs.prime.sequence(n: number)       // Returns a list of the first n terms in the sequence
+intseqs.prime.sequenceMax(max: number)  // Returns a list of the first terms, all terms being <= max
+intseqs.prime.term(n: number)           // Returns the nth term
+intseqs.prime.isTerm(n: number)         // Returns x where n is the xth term or false where n is not a term
+intseqs.prime.isTermFast(n: number)     // Returns a boolean, is n a term?
 ```
 
 ## Cube numbers - [A000578](https://oeis.org/A000578)
@@ -160,7 +160,7 @@ intseqs.triangle.isTerm(n: number)
 
 ## Author says
 
-People think I am religious. Wrong. I just love Jesus! People think religion is boring! So do I. Worse than that, man-made religion is destructive. Jesus himself warned against it.
+People think I am religious but, to my mind, I just love Jesus! People think man-made religion is boring! So do I. Worse than that, man-made religion is destructive. Jesus himself warned against it.
 
 What Jesus wants is relationship; to be your friend. This [video](https://www.youtube.com/watch?v=1IAhDGYlpqY) explains it fairly well.
 

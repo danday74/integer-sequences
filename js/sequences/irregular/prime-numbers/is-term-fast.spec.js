@@ -5,8 +5,8 @@ const spec = require('../../../more/specs/is-number-spec')
 
 const seriesKey = config.seriesKeys.prime
 
-describe('isPrimeNumberFast', () => {
-  spec(main.isPrimeNumberFast, [
+describe('prime.isTermFast', () => {
+  spec(main.prime.isTermFast, [
     {n: Big('0'), value: undefined},
     {n: Big('1'), value: false},
     {n: Big('2'), value: true},

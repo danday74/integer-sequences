@@ -5,7 +5,7 @@ const Big = require('big.js.safe')
 const cube = require('../sequences/standard/cube-numbers')
 const fibonacci = require('../sequences/standard/fibonacci-numbers')
 const padovan = require('../sequences/standard/padovan-numbers')
-const getPrimeNumbers = require('../sequences/irregular/prime-numbers/get-prime-numbers')
+const prime = require('../sequences/irregular/prime-numbers')
 const square = require('../sequences/standard/square-numbers')
 const tetrahedron = require('../sequences/standard/tetrahedron-numbers')
 const triangle = require('../sequences/standard/triangle-numbers')
@@ -44,10 +44,10 @@ const getNumbersAsJson = (max = 0) => {
   const pad = padovan.sequenceMax(max)
   let p
   try {
-    p = getPrimeNumbers(max)
+    p = prime.sequenceMax(max)
   } catch (e) {
     /* istanbul ignore next */
-    p = getPrimeNumbers()
+    p = prime.sequenceMax()
   }
   const s = square.sequenceMax(max)
   const tet = tetrahedron.sequenceMax(max)

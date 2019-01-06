@@ -8,7 +8,7 @@ describe('misc', () => {
   describe('examples', () => {
 
     it('example 1', () => {
-      const bigObj = intseqs.getNthPrimeNumber(10)
+      const bigObj = intseqs.prime.term(10)
       const value = bigObj.toFixed()
       expect(value).to.equal('29')
     })

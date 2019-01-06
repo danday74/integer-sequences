@@ -2,7 +2,7 @@
 
 const _ = require('lodash')
 const Big = require('big.js.safe')
-const getPrimeNumbers = require('../sequences/irregular/prime-numbers/get-prime-numbers')
+const prime = require('../sequences/irregular/prime-numbers')
 const config = require('../../config')
 
 /* istanbul ignore next */
@@ -22,10 +22,10 @@ const getNumbersAsJson = (max = 0) => {
 
   let p
   try {
-    p = getPrimeNumbers(max)
+    p = prime.sequenceMax(max)
   } catch (e) {
     /* istanbul ignore next */
-    p = getPrimeNumbers()
+    p = prime.sequenceMax()
   }
 
   const len = numbers.length + 1

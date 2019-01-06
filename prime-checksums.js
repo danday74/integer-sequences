@@ -5,7 +5,7 @@ const main = require('.')
 
 console.log('checksums running')
 
-const primes = main.getPrimeNumbers()
+const primes = main.prime.sequenceMax()
 
 const path = __dirname + '/js/prime-numbers/checksums/10m-primes.txt'
 const contents = fs.readFileSync(path, 'utf8')

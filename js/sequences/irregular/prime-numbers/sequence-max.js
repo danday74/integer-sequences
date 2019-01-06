@@ -2,7 +2,7 @@ const _ = require('lodash')
 const Big = require('big.js.safe')
 const readPrimeNumbersFromFile = require('./read-prime-numbers-from-file')
 
-const getPrimeNumbers = max => {
+const sequenceMax = max => {
 
   if (max != null) {
     max = Big(max)
@@ -19,4 +19,4 @@ const getPrimeNumbers = max => {
   return primes
 }
 
-module.exports = getPrimeNumbers
+module.exports = sequenceMax
