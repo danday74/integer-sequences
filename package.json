@@ -29,14 +29,34 @@
     "mocha": "^5.2.0"
   },
   "keywords": [
+    "oeis",
     "math",
     "mathematic",
+    "integer",
     "sequence",
     "series",
+
+    "cube",
+    "cubic",
+
     "fibonacci",
+
+    "padovan",
+
     "prime",
+    "primes",
+    "primality",
+
     "square",
-    "triangle"
+    "squares",
+
+    "tetrahedron",
+    "tetrahedral",
+
+    "triangle",
+    "triangular",
+
+    "numbers"
   ],
   "repository": {
     "type": "git",
