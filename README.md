@@ -18,7 +18,7 @@
 
 `npm install --save integer-sequences`
 
-Functional library for precise access to integer sequences. Cached access offers performance. For example:
+Functional library for precise access to integer sequences. Total unit test coverage. Cached access offers performance. For example:
 
 ```javascript 1.7
 const intseqs = require('integer-sequences')
