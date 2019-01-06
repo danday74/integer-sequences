@@ -30,13 +30,13 @@ console.timeEnd('get numbers as json')
 
 console.log()
 
-console.time('get primes 100m')
+console.time('prime.sequenceMax 100m')
 main.prime.sequenceMax(100000000)
-console.timeEnd('get primes 100m')
+console.timeEnd('prime.sequenceMax 100m')
 
-console.time('get primes 100m')
+console.time('prime.sequenceMax 100m')
 main.prime.sequenceMax(100000000)
-console.timeEnd('get primes 100m')
+console.timeEnd('prime.sequenceMax 100m')
 
 console.log()
 
