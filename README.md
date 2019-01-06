@@ -89,6 +89,8 @@ intseqs.getNumberAsJson(n: number)  // Returns the nth numeric JSON object
 
 ## Prime numbers - [A000040](https://oeis.org/A000040)
 
+[term](js/sequences/irregular/prime-numbers/term.js) - [isTerm](js/sequences/irregular/prime-numbers/is-term.js) - [isTermFast](js/sequences/irregular/prime-numbers/is-term-fast.js)
+
 Full support for primes upto Prime(6000000)=104395301 (partial support thereafter)
 
 ```
