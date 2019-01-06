@@ -2,7 +2,7 @@ const _ = require('lodash')
 const assert = require('assert')
 const config = require('./config')
 const getPrimeNumberAsJsonForTesting = require('./js/numbers-as-json/get-prime-numbers-as-json-for-testing')
-const main = require('.')
+const intseqs = require('.')
 
 let json
 let number
@@ -21,21 +21,21 @@ console.log('tests running')
 console.log()
 
 console.time('get numbers as json')
-main.getNumbersAsJson(1000000)
+intseqs.getNumbersAsJson(1000000)
 console.timeEnd('get numbers as json')
 
 console.time('get numbers as json')
-main.getNumbersAsJson(1000000)
+intseqs.getNumbersAsJson(1000000)
 console.timeEnd('get numbers as json')
 
 console.log()
 
 console.time('prime.sequenceMax 100m')
-main.prime.sequenceMax(100000000)
+intseqs.prime.sequenceMax(100000000)
 console.timeEnd('prime.sequenceMax 100m')
 
 console.time('prime.sequenceMax 100m')
-main.prime.sequenceMax(100000000)
+intseqs.prime.sequenceMax(100000000)
 console.timeEnd('prime.sequenceMax 100m')
 
 console.log()
