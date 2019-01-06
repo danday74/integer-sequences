@@ -22,8 +22,8 @@ Functional library for precise access to integer sequences. Cached access offers
 
 ```javascript 1.7
 const intseqs = require('integer-sequences')
-intseqs.prime.sequenceMax(100000000)  // takes 2145ms - first call
-intseqs.prime.sequenceMax(100000000)  // takes 23ms - second cached call
+intseqs.prime.sequenceMax(100000000)  // takes 1900ms - first call
+intseqs.prime.sequenceMax(100000000)  // takes 25ms - second cached call
 ```
 
 It makes use of [Big.js](http://mikemcl.github.io/big.js) to guarantee precision when working with big numbers.
