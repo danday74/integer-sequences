@@ -1,7 +1,7 @@
 const assert = require('assert')
 const isPrime = require('is-prime')
 const config = require('./config')
-const main = require('.')
+const getPrimeNumberAsJsonForTesting = require('./js/numbers-as-json/get-prime-numbers-as-json-for-testing')
 
 console.log('is-prime test running')
 
@@ -36,7 +36,7 @@ assert.equal(isPrime(47055833461), false)
 // main
 
 console.time('loading primes')
-const numbers = main.getNumbersAsJson(config.LAST_PRIME)
+const numbers = getPrimeNumberAsJsonForTesting(config.LAST_PRIME)
 console.timeEnd('loading primes')
 
 let trueCount = 0
