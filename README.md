@@ -89,6 +89,8 @@ intseqs.getNumberAsJson(n: number)  // Returns the nth numeric JSON object
 
 ## Prime numbers - [A000040](https://oeis.org/A000040)
 
+Full support for primes upto Prime(6000000)=104395301 (partial support thereafter)
+
 ```
 intseqs.prime.sequence(n: number)       // Returns a list of the first n terms in the sequence
 intseqs.prime.sequenceMax(max: number)  // Returns a list of the first terms, all terms being <= max
