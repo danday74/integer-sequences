@@ -103,6 +103,8 @@ intseqs.prime.isTermFast(n: number)     // Returns a boolean, is n a term?
 
 ## Cube numbers - [A000578](https://oeis.org/A000578)
 
+[term](js/sequences/standard/cube-numbers/term.js) [isTerm](js/sequences/standard/cube-numbers/is-term.js)
+
 ```
 intseqs.cube.sequence(n: number)
 intseqs.cube.sequenceMax(max: number)
@@ -111,6 +113,8 @@ intseqs.cube.isTerm(n: number)
 ```
 
 ## Fibonacci numbers - [A000045](https://oeis.org/A000045)
+
+[term](js/sequences/standard/fibonacci-numbers/term.js) [isTerm](js/sequences/standard/fibonacci-numbers/is-term.js) [isTermFast](js/sequences/standard/fibonacci-numbers/is-term-fast.js)
 
 ```
 intseqs.fibonacci.sequence(n: number)
@@ -122,6 +126,8 @@ intseqs.fibonacci.isTermFast(n: number)
 
 ## Padovan numbers - [A134816](https://oeis.org/A134816)
 
+[term](js/sequences/standard/padovan-numbers/term.js) [isTerm](js/sequences/standard/padovan-numbers/is-term.js)
+
 ```
 intseqs.padovan.sequence(n: number)
 intseqs.padovan.sequenceMax(max: number)
@@ -130,6 +136,8 @@ intseqs.padovan.isTerm(n: number)
 ```
 
 ## Square numbers - [A000290](https://oeis.org/A000290)
+
+[term](js/sequences/standard/square-numbers/term.js) [isTerm](js/sequences/standard/square-numbers/is-term.js)
 
 ```
 intseqs.square.sequence(n: number)
@@ -140,6 +148,8 @@ intseqs.square.isTerm(n: number)
 
 ## Tetrahedron numbers - [A000292](https://oeis.org/A000292)
 
+[term](js/sequences/standard/tetrahedron-numbers/term.js) [isTerm](js/sequences/standard/tetrahedron-numbers/is-term.js)
+
 ```
 intseqs.tetrahedron.sequence(n: number)
 intseqs.tetrahedron.sequenceMax(max: number)
@@ -148,6 +158,8 @@ intseqs.tetrahedron.isTerm(n: number)
 ```
 
 ## Triangle numbers - [A000217](https://oeis.org/A000217)
+
+[term](js/sequences/standard/triangle-numbers/term.js) [isTerm](js/sequences/standard/triangle-numbers/is-term.js)
 
 ```
 intseqs.triangle.sequence(n: number)
